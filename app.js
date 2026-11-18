@@ -10,11 +10,51 @@ db.vocabulary = db.vocabulary || [];
 
 let session = "morning";
 let articles = [];
+const articleWordCache = new Map();
 
 const demo = [
   {id:"am-demo",date:today,session:"morning",title:"News is being loaded",source:"Daily News English",url:"https://www.bbc.com/news",status:"unverified",topic:"World",duration:"약 10분"},
   {id:"pm-demo",date:today,session:"evening",title:"News is being loaded",source:"Daily News English",url:"https://www.bbc.com/news",status:"unverified",topic:"Listening",duration:"약 1분"}
 ];
+
+const STOPWORDS = new Set(`
+about above across after again against almost along already also although always
+among another any anyone anything around because become been before being below
+between both business came can cannot could country countries current daily
+during each early economic economy even every expected first following from
+further general government governments group groups have having here however
+including into itself just large later least less made make many market markets
+might more most much must near need never new news next none nothing number
+often once only other others our out over own part people person place policy
+public rather really recently said same several should since some something
+still such take than that the their them then there these they thing things
+think those through time today together under until upon very was were what
+when where which while who why will with within without would year years
+according administration agency announced around authorities officials
+officials report reported reports statement statements monday tuesday
+wednesday thursday friday saturday sunday january february march april may
+june july august september october november december
+international national regional global latest major
+million billion trillion percent percentage
+company companies officials leaders minister president
+country countries world
+`.trim().split(/\s+/));
+
+const ADVANCED_WORDS = new Set(`
+accountability adverse alleviate amid apprehension austerity bolster
+cohesion contentious deteriorate discrepancy disruption exacerbate
+expenditure facilitate fiscal fluctuate foster hamper implication
+incentive infrastructure instability intervention mitigate momentum
+persistent pivotal prevalence recession resilience scrutiny substantial
+sustainable unprecedented volatile vulnerability vulnerable
+acknowledge allocate anticipate apparent assert capacity compelling
+consecutive consensus constraint controversial credible cumulative
+decline deficit deploy deteriorate diminish disclose emerge emphasis
+enforce enhance ensure establish estimate evaluate evidence expand
+exposure framework fundamental generate impose incentive incorporate
+inevitable influence initiative insight integral intensify interpret
+justify legislation substantial undermine undertake widespread
+`.trim().split(/\s+/));
 
 function save(){
   localStorage.setItem(key,JSON.stringify(db));
@@ -28,19 +68,19 @@ function esc(s=""){
 
 function safeUrl(s){
   try{
-    const u = new URL(s);
-    return ["https:","http:"].includes(u.protocol) ? u.href : "#";
+    const u=new URL(s);
+    return ["https:","http:"].includes(u.protocol)?u.href:"#";
   }catch{return "#";}
 }
 
 function current(){
   return db.lessons.find(x=>x.date===today&&x.session===session)
-    || demo.find(x=>x.session===session);
+    ||demo.find(x=>x.session===session);
 }
 
 function rec(id){
   return db.records.find(x=>x.lessonId===id)
-    || {lessonId:id,summary:"",dictation:"",notes:"",difficulty:3,completed:false,dictationDone:false};
+    ||{lessonId:id,summary:"",dictation:"",notes:"",difficulty:3,completed:false,dictationDone:false};
 }
 
 function upsert(r){
@@ -50,15 +90,14 @@ function upsert(r){
 }
 
 function assignNews(){
-  if(!articles.length) return;
+  if(!articles.length)return;
 
-  const morningArticle =
+  const morningArticle=
     articles.find(a=>["World","Business","Science","Technology"].includes(a.topic))
-    || articles[0];
+    ||articles[0];
 
-  const eveningArticle =
-    articles.find(a=>a.id!==morningArticle.id)
-    || morningArticle;
+  const eveningArticle=
+    articles.find(a=>a.id!==morningArticle.id)||morningArticle;
 
   [morningArticle,eveningArticle].forEach((a,i)=>{
     const s=i===0?"morning":"evening";
@@ -87,7 +126,7 @@ function assignNews(){
 async function loadNews(){
   try{
     const response=await fetch("./data/news.json?t="+Date.now(),{cache:"no-store"});
-    if(!response.ok) throw new Error("News unavailable");
+    if(!response.ok)throw new Error("News unavailable");
 
     const data=await response.json();
     articles=Array.isArray(data.articles)?data.articles:[];
@@ -109,7 +148,7 @@ function renderNews(){
     section.className="card";
 
     const manual=$("#addLesson")?.closest(".card");
-    if(manual) manual.before(section);
+    if(manual)manual.before(section);
     else $(".shell").append(section);
   }
 
@@ -134,7 +173,9 @@ function renderNews(){
             <a class="btn secondary" href="${safeUrl(a.url)}" target="_blank" rel="noopener">원문 보기</a>
             <button class="btn secondary" data-pick="${esc(a.id)}" data-session="morning">아침 자료로 선택</button>
             <button class="btn secondary" data-pick="${esc(a.id)}" data-session="evening">저녁 자료로 선택</button>
+            <button class="btn" data-extract="${esc(a.id)}">핵심 어휘 5개 추출</button>
           </div>
+          <div id="article-vocab-${esc(a.id)}"></div>
         </div>
       `).join("")}
     `;
@@ -145,11 +186,10 @@ function renderNews(){
   section.querySelectorAll("[data-pick]").forEach(button=>{
     button.addEventListener("click",()=>{
       const article=articles.find(a=>a.id===button.dataset.pick);
-      if(!article) return;
+      if(!article)return;
 
       const s=button.dataset.session;
       db.lessons=db.lessons.filter(x=>!(x.date===today&&x.session===s));
-
       db.lessons.push({
         id:`selected-${today}-${s}-${article.id}`,
         date:today,
@@ -170,6 +210,155 @@ function renderNews(){
       window.scrollTo({top:0,behavior:"smooth"});
     });
   });
+
+  section.querySelectorAll("[data-extract]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      const article=articles.find(a=>a.id===button.dataset.extract);
+      if(article)extractArticleVocabulary(article);
+    });
+  });
+}
+
+// 뉴스 제목과 RSS 요약에서 고급 어휘 후보를 고른다.
+function extractCandidates(article){
+  const text=(article.title||"")+" "+(article.summary||"");
+  const words=text.toLowerCase().match(/\b[a-z][a-z'-]{5,}\b/g)||[];
+  const counts={};
+
+  words.forEach(raw=>{
+    const word=raw.replace(/['-]/g,"");
+    if(word.length<6||STOPWORDS.has(word))return;
+    if(!/^[a-z]+$/.test(word))return;
+    counts[word]=(counts[word]||0)+1;
+  });
+
+  return Object.entries(counts)
+    .map(([word,count])=>({
+      word,
+      score:
+        Math.min(word.length,12)+
+        count*2+
+        (ADVANCED_WORDS.has(word)?12:0)
+    }))
+    .sort((a,b)=>b.score-a.score)
+    .slice(0,5)
+    .map(x=>x.word);
+}
+
+async function getWordInfo(word){
+  let part="";
+  let definition="";
+  let example="";
+  let meaning="한국어 뜻을 가져오지 못했어요.";
+
+  try{
+    const response=await fetch(
+      "https://api.dictionaryapi.dev/api/v2/entries/en/"+encodeURIComponent(word)
+    );
+
+    if(response.ok){
+      const data=await response.json();
+      const entry=data[0];
+      const meanings=entry.meanings||[];
+
+      part=meanings.map(m=>m.partOfSpeech||"").filter(Boolean).slice(0,2).join(", ");
+      definition=meanings
+        .slice(0,2)
+        .map(m=>m.definitions?.[0]?.definition||"")
+        .filter(Boolean)
+        .join(" / ");
+
+      example=meanings
+        .flatMap(m=>m.definitions||[])
+        .find(d=>d.example)?.example||"";
+    }
+  }catch(error){
+    console.log("Dictionary unavailable:",word,error);
+  }
+
+  try{
+    const response=await fetch(
+      "https://api.mymemory.translated.net/get?q="+
+      encodeURIComponent(word)+"&langpair=en|ko"
+    );
+
+    if(response.ok){
+      const data=await response.json();
+      const translated=data.responseData?.translatedText;
+      if(translated&&data.responseStatus===200)meaning=translated;
+    }
+  }catch(error){
+    console.log("Translation unavailable:",word,error);
+  }
+
+  return {word,part,definition,example,meaning};
+}
+
+async function extractArticleVocabulary(article){
+  const panel=$("#article-vocab-"+article.id);
+  if(!panel)return;
+
+  panel.innerHTML='<p class="muted">기사에서 어휘를 찾고 사전 정보를 가져오는 중이에요...</p>';
+
+  const candidates=extractCandidates(article);
+
+  if(!candidates.length){
+    panel.innerHTML='<p class="muted">이 기사 요약에서는 어휘 후보를 찾지 못했어요. 다른 기사를 선택해 주세요.</p>';
+    return;
+  }
+
+  const results=await Promise.all(candidates.map(getWordInfo));
+
+  results.forEach(item=>{
+    articleWordCache.set(item.word.toLowerCase(),item);
+  });
+
+  panel.innerHTML=`
+    <div style="margin-top:14px;padding:12px;background:rgba(127,127,127,.08);border-radius:10px">
+      <b>이 기사에서 찾은 핵심 어휘</b>
+      <p class="muted">제목과 RSS 요약에 등장한 단어를 분석했어요.</p>
+      ${results.map(item=>`
+        <div class="word" style="padding:12px 0;border-bottom:1px solid #ddd">
+          <b>${esc(item.word)}</b>
+          <div class="muted">${esc(item.part||"")}</div>
+          <p><b>한국어 뜻</b>: ${esc(item.meaning)}</p>
+          ${item.definition?`<p class="muted"><b>영영 정의</b>: ${esc(item.definition)}</p>`:""}
+          ${item.example?`<p class="muted"><b>예문</b>: ${esc(item.example)}</p>`:""}
+          <button class="btn secondary" data-save-article-word="${esc(item.word.toLowerCase())}">단어장에 저장</button>
+        </div>
+      `).join("")}
+    </div>
+  `;
+
+  panel.querySelectorAll("[data-save-article-word]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      const item=articleWordCache.get(button.dataset.saveArticleWord);
+      if(item)saveVocabularyWord(item,button);
+    });
+  });
+}
+
+function saveVocabularyWord(item,button){
+  db.vocabulary=db.vocabulary||[];
+
+  if(db.vocabulary.some(w=>w.word.toLowerCase()===item.word.toLowerCase())){
+    button.textContent="이미 저장됨";
+    button.disabled=true;
+    return;
+  }
+
+  db.vocabulary.push({
+    word:item.word,
+    part:item.part,
+    meaning:item.meaning,
+    definition:item.definition,
+    example:item.example,
+    savedAt:new Date().toISOString()
+  });
+
+  save();
+  button.textContent="저장 완료";
+  button.disabled=true;
 }
 
 function render(){
@@ -249,7 +438,6 @@ function render(){
 function store(done){
   const l=current();
   const r=rec(l.id);
-
   r.summary=$("#summary").value;
   r.dictation=$("#dictation")?.value||"";
   r.notes=$("#notes").value;
@@ -285,14 +473,13 @@ function renderHistory(){
   $("#lesson").innerHTML=html;
 }
 
-async function renderVocabulary(){
+function renderVocabulary(){
   db.vocabulary=db.vocabulary||[];
-
   const words=db.vocabulary;
 
   $("#lesson").innerHTML=`
     <h2>나만의 영어 단어장</h2>
-    <p class="muted">뉴스를 읽으며 발견한 영어 단어를 검색하고 저장하세요.</p>
+    <p class="muted">뉴스 어휘를 추출하거나 직접 검색해 저장하세요.</p>
 
     <div class="fieldtitle">단어 검색</div>
     <div class="actions">
@@ -301,7 +488,6 @@ async function renderVocabulary(){
     </div>
 
     <div id="wordResult"></div>
-
     <div class="fieldtitle">저장한 단어 ${words.length}개</div>
     <div id="savedWords">
       ${words.length?words.slice().reverse().map((w,i)=>`
@@ -319,7 +505,7 @@ async function renderVocabulary(){
 
   $("#searchWord").onclick=searchVocabulary;
   $("#wordSearch").onkeydown=e=>{
-    if(e.key==="Enter") searchVocabulary();
+    if(e.key==="Enter")searchVocabulary();
   };
 
   $("#savedWords").querySelectorAll("[data-delete-word]").forEach(btn=>{
@@ -347,7 +533,7 @@ async function searchVocabulary(){
       "https://api.dictionaryapi.dev/api/v2/entries/en/"+encodeURIComponent(word)
     );
 
-    if(!dictionaryResponse.ok) throw new Error("Word not found");
+    if(!dictionaryResponse.ok)throw new Error("Word not found");
 
     const data=await dictionaryResponse.json();
     const entry=data[0];
@@ -374,7 +560,8 @@ async function searchVocabulary(){
       if(translationResponse.ok){
         const translationData=await translationResponse.json();
         const translated=translationData.responseData?.translatedText;
-        if(translated && translationData.responseStatus===200){
+
+        if(translated&&translationData.responseStatus===200){
           korean=translated;
         }
       }
@@ -394,26 +581,10 @@ async function searchVocabulary(){
     `;
 
     $("#saveWord").onclick=()=>{
-      db.vocabulary=db.vocabulary||[];
-
-      if(db.vocabulary.some(w=>w.word.toLowerCase()===entry.word.toLowerCase())){
-        alert("이미 저장된 단어예요.");
-        return;
-      }
-
-      db.vocabulary.push({
-        word:entry.word,
-        part,
-        meaning:korean,
-        definition,
-        example,
-        savedAt:new Date().toISOString()
-      });
-
-      save();
-      renderVocabulary();
+      const item={word:entry.word,part,meaning:korean,definition,example};
+      const button=$("#saveWord");
+      saveVocabularyWord(item,button);
     };
-
   }catch(error){
     result.innerHTML=`
       <p class="muted">검색 결과를 찾지 못했어요.</p>
@@ -440,7 +611,6 @@ $("#addLesson")?.addEventListener("click",()=>{
   }
 
   const status=$("#customStatus").value;
-
   db.lessons=db.lessons.filter(x=>!(x.date===today&&x.session===session));
 
   db.lessons.push({
