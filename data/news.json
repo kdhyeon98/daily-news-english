@@ -1,6 +1,141 @@
 {
-  "updated_at": "2026-11-18T22:00:33.045798+00:00",
+  "updated_at": "2026-11-19T22:00:28.253101+00:00",
   "articles": [
+    {
+      "id": "8febbadd7da71c0f",
+      "title": "Anthropic becomes most valuable AI firm as shares soar in stock market debut",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
+      "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
+      "published": "Thu, 19 Nov 2026 21:38:42 GMT"
+    },
+    {
+      "id": "968ebb26e1aec61e",
+      "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
+      "summary": "The unprecedented International Court of Justice verdict concerns a 2017 military crackdown that killed thousands.",
+      "published": "Thu, 19 Nov 2026 20:07:02 GMT"
+    },
+    {
+      "id": "eeaf96b77ff1efc7",
+      "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss",
+      "summary": "While the presidents have previously met for one-on-one meetings, this is their first trilateral discussion.",
+      "published": "Thu, 19 Nov 2026 17:38:22 GMT"
+    },
+    {
+      "id": "92ca9ff247094edd",
+      "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+      "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin.",
+      "published": "Thu, 19 Nov 2026 21:21:43 GMT"
+    },
+    {
+      "id": "1548d446c7c63613",
+      "title": "Dozens missing after boat carrying migrants sinks off Senegal's coast",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&at_campaign=rss",
+      "summary": "At least four bodies have been recovered from the boat which was reportedly carrying between 50 and 100 people.",
+      "published": "Thu, 19 Nov 2026 15:52:26 GMT"
+    },
+    {
+      "id": "ecb256426dd1c275",
+      "title": "Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+      "summary": "The bridge - a symbol of Russia's occupation of the Crimean Peninsula - suffered major damaged following a combined attack by Ukraine earlier this week.",
+      "published": "Thu, 19 Nov 2026 13:07:35 GMT"
+    },
+    {
+      "id": "4a8309431ec4f087",
+      "title": "Fiona the hippo dies after swallowing a hat at Cincinnati Zoo",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cwz0k3172xzko?at_medium=RSS&at_campaign=rss",
+      "summary": "\"She fought until she couldn’t anymore,\" the Cincinnati Zoo said in a statement. Fiona became ill a few days after the incident.",
+      "published": "Thu, 19 Nov 2026 21:26:10 GMT"
+    },
+    {
+      "id": "877afe82f192b0c8",
+      "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&at_campaign=rss",
+      "summary": "Châtaigniers en fleurs was painted in 1890 in the final two months of Vincent van Gogh's life.",
+      "published": "Thu, 19 Nov 2026 00:49:19 GMT"
+    },
+    {
+      "id": "0f1dfbdae502ca8b",
+      "title": "Venezuela signs military deal with US less than a year after Maduro's removal",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo?at_medium=RSS&at_campaign=rss",
+      "summary": "The US Secretary of Defence says Venezuela has \"gone from our most aggressive regional threat to a compliant security partner\".",
+      "published": "Thu, 19 Nov 2026 13:31:23 GMT"
+    },
+    {
+      "id": "20aed2f8500b9a48",
+      "title": "Susan Smith denied parole again 32 years after drowning her two sons",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/ckdd1y09eqjmo?at_medium=RSS&at_campaign=rss",
+      "summary": "At a hearing on the possibility of parole, Smith said she wished she could change the past, and her two children \"did not deserve to die\".",
+      "published": "Thu, 19 Nov 2026 17:23:34 GMT"
+    },
+    {
+      "id": "eb1e212b48f5a233",
+      "title": "US consortium wins huge Kenya mining deal, beating Chinese rivals",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cm9q84gp0gr3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The Mrima Hill site is estimated to hold deposits of critical minerals worth more than $60bn (£45bn).",
+      "published": "Thu, 19 Nov 2026 12:56:30 GMT"
+    },
+    {
+      "id": "1003cd7da12c85aa",
+      "title": "Survivors of Uganda's deadly landslide seek justice at the UN",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c920xgxp5785o?at_medium=RSS&at_campaign=rss",
+      "summary": "Survivors reject relocation plans they say ignore their safety, land rights and livelihoods.",
+      "published": "Thu, 19 Nov 2026 09:21:54 GMT"
+    },
+    {
+      "id": "29b28d61ecc7b2f0",
+      "title": "Florida pastor found guilty over role in assassination of Haitian president",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cm702q0lg50po?at_medium=RSS&at_campaign=rss",
+      "summary": "Christian Emmanuel Sanon is convicted of involvement in the plot that resulted in the killing of Jovenel Moïse.",
+      "published": "Thu, 19 Nov 2026 11:44:57 GMT"
+    },
+    {
+      "id": "4bae7c9dd7b588be",
+      "title": "Israeli military completes ground operation in Gaza beyond Yellow Line",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
+      "summary": "Hamas condemned the incursion, which the Israeli military said was to dismantle a \"terror tunnel\", as a \"flagrant\" ceasefire violation.",
+      "published": "Thu, 19 Nov 2026 17:03:23 GMT"
+    },
+    {
+      "id": "5b76b8d80d91a943",
+      "title": "Elon Musk says record $446m spending on US midterms was 'pretty foolish'",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o?at_medium=RSS&at_campaign=rss",
+      "summary": "The multi-billionaire also said he was \"not Maga\", distancing himself from the political movement linked to Trump.",
+      "published": "Thu, 19 Nov 2026 02:59:06 GMT"
+    },
     {
       "id": "3899f95c62c8755c",
       "title": "Inside the old gas pipeline where Ukraine is fighting an underground war with Russia",
@@ -11,31 +146,22 @@
       "published": "Wed, 18 Nov 2026 17:00:40 GMT"
     },
     {
-      "id": "e8d478620ac5766e",
-      "title": "'The drones don't fly here' - BBC reports from Ukraine's new front line",
+      "id": "a841d7eae2401c93",
+      "title": "Russian arrested for spying on US defence company Palantir over Ukraine support",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c32l507ev4v4o?at_medium=RSS&at_campaign=rss",
-      "summary": "Ukrainian forces are fighting Russian troops in an old Soviet tunnel in the Kharkiv region.",
-      "published": "Wed, 18 Nov 2026 17:00:04 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cq20xg80ly47o?at_medium=RSS&at_campaign=rss",
+      "summary": "The suspect followed employees and was found with fake US IDs and two Russian passports, prosecutors say.",
+      "published": "Wed, 18 Nov 2026 23:28:03 GMT"
     },
     {
-      "id": "a38f101401d45588",
-      "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
+      "id": "0082b563af8d4e67",
+      "title": "Parents jailed for torture and death of four-year-old girl found along French motorway in 1987",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss",
-      "summary": "The three leaders will meet together for the first time on Thursday during a closely-watched summit.",
-      "published": "Wed, 18 Nov 2026 16:10:44 GMT"
-    },
-    {
-      "id": "4bae7c9dd7b588be",
-      "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
-      "summary": "Hamas condemns the incursion, which the Israeli military says is dismantling a \"terror tunnel\", as a \"flagrant\" ceasefire violation.",
-      "published": "Wed, 18 Nov 2026 20:14:57 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c6lyw490z14jo?at_medium=RSS&at_campaign=rss",
+      "summary": "Inass Touloub's body was found along the A10 road in 1987, bearing marks of abuse, and was not identified until 2018.",
+      "published": "Wed, 18 Nov 2026 15:39:57 GMT"
     },
     {
       "id": "c9225e5cee2bd860",
@@ -54,24 +180,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o?at_medium=RSS&at_campaign=rss",
       "summary": "Bahrain says it was also attacked by Iran following a US air strike on the Iranian island of Qeshm in the Gulf on Tuesday.",
       "published": "Wed, 18 Nov 2026 13:04:48 GMT"
-    },
-    {
-      "id": "d8da16886db7756f",
-      "title": "Grand Theft Auto 6 is a masterpiece, say critics",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw8r75xm8v4po?at_medium=RSS&at_campaign=rss",
-      "summary": "Critics have their say as to whether GTA 6, the most anticipated video game of all time, lives up to the hype.",
-      "published": "Wed, 18 Nov 2026 17:34:25 GMT"
-    },
-    {
-      "id": "0082b563af8d4e67",
-      "title": "Parents jailed for torture and death of four-year-old girl found along French motorway in 1987",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c6lyw490z14jo?at_medium=RSS&at_campaign=rss",
-      "summary": "Inass Touloub's body was found along the A10 road in 1987, bearing marks of abuse, and was not identified until 2018.",
-      "published": "Wed, 18 Nov 2026 15:39:57 GMT"
     },
     {
       "id": "959581aa59f46cda",
@@ -128,157 +236,76 @@
       "published": "Wed, 18 Nov 2026 09:28:35 GMT"
     },
     {
-      "id": "58ccec08be884d74",
-      "title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
+      "id": "c51e08d264041602",
+      "title": "Rohingya genocide: What was said in court and what happens now?",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
-      "summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang.",
-      "published": "Wed, 18 Nov 2026 01:18:18 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/c60qj10j0ld5o?at_medium=RSS&at_campaign=rss",
+      "summary": "The verdict marks the first time a state has ever been found to have committed genocide by an international court.",
+      "published": "Thu, 19 Nov 2026 17:35:05 GMT"
     },
     {
-      "id": "ccc4389da68ad4d0",
-      "title": "Waymo pulls driverless taxis from all US freeways",
+      "id": "d9c4d2e33d041e62",
+      "title": "What did Trump, Xi and Putin get out of their historic meeting?",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmy86pp336qlo?at_medium=RSS&at_campaign=rss",
-      "summary": "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways following a series of traffic incidents.",
-      "published": "Wed, 18 Nov 2026 03:07:22 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/c63rgnq05pdwo?at_medium=RSS&at_campaign=rss",
+      "summary": "Trump, Putin and Xi have issued a \"joint declaration of peace\" after historical trilateral talks, but what did they get out of meeting?",
+      "published": "Thu, 19 Nov 2026 17:23:29 GMT"
     },
     {
-      "id": "e20cf5e31880fcb8",
-      "title": "Pakistani man sentenced to 27 years for Iran-backed plot to kill Trump",
+      "id": "7a2a34188fae0860",
+      "title": "Indian driver wins $1.3m in life-changing lottery prize",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm15ezz8n394o?at_medium=RSS&at_campaign=rss",
-      "summary": "Asif Merchant was found guilty in March of trying to hire undercover FBI agents as hitmen to assassinate US officials, including the president.",
-      "published": "Wed, 18 Nov 2026 02:29:52 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/cke89vdn75gyo?at_medium=RSS&at_campaign=rss",
+      "summary": "A truck driver's fortunes have changed overnight after he won a Diwali lottery in the northern Indian state of Punjab.",
+      "published": "Thu, 19 Nov 2026 11:38:09 GMT"
     },
     {
-      "id": "770394a85193c56f",
-      "title": "Rubio says US not 'under systemic attack' after series of tech outages",
+      "id": "dd4c81a285670870",
+      "title": "Trump greets 'my friend' Putin as pair shake hands",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/crkgvxxwpwz2o?at_medium=RSS&at_campaign=rss",
-      "summary": "Secretary of State Marco Rubio said there was \"zero evidence\" supporting theories online that recent disruptions affecting Microsoft, banks and flights are connected.",
-      "published": "Wed, 18 Nov 2026 04:57:06 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/c6j9m19llmv3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The pair met ahead of a trilateral meeting later with Chinese leader Xi Jinping.",
+      "published": "Thu, 19 Nov 2026 08:31:09 GMT"
     },
     {
-      "id": "b6eb95c1fd1b9f63",
-      "title": "Irishman charged with destroying US military aircraft with axe",
+      "id": "4c8aeede10ce74e4",
+      "title": "Why has Waymo pulled all its driverless cars from US freeways?",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwd01jjl5zzzo?at_medium=RSS&at_campaign=rss",
-      "summary": "The $60m (£45m) plane was destroyed in an hours-long raid by an anti-war protester, according to the FBI.",
-      "published": "Wed, 18 Nov 2026 02:00:37 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/cmx2ryw97x4go?at_medium=RSS&at_campaign=rss",
+      "summary": "The vehicles currently operate in 15 US cities, though freeway rides are only offered in a handful, including San Francisco and Los Angeles.",
+      "published": "Wed, 18 Nov 2026 23:47:46 GMT"
     },
     {
-      "id": "09543f7a2b137148",
-      "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+      "id": "b294a552230e3405",
+      "title": "This is a remarkable diplomatic moment for China's Xi - but it comes with pitfalls",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-      "summary": "Ukraine says the missile and drone attack on the strategic bridge in the Russian-annexed Crimea took weeks to plan.",
-      "published": "Tue, 17 Nov 2026 21:24:35 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o?at_medium=RSS&at_campaign=rss",
+      "summary": "The meeting comes with challenges as there are things Xi does not appear keen to discuss with Putin and Trump.",
+      "published": "Thu, 19 Nov 2026 04:42:52 GMT"
     },
     {
-      "id": "cd623bac54324ccf",
-      "title": "US loses measles elimination status after 26 years amid record case numbers",
+      "id": "f93ed37b5789392d",
+      "title": "'It's a dream come true' – South African DJ celebrates featuring in GTA 6",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c977p71jx0xxo?at_medium=RSS&at_campaign=rss",
-      "summary": "States have reported over 5,400 cases and 10 measles-related deaths for the first time since the early 1990s.",
-      "published": "Tue, 17 Nov 2026 21:04:00 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/crx20q3qy0vxo?at_medium=RSS&at_campaign=rss",
+      "summary": "DJ lag, one of South Africa's best-known electronic music producers, is among several African stars to feature on Grand Theft Auto 6.",
+      "published": "Thu, 19 Nov 2026 10:32:10 GMT"
     },
     {
-      "id": "35ec7fce43bd571d",
-      "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
+      "id": "cfb826ce4266e761",
+      "title": "'Frustrated' - Democrats remain a divided party despite winning big in midterms",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Metropolitan Police say he has been taken into custody by the US Military over suspected national security and espionage allegations.",
-      "published": "Tue, 17 Nov 2026 22:46:30 GMT"
-    },
-    {
-      "id": "4c41059aab1950cd",
-      "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cq7825234lgmo?at_medium=RSS&at_campaign=rss",
-      "summary": "Moscow has targeted bridges in Kyiv, while Ukraine severely damaged a critical bridge linking Russia to occupied Crimea.",
-      "published": "Tue, 17 Nov 2026 17:19:57 GMT"
-    },
-    {
-      "id": "02f09a3f2c48291e",
-      "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqrlg377638yo?at_medium=RSS&at_campaign=rss",
-      "summary": "Palestinians say there was an attack by settlers in al-Duyuk al-Tahta, while the Israeli military says the settlers fired after being attacked.",
-      "published": "Tue, 17 Nov 2026 20:30:20 GMT"
-    },
-    {
-      "id": "19e6d13053833b33",
-      "title": "William and Kate celebrate Earthshot Prize winners in Mumbai",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqlykve012d1o?at_medium=RSS&at_campaign=rss",
-      "summary": "The Prince and Princess of Wales were joined by sporting and acting stars for the annual environmental awards ceremony.",
-      "published": "Tue, 17 Nov 2026 18:20:36 GMT"
-    },
-    {
-      "id": "3b43fd35f7bac6b0",
-      "title": "New video shows explosions moments before part of Crimea Bridge collapses",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/ckvg28jy77z5o?at_medium=RSS&at_campaign=rss",
-      "summary": "BBC Verify analyses footage showing the final moments before part of the bridge fell and videos showing the scale of destruction.",
-      "published": "Wed, 18 Nov 2026 17:09:43 GMT"
-    },
-    {
-      "id": "a2c6319ae5d8e724",
-      "title": "Fiona the hippo undergoing care after swallowing a hat at Cincinnati Zoo",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm2d93z0e9gjo?at_medium=RSS&at_campaign=rss",
-      "summary": "Zookeepers say she cannot have surgery but are providing fluids and supportive care to help her pass the hat.",
-      "published": "Wed, 18 Nov 2026 16:05:26 GMT"
-    },
-    {
-      "id": "68be44d626faa550",
-      "title": "BBC correspondents discuss historic Trump, Xi and Putin meeting",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cqp86k23d84ro?at_medium=RSS&at_campaign=rss",
-      "summary": "The BBC’s Laura Bicker, Steve Rosenberg and Nada Tawfik explain everything you need to know ahead of the unprecedented trilateral meeting.",
-      "published": "Wed, 18 Nov 2026 08:33:32 GMT"
-    },
-    {
-      "id": "9f587a01257e3cbb",
-      "title": "Steve Rosenberg: Historic talks with Xi and Trump are a coup for Putin",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c9n70gd320mpo?at_medium=RSS&at_campaign=rss",
-      "summary": "Thursday's meeting between the leaders of US, China and Russia will give Vladimir Putin a big stage - but it does not bring him closer to winning the war in Ukraine.",
-      "published": "Wed, 18 Nov 2026 10:53:21 GMT"
-    },
-    {
-      "id": "475ca03637df2db4",
-      "title": "Can a US-backed mineral highway bring peace and prosperity to DR Congo?",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cx053jrv9rz9o?at_medium=RSS&at_campaign=rss",
-      "summary": "The Lobito Corridor is at the centre of a US-backed effort to secure access to Africa's critical minerals.",
-      "published": "Wed, 18 Nov 2026 05:11:42 GMT"
-    },
-    {
-      "id": "0c76433c2bc5ed53",
-      "title": "Pakistan's solar revolution is so successful the national grid is lagging behind",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/ckvg2n2q3103o?at_medium=RSS&at_campaign=rss",
-      "summary": "People installing their own solar panels has helped boost the solar share of Pakistan's electricity from 1% to 28%.",
-      "published": "Tue, 17 Nov 2026 23:34:56 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c6174edpp5e8o?at_medium=RSS&at_campaign=rss",
+      "summary": "After winning power in Congress, a Democratic conference in Denver was animated with talk on the best way forward.",
+      "published": "Thu, 19 Nov 2026 11:43:06 GMT"
     },
     {
       "id": "4890d4f9638ab71d",
@@ -287,16 +314,70 @@
       "topic": "World",
       "url": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
       "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich.",
-      "published": "Wed, 18 Nov 2026 13:55:14 GMT"
+      "published": "Wed, 18 Nov 2026 23:42:07 GMT"
     },
     {
-      "id": "6df3cd1195315565",
-      "title": "Who to watch in Spain's election race",
+      "id": "d4bb422603f1c4d5",
+      "title": "India's religious make-up - what a new Pew study says about Hindus and Muslims",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cxr5g4lyp94no?at_medium=RSS&at_campaign=rss",
-      "summary": "Spain votes on 29 November, with the conservatives leading most polls after eight years of Socialist-led rule.",
-      "published": "Wed, 18 Nov 2026 11:44:25 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cqd01epyrz1do?at_medium=RSS&at_campaign=rss",
+      "summary": "India will remain predominantly Hindu, though its Muslim population is projected to grow faster, according to a new survey.",
+      "published": "Thu, 19 Nov 2026 00:38:52 GMT"
+    },
+    {
+      "id": "1c9f1ec88723e6c1",
+      "title": "Simon Jack: Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o?at_medium=RSS&at_campaign=rss",
+      "summary": "Anthropic's hotly anticipated IPO is expected to put it in the top 10 most valuable US companies, but the future is uncertain.",
+      "published": "Wed, 18 Nov 2026 21:28:08 GMT"
+    },
+    {
+      "id": "93d5ed52214d6355",
+      "title": "McDonald's sex abuse: 'They were waiting for the younger girls to turn 18'",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c6x2eve321jno?at_medium=RSS&at_campaign=rss",
+      "summary": "A former McDonald's worker calls on the firm to “change the way they treat younger employees” as a judge rules a legal case against the chain can go ahead.",
+      "published": "Thu, 19 Nov 2026 00:00:59 GMT"
+    },
+    {
+      "id": "4c58e294624baba8",
+      "title": "Viagogo may have broken law on hidden fees, watchdog provisionally finds",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cmvg2ex7j30lo?at_medium=RSS&at_campaign=rss",
+      "summary": "The UK's competition body says initial findings suggest the ticket-reselling website used drip pricing.",
+      "published": "Thu, 19 Nov 2026 13:35:52 GMT"
+    },
+    {
+      "id": "010b3a1c8069f2a8",
+      "title": "Europe plans to catch the next computer chip wave",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cqglwjd450k0o?at_medium=RSS&at_campaign=rss",
+      "summary": "Europe hopes to be a leader in a new generation of computer chips which use light to process data.",
+      "published": "Wed, 18 Nov 2026 00:00:24 GMT"
+    },
+    {
+      "id": "1d23156725b57962",
+      "title": "Crew unaware of risks before Mike Lynch's yacht Bayesian sank, say investigators",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c6e9kn15z9d7o?at_medium=RSS&at_campaign=rss",
+      "summary": "The vessel sank off the coast of northern Sicily, killing seven people including British tech tycoon Mike Lynch.",
+      "published": "Thu, 19 Nov 2026 00:05:31 GMT"
+    },
+    {
+      "id": "5a9cd3303a442ab6",
+      "title": "Gilts v kilts: What is happening with Scottish government bonds?",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy8pgj2z8vo?at_medium=RSS&at_campaign=rss",
+      "summary": "MSPs have heard both the pros and cons of the government's plan to launch its first ever bond to the market.",
+      "published": "Thu, 19 Nov 2026 06:15:57 GMT"
     },
     {
       "id": "68393aec55556476",
@@ -308,6 +389,15 @@
       "published": "Wed, 18 Nov 2026 13:17:06 GMT"
     },
     {
+      "id": "787ec3ea015eb548",
+      "title": "Anthropic raises $81bn in record-breaking stock market debut",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+      "summary": "The company behind the Claude chatbot will become one of the most valuable firms in the world.",
+      "published": "Thu, 19 Nov 2026 15:58:58 GMT"
+    },
+    {
       "id": "0108746f3e45d6f1",
       "title": "Heating bills, chocolate and cat food: What the inflation figures mean for you",
       "source": "BBC",
@@ -317,6 +407,15 @@
       "published": "Wed, 18 Nov 2026 13:10:01 GMT"
     },
     {
+      "id": "58ccec08be884d74",
+      "title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+      "summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang.",
+      "published": "Wed, 18 Nov 2026 01:18:18 GMT"
+    },
+    {
       "id": "9194ddb079718aec",
       "title": "How important are Nvidia and Jensen Huang to the US economy?",
       "source": "BBC",
@@ -324,15 +423,6 @@
       "url": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
       "summary": "The former Nvidia chief executive has been at the centre of the artificial intelligence boom.",
       "published": "Wed, 18 Nov 2026 06:04:21 GMT"
-    },
-    {
-      "id": "010b3a1c8069f2a8",
-      "title": "Europe plans to catch the next computer chip wave",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cqglwjd450k0o?at_medium=RSS&at_campaign=rss",
-      "summary": "Europe hopes to be a leader in a new generation of computer chips which use light to process data.",
-      "published": "Wed, 18 Nov 2026 00:00:24 GMT"
     },
     {
       "id": "e2ba4047b138bc99",
@@ -371,6 +461,15 @@
       "published": "Wed, 18 Nov 2026 08:47:06 GMT"
     },
     {
+      "id": "ccc4389da68ad4d0",
+      "title": "Waymo pulls driverless taxis from all US freeways",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cmy86pp336qlo?at_medium=RSS&at_campaign=rss",
+      "summary": "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways following a series of traffic incidents.",
+      "published": "Wed, 18 Nov 2026 03:07:22 GMT"
+    },
+    {
       "id": "2d20c91af3ce8bf6",
       "title": "As Trump and Xi meet, China's AI dreams face an unexpected hurdle: the Nvidia spy scandal",
       "source": "BBC",
@@ -387,33 +486,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cw3djdjk5d7ko?at_medium=RSS&at_campaign=rss",
       "summary": "How many jobs are there where you live and in which sectors are you most likely to find an opening?",
       "published": "Tue, 17 Nov 2026 12:35:53 GMT"
-    },
-    {
-      "id": "8760c088ea7491c5",
-      "title": "We can't afford to hire under-25s, say firms. Will Milburn plans help?",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6d01e8m15mko?at_medium=RSS&at_campaign=rss",
-      "summary": "The proposal to cut employers' National Insurance costs is \"essential\" to tackling the Neet problem, one business group says.",
-      "published": "Tue, 17 Nov 2026 15:56:04 GMT"
-    },
-    {
-      "id": "a4c286a5351199ba",
-      "title": "We couldn't afford a house alone, so we bought one with strangers",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c5742lwdyzglo?at_medium=RSS&at_campaign=rss",
-      "summary": "People who can't afford to get on the housing ladder are buying homes with someone they don't know.",
-      "published": "Tue, 17 Nov 2026 00:00:02 GMT"
-    },
-    {
-      "id": "a126a11490f7a77e",
-      "title": "How new US chip restrictions on South East Asia will hit China",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cwq6e2qgvmlgo?at_medium=RSS&at_campaign=rss",
-      "summary": "The new rules restrict chip exports and also access to their computing power, which China relies on heavily.",
-      "published": "Tue, 17 Nov 2026 14:25:45 GMT"
     },
     {
       "id": "64838ee6839b9ce3",
@@ -551,6 +623,33 @@
       "published": "Thu, 08 Oct 2026 23:09:56 GMT"
     },
     {
+      "id": "23704d6b091a33a8",
+      "title": "More support for households reliant on heating oil",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cwm2mj7vezr3o?at_medium=RSS&at_campaign=rss",
+      "summary": "North Northamptonshire Council is encouraging eligible residents to apply for more support.",
+      "published": "Thu, 19 Nov 2026 15:22:31 GMT"
+    },
+    {
+      "id": "b57113ab172e75fa",
+      "title": "Increase in direct cremations since pandemic",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/ck5ywnr59z85o?at_medium=RSS&at_campaign=rss",
+      "summary": "A 2026 Cost of Dying Report found direct cremation was now chosen for about one in five funerals.",
+      "published": "Thu, 19 Nov 2026 06:23:22 GMT"
+    },
+    {
+      "id": "a2af965ea938228e",
+      "title": "Leftover pumpkins help deliver 1,000th free meal",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c6x29jxgkjpno?at_medium=RSS&at_campaign=rss",
+      "summary": "\"It's a really tough time for a lot of people,\" a sustainable food organisation says.",
+      "published": "Thu, 19 Nov 2026 06:04:30 GMT"
+    },
+    {
       "id": "e3c0c955248585b5",
       "title": "How high is UK inflation and how will you be affected?",
       "source": "BBC",
@@ -567,15 +666,6 @@
       "url": "https://www.bbc.co.uk/news/articles/c6kgr03jlv4ro?at_medium=RSS&at_campaign=rss",
       "summary": "Gloucester Cathedral has been going through a restructure due to \"significant financial pressure\".",
       "published": "Wed, 18 Nov 2026 15:14:34 GMT"
-    },
-    {
-      "id": "dd77d41a37831d11",
-      "title": "MP urges council to speed up heating oil payments",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cm792dqz4qvyo?at_medium=RSS&at_campaign=rss",
-      "summary": "About 23,000 households use heating oil in Northumberland and face increasing bills this winter.",
-      "published": "Wed, 18 Nov 2026 08:48:26 GMT"
     },
     {
       "id": "27179cdad45769a7",
@@ -623,6 +713,24 @@
       "published": "Tue, 30 Jun 2026 23:05:19 GMT"
     },
     {
+      "id": "0e74cf8e826ca907",
+      "title": "Who are the investors ready to jump on Anthropic?",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/videos/c6y0x84xx22wo?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC's Samira Hussain speaks to a retail investor eagerly waiting for the AI company's stock to go live on Thursday.",
+      "published": "Thu, 19 Nov 2026 01:22:38 GMT"
+    },
+    {
+      "id": "df58c3ac4bf77bb9",
+      "title": "Business Daily",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/sounds/play/w3ct8gm9?at_medium=RSS&at_campaign=rss",
+      "summary": "We examine the business of the Claude chatbot maker as it starts selling shares",
+      "published": "Wed, 18 Nov 2026 21:30:00 GMT"
+    },
+    {
       "id": "0e23fc84e68fcc20",
       "title": "Immigration arrests after organised crime blitz",
       "source": "BBC",
@@ -632,31 +740,31 @@
       "published": "Tue, 17 Nov 2026 10:49:58 GMT"
     },
     {
-      "id": "bd12565e3dc74511",
-      "title": "Business Daily",
+      "id": "eb2f6d1f6a76ebef",
+      "title": "Dutch watchdog tells people not to buy AI smart glasses",
       "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/sounds/play/w3ct8grt?at_medium=RSS&at_campaign=rss",
-      "summary": "Jensen Huang quit Nvidia, but the AI chip boom rolls on. What's changed is who's paying?",
-      "published": "Mon, 16 Nov 2026 21:30:00 GMT"
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/ckq6eyrzrzy5o?at_medium=RSS&at_campaign=rss",
+      "summary": "Tests of glasses showed some misread medicine instructions or pretended to have called an ambulance",
+      "published": "Thu, 19 Nov 2026 16:33:17 GMT"
     },
     {
-      "id": "bb07533395a6b546",
-      "title": "'Parents are offering to pay kids' wages': Salon owner",
+      "id": "db5722a0b368ed2e",
+      "title": "UK joins in GTA 6 frenzy as game becomes available worldwide",
       "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/videos/c60rkn7vdjxxo?at_medium=RSS&at_campaign=rss",
-      "summary": "National Insurance (NI) paid by firms on under-25s should be gradually lowered to help create more jobs, according to a new report from former government minister Alan Milburn, due to be published on Tuesday.",
-      "published": "Mon, 16 Nov 2026 18:05:17 GMT"
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/c6z74ep2n17zo?at_medium=RSS&at_campaign=rss",
+      "summary": "The game, which was in development for 13 years, is set become one of the world's most popular entertainment products ever.",
+      "published": "Thu, 19 Nov 2026 12:26:39 GMT"
     },
     {
-      "id": "16ff3b09a2a774d0",
-      "title": "The rise of 'housefishing' by estate agents",
+      "id": "d8da16886db7756f",
+      "title": "Grand Theft Auto 6 is a masterpiece, say critics",
       "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/videos/cmx295lz17wzo?at_medium=RSS&at_campaign=rss",
-      "summary": "The rise of 'housefishing' by estate agents.",
-      "published": "Sat, 14 Nov 2026 07:45:50 GMT"
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cw8r75xm8v4po?at_medium=RSS&at_campaign=rss",
+      "summary": "Critics have their say as to whether GTA 6, the most anticipated video game of all time, lives up to the hype.",
+      "published": "Wed, 18 Nov 2026 17:34:25 GMT"
     },
     {
       "id": "08a6226e73776bd3",
@@ -675,24 +783,6 @@
       "url": "https://www.bbc.co.uk/news/videos/cx1l0vm87yl9o?at_medium=RSS&at_campaign=rss",
       "summary": "Microsoft, major US banks, Apple and Air Traffic authorities have been hit over recent days by tech glitches.",
       "published": "Wed, 18 Nov 2026 05:10:02 GMT"
-    },
-    {
-      "id": "2b4aebc655461a30",
-      "title": "NHS data contract to stay with Palantir until 2029",
-      "source": "BBC",
-      "topic": "Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cqvg27zpm8w8o?at_medium=RSS&at_campaign=rss",
-      "summary": "Despite calls from some Labour MPs to end the arrangement with Palantir, ministers say a new contract will not be awarded until 2029.",
-      "published": "Tue, 17 Nov 2026 12:00:12 GMT"
-    },
-    {
-      "id": "55ee5feb0ebc0de1",
-      "title": "Pretending to be in New Zealand, booking leave and buying consoles - the lengths fans are going to for GTA 6",
-      "source": "BBC",
-      "topic": "Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cm4gn9xnn1ppo?at_medium=RSS&at_campaign=rss",
-      "summary": "Sensor Tower estimates the game has already made $1.18bn from pre-orders across PlayStation and Xbox",
-      "published": "Tue, 17 Nov 2026 11:49:01 GMT"
     },
     {
       "id": "1b098827987d9fe3",
@@ -767,6 +857,15 @@
       "published": "Sat, 26 Sep 2026 01:00:13 GMT"
     },
     {
+      "id": "fa6ad01cfc568813",
+      "title": "Wading bird called Phil tracked in epic migration to Siberia and back",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c6qj5dl29zqro?at_medium=RSS&at_campaign=rss",
+      "summary": "A bird has astonished conservationists by completing a 6,800-mile round trip to Siberia and back.",
+      "published": "Thu, 19 Nov 2026 13:35:29 GMT"
+    },
+    {
       "id": "c3b22e300a070dce",
       "title": "Torrential rain causes widespread flooding in South Florida",
       "source": "BBC",
@@ -801,105 +900,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cm752w35lkz3o?at_medium=RSS&at_campaign=rss",
       "summary": "The BBC looks at why in a dry summer with few sewage spills, one bathing site failed so many water quality tests.",
       "published": "Wed, 18 Nov 2026 06:12:44 GMT"
-    },
-    {
-      "id": "b2d5638f441152da",
-      "title": "Government risks missing climate targets if EV rules weakened, adviser warns",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/c63rgqg5l9l2o?at_medium=RSS&at_campaign=rss",
-      "summary": "The UK could miss legally binding climate targets if EV targets are cut, an adviser warns",
-      "published": "Wed, 18 Nov 2026 00:44:48 GMT"
-    },
-    {
-      "id": "7939e37c21a64040",
-      "title": "Fears toxic lagoon fire led to cancer and miscarriages",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/videos/cw074g4jk87vo?at_medium=RSS&at_campaign=rss",
-      "summary": "The incident took place in Llwyneinion in August 1980.",
-      "published": "Tue, 17 Nov 2026 22:39:23 GMT"
-    },
-    {
-      "id": "b68a91fc04cc8f0a",
-      "title": "Campaigners take claim 'regulatory gap' risks poultry farms polluting rivers to High Court",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/cm894x41jw54o?at_medium=RSS&at_campaign=rss",
-      "summary": "It follows years of debate over the alleged impacts on rivers in an area dubbed \"poultry capital\".",
-      "published": "Tue, 17 Nov 2026 21:00:51 GMT"
-    },
-    {
-      "id": "b9433f77441f4ba9",
-      "title": "More than £160m needed to clean up one of Europe's largest illegal dumps",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/cr5y18lg31nxo?at_medium=RSS&at_campaign=rss",
-      "summary": "Environment Minister Andrew Muir has described what happened at Mobuoy, near Derry, as an \"absolute scandal\" which could take a generation to fix.",
-      "published": "Tue, 17 Nov 2026 09:46:31 GMT"
-    },
-    {
-      "id": "d06a93581d98b0eb",
-      "title": "Dazzling Leonid meteor shower to peak on Tuesday night",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/weather/articles/c6742xzg3eljo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Leonid meteor shower, known for its bright and fast meteors, is set to peak on Tuesday night.",
-      "published": "Tue, 17 Nov 2026 09:03:08 GMT"
-    },
-    {
-      "id": "96bbf92b47efbf62",
-      "title": "Met Office yellow warning in place as snow could disrupt Tuesday morning travel",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/weather/articles/ck5y1g0rnx02o?at_medium=RSS&at_campaign=rss",
-      "summary": "Snow could bring some transport disruption to the hills of northern England and southern Scotland, as Chris Fawkes explains.",
-      "published": "Tue, 17 Nov 2026 08:01:38 GMT"
-    },
-    {
-      "id": "9ca2f67adbe55fbc",
-      "title": "William and Kate honour Earthshot Prize winners in Mumbai",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/videos/cmwy97rj83n1o?at_medium=RSS&at_campaign=rss",
-      "summary": "The Prince and Princess of Wales have said environmental innovators are changing the lives of future generations as they celebrated this year's winners of the Earthshot Prize.",
-      "published": "Wed, 18 Nov 2026 11:18:04 GMT"
-    },
-    {
-      "id": "798f9748a7d91e0a",
-      "title": "People asked for views on blue brook pollution",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/cqpv9mjm78m3o?at_medium=RSS&at_campaign=rss",
-      "summary": "The Environment Agency wants to know how the incident affected visitors, residents and businesses.",
-      "published": "Wed, 18 Nov 2026 08:37:02 GMT"
-    },
-    {
-      "id": "f9a7386c1121bde4",
-      "title": "Conservationists searching for large river eels",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/ck3rgl783xqro?at_medium=RSS&at_campaign=rss",
-      "summary": "The Tees Rivers Trust has been searching for eels to tag and track as they migrate out to sea.",
-      "published": "Wed, 18 Nov 2026 06:19:28 GMT"
-    },
-    {
-      "id": "c6674173cc67e8db",
-      "title": "Giant lunar sculpture has visitors over the moon",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/cm79213ngx45o?at_medium=RSS&at_campaign=rss",
-      "summary": "People can see the 6m-wide sculpture in St Helier until 29 November.",
-      "published": "Tue, 17 Nov 2026 12:04:38 GMT"
-    },
-    {
-      "id": "4dc5ceb9bbe4f62f",
-      "title": "Pupils fascinated by space get astronomy lesson",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/c67428w9vvkqo?at_medium=RSS&at_campaign=rss",
-      "summary": "Pupils at First Tower School get a visit from a University of Cambridge astronomer.",
-      "published": "Mon, 16 Nov 2026 06:11:42 GMT"
     }
   ]
 }
