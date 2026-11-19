@@ -10,6 +10,9 @@ db.vocabulary = db.vocabulary || [];
 
 let session = "morning";
 let articles = [];
+let newsUtterance = null;
+let newsSpeechRate = 1;
+
 const articleWordCache = new Map();
 
 const demo = [
@@ -188,6 +191,8 @@ function renderNews(){
       const article=articles.find(a=>a.id===button.dataset.pick);
       if(!article)return;
 
+      stopNewsSpeech();
+
       const s=button.dataset.session;
       db.lessons=db.lessons.filter(x=>!(x.date===today&&x.session===s));
       db.lessons.push({
@@ -219,7 +224,6 @@ function renderNews(){
   });
 }
 
-// 뉴스 제목과 RSS 요약에서 고급 어휘 후보를 고른다.
 function extractCandidates(article){
   const text=(article.title||"")+" "+(article.summary||"");
   const words=text.toLowerCase().match(/\b[a-z][a-z'-]{5,}\b/g)||[];
@@ -361,7 +365,97 @@ function saveVocabularyWord(item,button){
   button.disabled=true;
 }
 
+function stopNewsSpeech(){
+  if("speechSynthesis" in window){
+    window.speechSynthesis.cancel();
+  }
+  newsUtterance=null;
+}
+
+function bindNewsSpeech(article){
+  const speak=$("#newsSpeak");
+  const pause=$("#newsPause");
+  const resume=$("#newsResume");
+  const stop=$("#newsStop");
+  const rate=$("#newsSpeechRate");
+  const status=$("#newsSpeechStatus");
+
+  if(!speak)return;
+
+  rate.value=String(newsSpeechRate);
+
+  rate.onchange=()=>{
+    newsSpeechRate=Number(rate.value);
+  };
+
+  speak.onclick=()=>{
+    if(!("speechSynthesis" in window)){
+      status.textContent="이 기기에서는 음성 재생을 지원하지 않습니다.";
+      return;
+    }
+
+    const text=[article.title,article.summary]
+      .filter(Boolean)
+      .join(". ");
+
+    if(!text.trim()){
+      status.textContent="재생할 뉴스 내용이 없습니다. 언론사 원문을 이용해 주세요.";
+      return;
+    }
+
+    stopNewsSpeech();
+
+    const utterance=new SpeechSynthesisUtterance(text);
+    utterance.lang="en-US";
+    utterance.rate=newsSpeechRate;
+
+    const voices=window.speechSynthesis.getVoices();
+    const voice=voices.find(v=>v.lang==="en-US")
+      ||voices.find(v=>v.lang.startsWith("en"));
+
+    if(voice)utterance.voice=voice;
+
+    utterance.onstart=()=>{
+      status.textContent="영어 음성을 재생하고 있습니다.";
+    };
+
+    utterance.onend=()=>{
+      status.textContent="재생이 끝났습니다.";
+      newsUtterance=null;
+    };
+
+    utterance.onerror=()=>{
+      status.textContent="재생에 실패했습니다. 원문 링크를 이용해 주세요.";
+      newsUtterance=null;
+    };
+
+    newsUtterance=utterance;
+    window.speechSynthesis.speak(utterance);
+  };
+
+  pause.onclick=()=>{
+    if(window.speechSynthesis?.speaking){
+      window.speechSynthesis.pause();
+      status.textContent="일시정지했습니다.";
+    }
+  };
+
+  resume.onclick=()=>{
+    if(window.speechSynthesis?.paused){
+      window.speechSynthesis.resume();
+      status.textContent="이어서 재생합니다.";
+    }
+  };
+
+  stop.onclick=()=>{
+    stopNewsSpeech();
+    status.textContent="재생을 정지했습니다.";
+  };
+}
+
 function render(){
+  stopNewsSpeech();
+
   $("#today").textContent=new Date().toLocaleDateString("ko-KR",{
     month:"long",day:"numeric",weekday:"short"
   });
@@ -391,14 +485,52 @@ function render(){
       <span class="pill">${evening?"INTENSIVE LISTENING":"LISTEN + READ"}</span>
       <span class="muted">${l.duration||""}</span>
     </div>
+
     <div class="title">${esc(l.title)}</div>
     <div class="muted">${esc(l.source)} · ${esc(l.topic||"")}</div>
-    <p><a class="btn" href="${safeUrl(l.url)}" target="_blank" rel="noopener">언론사 원본 열기 ↗</a></p>
+
+    <p>
+      <a class="btn" href="${safeUrl(l.url)}" target="_blank" rel="noopener">
+        언론사 원문 및 실제 오디오 확인 ↗
+      </a>
+    </p>
+
+    <div class="notice">
+      원문에 실제 음성이나 영상이 있다면 언론사 페이지에서 이용하세요.
+      아래 앱 음성은 기기에서 생성하는 영어 합성 음성입니다.
+    </div>
+
+    <section class="word" style="margin:16px 0;padding:16px">
+      <h3>뉴스 듣기</h3>
+      <p class="muted">뉴스 제목과 요약을 영어 음성으로 읽어줍니다.</p>
+
+      <div class="actions">
+        <button class="btn" id="newsSpeak">▶ 재생</button>
+        <button class="btn secondary" id="newsPause">일시정지</button>
+        <button class="btn secondary" id="newsResume">이어 듣기</button>
+        <button class="btn secondary" id="newsStop">정지</button>
+      </div>
+
+      <div class="fieldtitle">재생 속도</div>
+      <select id="newsSpeechRate" class="input">
+        <option value="0.8">0.8배속</option>
+        <option value="1">1.0배속</option>
+        <option value="1.2">1.2배속</option>
+      </select>
+
+      <p id="newsSpeechStatus" class="muted">
+        재생 버튼을 눌러 영어 듣기를 시작하세요.
+      </p>
+    </section>
+
     <div class="notice">미검증 콘텐츠입니다. 받아쓰기 정답을 공개하지 않습니다.</div>
+
     ${l.summary?`<p class="muted">${esc(l.summary)}</p>`:""}
+
     <div class="fieldtitle">1. 첫 청취 후 요약</div>
     <p class="muted">핵심 사건과 기자의 논지를 정리하세요.</p>
     <textarea id="summary" placeholder="청취 요약">${esc(r.summary)}</textarea>
+
     ${evening?`
       <div class="fieldtitle">2. 받아쓰기</div>
       <textarea id="dictation" placeholder="원문을 보지 않고 들리는 대로 작성하세요.">${esc(r.dictation)}</textarea>
@@ -408,16 +540,21 @@ function render(){
       </div>
       <div class="muted">${r.dictationDone?"완료 선언 기록됨.":"완료 선언 전에는 정답을 공개하지 않습니다."}</div>
     `:""}
+
     <div class="fieldtitle">${evening?"3":"2"}. 난이도 체감</div>
     <input id="difficulty" type="range" min="1" max="5" value="${r.difficulty}">
     <div class="muted">1 쉬움 · 5 매우 어려움 · 현재 ${r.difficulty}/5</div>
+
     <div class="fieldtitle">학습 메모</div>
     <textarea id="notes" placeholder="헷갈린 발음, 표현, 복습할 부분">${esc(r.notes)}</textarea>
+
     <div class="actions">
       <button class="btn secondary" id="save">진도 저장</button>
       <button class="btn" id="complete">학습 완료</button>
     </div>
   `;
+
+  bindNewsSpeech(l);
 
   $("#save").onclick=()=>store(false);
   $("#complete").onclick=()=>store(true);
@@ -595,6 +732,7 @@ async function searchVocabulary(){
 
 document.querySelectorAll(".tab").forEach(b=>{
   b.onclick=()=>{
+    stopNewsSpeech();
     session=b.dataset.session;
     render();
   };
@@ -668,162 +806,3 @@ if("serviceWorker" in navigator){
 
 render();
 loadNews();
-
-
-/* ===== NEWS LISTENING FEATURE ===== */
-(function installNewsListening() {
-  const lesson = document.querySelector("#lesson");
-  if (!lesson) return;
-
-  let currentUtterance = null;
-  let speechRate = 1;
-
-  function stopSpeech() {
-    if ("speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-    }
-    currentUtterance = null;
-  }
-
-  function getCurrentLesson() {
-    try {
-      return typeof current === "function" ? current() : null;
-    } catch {
-      return null;
-    }
-  }
-
-  function addListeningPanel() {
-    if (!lesson || !lesson.querySelector("a[href]")) return;
-
-    const existingLink = lesson.querySelector("a[href]");
-    if (existingLink) {
-      existingLink.textContent = "원문·기사 내 오디오 확인 ↗";
-    }
-
-    if (lesson.querySelector("#newsListeningPanel")) return;
-
-    const panel = document.createElement("div");
-    panel.id = "newsListeningPanel";
-    panel.className = "word";
-    panel.style.cssText =
-      "margin:16px 0;padding:16px;border-radius:12px;background:rgba(127,127,127,.08)";
-
-    panel.innerHTML = `
-      <div class="fieldtitle">뉴스 듣기</div>
-      <p class="muted">
-        먼저 언론사 원문을 열어 기사에 포함된 실제 음성·영상이 있는지 확인하세요.
-      </p>
-      <p class="muted">
-        앱 음성은 실제 기자 음성이 아닌 기기 내 영어 합성 음성(TTS)입니다.
-      </p>
-      <div class="actions">
-        <button class="btn" id="newsSpeak">앱 음성 재생</button>
-        <button class="btn secondary" id="newsPause">일시정지</button>
-        <button class="btn secondary" id="newsResume">이어 듣기</button>
-        <button class="btn secondary" id="newsStop">정지</button>
-      </div>
-      <div class="fieldtitle">음성 속도</div>
-      <select id="newsSpeechRate" class="input">
-        <option value="0.8">0.8배속</option>
-        <option value="1" selected>1.0배속</option>
-        <option value="1.2">1.2배속</option>
-      </select>
-      <p id="newsSpeechStatus" class="muted">
-        원문 음성을 우선 이용하고, 필요할 때 앱 음성을 사용하세요.
-      </p>
-    `;
-
-    const linkParagraph = existingLink.closest("p");
-    if (linkParagraph) {
-      linkParagraph.after(panel);
-    } else {
-      lesson.prepend(panel);
-    }
-
-    panel.querySelector("#newsSpeechRate").onchange = e => {
-      speechRate = Number(e.target.value);
-    };
-
-    panel.querySelector("#newsSpeak").onclick = () => {
-      const l = getCurrentLesson();
-      const status = panel.querySelector("#newsSpeechStatus");
-
-      if (!("speechSynthesis" in window)) {
-        status.textContent = "이 브라우저에서는 음성 재생을 지원하지 않습니다.";
-        return;
-      }
-
-      const text = [l?.title, l?.summary]
-        .filter(Boolean)
-        .join(". ");
-
-      if (!text.trim()) {
-        status.textContent = "재생할 뉴스 요약이 없습니다. 원문 링크를 이용해 주세요.";
-        return;
-      }
-
-      stopSpeech();
-
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "en-US";
-      utterance.rate = speechRate;
-
-      const voices = window.speechSynthesis.getVoices();
-      const englishVoice =
-        voices.find(v => v.lang === "en-US") ||
-        voices.find(v => v.lang?.startsWith("en"));
-
-      if (englishVoice) utterance.voice = englishVoice;
-
-      utterance.onstart = () => {
-        status.textContent = "영어 합성 음성을 재생하고 있습니다.";
-      };
-
-      utterance.onend = () => {
-        status.textContent = "재생이 끝났습니다.";
-      };
-
-      utterance.onerror = () => {
-        status.textContent = "음성 재생에 실패했습니다. 원문 링크를 이용해 주세요.";
-      };
-
-      currentUtterance = utterance;
-      window.speechSynthesis.speak(utterance);
-    };
-
-    panel.querySelector("#newsPause").onclick = () => {
-      if (window.speechSynthesis?.speaking) {
-        window.speechSynthesis.pause();
-        panel.querySelector("#newsSpeechStatus").textContent = "일시정지했습니다.";
-      }
-    };
-
-    panel.querySelector("#newsResume").onclick = () => {
-      if (window.speechSynthesis?.paused) {
-        window.speechSynthesis.resume();
-        panel.querySelector("#newsSpeechStatus").textContent = "이어서 재생합니다.";
-      }
-    };
-
-    panel.querySelector("#newsStop").onclick = () => {
-      stopSpeech();
-      panel.querySelector("#newsSpeechStatus").textContent = "재생을 정지했습니다.";
-    };
-  }
-
-  const observer = new MutationObserver(() => {
-    addListeningPanel();
-  });
-
-  observer.observe(lesson, {
-    childList: true,
-    subtree: true
-  });
-
-  addListeningPanel();
-
-  document.querySelectorAll(".tab").forEach(tab => {
-    tab.addEventListener("click", stopSpeech);
-  });
-})();
