@@ -668,3 +668,162 @@ if("serviceWorker" in navigator){
 
 render();
 loadNews();
+
+
+/* ===== NEWS LISTENING FEATURE ===== */
+(function installNewsListening() {
+  const lesson = document.querySelector("#lesson");
+  if (!lesson) return;
+
+  let currentUtterance = null;
+  let speechRate = 1;
+
+  function stopSpeech() {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+    currentUtterance = null;
+  }
+
+  function getCurrentLesson() {
+    try {
+      return typeof current === "function" ? current() : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function addListeningPanel() {
+    if (!lesson || !lesson.querySelector("a[href]")) return;
+
+    const existingLink = lesson.querySelector("a[href]");
+    if (existingLink) {
+      existingLink.textContent = "원문·기사 내 오디오 확인 ↗";
+    }
+
+    if (lesson.querySelector("#newsListeningPanel")) return;
+
+    const panel = document.createElement("div");
+    panel.id = "newsListeningPanel";
+    panel.className = "word";
+    panel.style.cssText =
+      "margin:16px 0;padding:16px;border-radius:12px;background:rgba(127,127,127,.08)";
+
+    panel.innerHTML = `
+      <div class="fieldtitle">뉴스 듣기</div>
+      <p class="muted">
+        먼저 언론사 원문을 열어 기사에 포함된 실제 음성·영상이 있는지 확인하세요.
+      </p>
+      <p class="muted">
+        앱 음성은 실제 기자 음성이 아닌 기기 내 영어 합성 음성(TTS)입니다.
+      </p>
+      <div class="actions">
+        <button class="btn" id="newsSpeak">앱 음성 재생</button>
+        <button class="btn secondary" id="newsPause">일시정지</button>
+        <button class="btn secondary" id="newsResume">이어 듣기</button>
+        <button class="btn secondary" id="newsStop">정지</button>
+      </div>
+      <div class="fieldtitle">음성 속도</div>
+      <select id="newsSpeechRate" class="input">
+        <option value="0.8">0.8배속</option>
+        <option value="1" selected>1.0배속</option>
+        <option value="1.2">1.2배속</option>
+      </select>
+      <p id="newsSpeechStatus" class="muted">
+        원문 음성을 우선 이용하고, 필요할 때 앱 음성을 사용하세요.
+      </p>
+    `;
+
+    const linkParagraph = existingLink.closest("p");
+    if (linkParagraph) {
+      linkParagraph.after(panel);
+    } else {
+      lesson.prepend(panel);
+    }
+
+    panel.querySelector("#newsSpeechRate").onchange = e => {
+      speechRate = Number(e.target.value);
+    };
+
+    panel.querySelector("#newsSpeak").onclick = () => {
+      const l = getCurrentLesson();
+      const status = panel.querySelector("#newsSpeechStatus");
+
+      if (!("speechSynthesis" in window)) {
+        status.textContent = "이 브라우저에서는 음성 재생을 지원하지 않습니다.";
+        return;
+      }
+
+      const text = [l?.title, l?.summary]
+        .filter(Boolean)
+        .join(". ");
+
+      if (!text.trim()) {
+        status.textContent = "재생할 뉴스 요약이 없습니다. 원문 링크를 이용해 주세요.";
+        return;
+      }
+
+      stopSpeech();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-US";
+      utterance.rate = speechRate;
+
+      const voices = window.speechSynthesis.getVoices();
+      const englishVoice =
+        voices.find(v => v.lang === "en-US") ||
+        voices.find(v => v.lang?.startsWith("en"));
+
+      if (englishVoice) utterance.voice = englishVoice;
+
+      utterance.onstart = () => {
+        status.textContent = "영어 합성 음성을 재생하고 있습니다.";
+      };
+
+      utterance.onend = () => {
+        status.textContent = "재생이 끝났습니다.";
+      };
+
+      utterance.onerror = () => {
+        status.textContent = "음성 재생에 실패했습니다. 원문 링크를 이용해 주세요.";
+      };
+
+      currentUtterance = utterance;
+      window.speechSynthesis.speak(utterance);
+    };
+
+    panel.querySelector("#newsPause").onclick = () => {
+      if (window.speechSynthesis?.speaking) {
+        window.speechSynthesis.pause();
+        panel.querySelector("#newsSpeechStatus").textContent = "일시정지했습니다.";
+      }
+    };
+
+    panel.querySelector("#newsResume").onclick = () => {
+      if (window.speechSynthesis?.paused) {
+        window.speechSynthesis.resume();
+        panel.querySelector("#newsSpeechStatus").textContent = "이어서 재생합니다.";
+      }
+    };
+
+    panel.querySelector("#newsStop").onclick = () => {
+      stopSpeech();
+      panel.querySelector("#newsSpeechStatus").textContent = "재생을 정지했습니다.";
+    };
+  }
+
+  const observer = new MutationObserver(() => {
+    addListeningPanel();
+  });
+
+  observer.observe(lesson, {
+    childList: true,
+    subtree: true
+  });
+
+  addListeningPanel();
+
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", stopSpeech);
+  });
+})();
