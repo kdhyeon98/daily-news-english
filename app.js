@@ -10,16 +10,13 @@ db.vocabulary = db.vocabulary || [];
 
 let session = "morning";
 let articles = [];
-let newsUtterance = null;
-let newsSpeechRate = 1;
-let speechSentences = [];
-let speechIndex = 0;
+let audioLessons = {};
 
 const articleWordCache = new Map();
 
 const demo = [
-  {id:"am-demo",date:today,session:"morning",title:"News is being loaded",source:"Daily News English",url:"https://www.bbc.com/news",status:"unverified",topic:"World",duration:"약 10분"},
-  {id:"pm-demo",date:today,session:"evening",title:"News is being loaded",source:"Daily News English",url:"https://www.bbc.com/news",status:"unverified",topic:"Listening",duration:"약 1분"}
+  {id:"am-demo",date:today,session:"morning",title:"BBC Learning English",source:"BBC Learning English",url:"https://www.bbc.co.uk/learningenglish",topic:"Listening",duration:"오디오 준비 중"},
+  {id:"pm-demo",date:today,session:"evening",title:"BBC News",source:"BBC World Service",url:"https://www.bbc.co.uk/sounds/play/live:bbc_world_service",topic:"Listening",duration:"오디오 준비 중"}
 ];
 
 const STOPWORDS = new Set(`
@@ -39,26 +36,22 @@ according administration agency announced around authorities officials
 officials report reported reports statement statements monday tuesday
 wednesday thursday friday saturday sunday january february march april may
 june july august september october november december
-international national regional global latest major
-million billion trillion percent percentage
-company companies officials leaders minister president
-country countries world
+international national regional global latest major million billion trillion
+percent percentage company companies leaders minister president world
 `.trim().split(/\s+/));
 
 const ADVANCED_WORDS = new Set(`
-accountability adverse alleviate amid apprehension austerity bolster
-cohesion contentious deteriorate discrepancy disruption exacerbate
-expenditure facilitate fiscal fluctuate foster hamper implication
-incentive infrastructure instability intervention mitigate momentum
-persistent pivotal prevalence recession resilience scrutiny substantial
-sustainable unprecedented volatile vulnerability vulnerable
-acknowledge allocate anticipate apparent assert capacity compelling
-consecutive consensus constraint controversial credible cumulative
-decline deficit deploy deteriorate diminish disclose emerge emphasis
-enforce enhance ensure establish estimate evaluate evidence expand
-exposure framework fundamental generate impose incentive incorporate
-inevitable influence initiative insight integral intensify interpret
-justify legislation substantial undermine undertake widespread
+accountability adverse alleviate amid apprehension austerity bolster cohesion
+contentious deteriorate discrepancy disruption exacerbate expenditure facilitate
+fiscal fluctuate foster hamper implication incentive infrastructure instability
+intervention mitigate momentum persistent pivotal prevalence recession resilience
+scrutiny substantial sustainable unprecedented volatile vulnerability vulnerable
+acknowledge allocate anticipate apparent assert capacity compelling consecutive
+consensus constraint controversial credible cumulative decline deficit deploy
+diminish disclose emerge emphasis enforce enhance ensure establish estimate
+evaluate evidence expand exposure framework fundamental generate impose
+incorporate inevitable influence initiative insight integral intensify interpret
+justify legislation undermine undertake widespread
 `.trim().split(/\s+/));
 
 function save(){
@@ -78,6 +71,21 @@ function safeUrl(s){
   }catch{return "#";}
 }
 
+function secureAudioUrl(s){
+  const url=safeUrl(s);
+  return url.startsWith("http://")
+    ?url.replace("http://","https://")
+    :url;
+}
+
+function formatDuration(value){
+  const seconds=Number(value);
+  if(!Number.isFinite(seconds)||seconds<=0)return "";
+  const min=Math.floor(seconds/60);
+  const sec=seconds%60;
+  return sec?`${min}분 ${sec}초`:`${min}분`;
+}
+
 function current(){
   return db.lessons.find(x=>x.date===today&&x.session===session)
     ||demo.find(x=>x.session===session);
@@ -94,35 +102,41 @@ function upsert(r){
   save();
 }
 
-function assignNews(){
-  if(!articles.length)return;
+/* BBC 실제 오디오 자료를 오늘의 학습으로 연결 */
+function assignAudioLessons(){
+  ["morning","evening"].forEach(s=>{
+    const a=audioLessons[s];
+    if(!a||!a.audio_available||!a.audio_url)return;
 
-  const morningArticle=
-    articles.find(a=>["World","Business","Science","Technology"].includes(a.topic))
-    ||articles[0];
+    const existing=db.lessons.find(x=>x.date===today&&x.session===s);
 
-  const eveningArticle=
-    articles.find(a=>a.id!==morningArticle.id)||morningArticle;
+    // 사용자가 직접 등록한 수업은 덮어쓰지 않음
+    if(existing&&!existing.auto)return;
 
-  [morningArticle,eveningArticle].forEach((a,i)=>{
-    const s=i===0?"morning":"evening";
-    const exists=db.lessons.find(x=>x.date===today&&x.session===s);
+    const id=existing?.id||`audio-${today}-${s}`;
 
-    if(!exists){
-      db.lessons.push({
-        id:`auto-${today}-${s}-${a.id}`,
-        date:today,
-        session:s,
-        title:a.title,
-        source:a.source,
-        url:a.url,
-        audio_url:a.audio_url||"",
-        status:"unverified",
-        topic:a.topic,
-        summary:a.summary,
-        duration:s==="morning"?"약 10분":"약 1분 구간",
-        auto:true
-      });
+    const lesson={
+      id,
+      date:today,
+      session:s,
+      title:a.episode_title||a.title||"BBC News",
+      source:a.source||"BBC",
+      url:a.episode_url||a.feed_url||"",
+      audio_url:secureAudioUrl(a.audio_url),
+      transcript_url:a.transcript_url||"",
+      transcript_available:!!a.transcript_available,
+      status:"official-audio",
+      topic:s==="morning"?"Learning English":"News Listening",
+      summary:a.description||"",
+      duration:formatDuration(a.duration),
+      published:a.published||"",
+      auto:true
+    };
+
+    if(existing){
+      Object.assign(existing,lesson);
+    }else{
+      db.lessons.push(lesson);
     }
   });
 
@@ -136,7 +150,9 @@ async function loadNews(){
 
     const data=await response.json();
     articles=Array.isArray(data.articles)?data.articles:[];
-    assignNews();
+    audioLessons=data.audio_lessons||{};
+
+    assignAudioLessons();
     renderNews();
     render();
   }catch(error){
@@ -177,8 +193,6 @@ function renderNews(){
           <p class="muted">${esc(a.summary||"")}</p>
           <div class="actions">
             <a class="btn secondary" href="${safeUrl(a.url)}" target="_blank" rel="noopener">원문 보기</a>
-            <button class="btn secondary" data-pick="${esc(a.id)}" data-session="morning">아침 자료로 선택</button>
-            <button class="btn secondary" data-pick="${esc(a.id)}" data-session="evening">저녁 자료로 선택</button>
             <button class="btn" data-extract="${esc(a.id)}">핵심 어휘 5개 추출</button>
           </div>
           <div id="article-vocab-${esc(a.id)}"></div>
@@ -188,37 +202,6 @@ function renderNews(){
   }
 
   $("#reloadNews")?.addEventListener("click",loadNews);
-
-  section.querySelectorAll("[data-pick]").forEach(button=>{
-    button.addEventListener("click",()=>{
-      const article=articles.find(a=>a.id===button.dataset.pick);
-      if(!article)return;
-
-      stopNewsSpeech();
-
-      const s=button.dataset.session;
-      db.lessons=db.lessons.filter(x=>!(x.date===today&&x.session===s));
-      db.lessons.push({
-        id:`selected-${today}-${s}-${article.id}`,
-        date:today,
-        session:s,
-        title:article.title,
-        source:article.source,
-        url:article.url,
-        audio_url:article.audio_url||"",
-        status:"unverified",
-        topic:article.topic,
-        summary:article.summary,
-        duration:s==="morning"?"약 10분":"약 1분 구간",
-        auto:true
-      });
-
-      save();
-      session=s;
-      render();
-      window.scrollTo({top:0,behavior:"smooth"});
-    });
-  });
 
   section.querySelectorAll("[data-extract]").forEach(button=>{
     button.addEventListener("click",()=>{
@@ -258,7 +241,6 @@ async function getWordInfo(word){
     const response=await fetch(
       "https://api.dictionaryapi.dev/api/v2/entries/en/"+encodeURIComponent(word)
     );
-
     if(response.ok){
       const data=await response.json();
       const meanings=data[0].meanings||[];
@@ -348,130 +330,7 @@ function saveVocabularyWord(item,button){
   button.disabled=true;
 }
 
-function stopNewsSpeech(){
-  if("speechSynthesis" in window)window.speechSynthesis.cancel();
-  newsUtterance=null;
-}
-
-function splitSentences(text){
-  return (text||"")
-    .replace(/\s+/g," ")
-    .match(/[^.!?]+[.!?]+|[^.!?]+$/g)
-    ?.map(s=>s.trim())
-    .filter(Boolean)||[];
-}
-
-function updateSentenceDisplay(){
-  const display=$("#sentenceDisplay");
-  const counter=$("#sentenceCounter");
-
-  if(display){
-    display.textContent=speechSentences[speechIndex]||"문장이 없습니다.";
-  }
-
-  if(counter){
-    counter.textContent=`${speechSentences.length?speechIndex+1:0} / ${speechSentences.length}`;
-  }
-}
-
-function speakCurrentSentence(){
-  if(!speechSentences.length)return;
-
-  stopNewsSpeech();
-
-  const text=speechSentences[speechIndex];
-  const utterance=new SpeechSynthesisUtterance(text);
-  utterance.lang="en-US";
-  utterance.rate=newsSpeechRate;
-
-  const voices=window.speechSynthesis.getVoices();
-  const voice=voices.find(v=>v.lang==="en-US")||voices.find(v=>v.lang.startsWith("en"));
-  if(voice)utterance.voice=voice;
-
-  utterance.onstart=()=>{
-    const status=$("#newsSpeechStatus");
-    if(status)status.textContent="문장을 재생하고 있습니다.";
-  };
-
-  utterance.onend=()=>{
-    const status=$("#newsSpeechStatus");
-    if(status)status.textContent="재생이 끝났습니다.";
-    newsUtterance=null;
-  };
-
-  utterance.onerror=()=>{
-    const status=$("#newsSpeechStatus");
-    if(status)status.textContent="음성 재생에 실패했습니다.";
-    newsUtterance=null;
-  };
-
-  newsUtterance=utterance;
-  window.speechSynthesis.speak(utterance);
-  updateSentenceDisplay();
-}
-
-function bindNewsSpeech(article){
-  const rate=$("#newsSpeechRate");
-  const status=$("#newsSpeechStatus");
-
-  speechSentences=splitSentences(
-    [article.title,article.summary].filter(Boolean).join(". ")
-  );
-  speechIndex=0;
-  updateSentenceDisplay();
-
-  if(rate){
-    rate.value=String(newsSpeechRate);
-    rate.onchange=()=>{
-      newsSpeechRate=Number(rate.value);
-    };
-  }
-
-  $("#newsSpeak")?.addEventListener("click",()=>{
-    if(!("speechSynthesis" in window)){
-      status.textContent="이 기기에서는 음성 재생을 지원하지 않습니다.";
-      return;
-    }
-    speakCurrentSentence();
-  });
-
-  $("#newsPause")?.addEventListener("click",()=>{
-    if(window.speechSynthesis?.speaking){
-      window.speechSynthesis.pause();
-      status.textContent="일시정지했습니다.";
-    }
-  });
-
-  $("#newsResume")?.addEventListener("click",()=>{
-    if(window.speechSynthesis?.paused){
-      window.speechSynthesis.resume();
-      status.textContent="이어서 재생합니다.";
-    }
-  });
-
-  $("#newsStop")?.addEventListener("click",()=>{
-    stopNewsSpeech();
-    status.textContent="재생을 정지했습니다.";
-  });
-
-  $("#sentencePlay")?.addEventListener("click",speakCurrentSentence);
-
-  $("#sentenceRepeat")?.addEventListener("click",speakCurrentSentence);
-
-  $("#sentencePrev")?.addEventListener("click",()=>{
-    speechIndex=Math.max(0,speechIndex-1);
-    speakCurrentSentence();
-  });
-
-  $("#sentenceNext")?.addEventListener("click",()=>{
-    speechIndex=Math.min(speechSentences.length-1,speechIndex+1);
-    speakCurrentSentence();
-  });
-}
-
 function render(){
-  stopNewsSpeech();
-
   $("#today").textContent=new Date().toLocaleDateString("ko-KR",{
     month:"long",day:"numeric",weekday:"short"
   });
@@ -495,96 +354,84 @@ function render(){
   const l=current();
   const r=rec(l.id);
   const evening=session==="evening";
-  const audioUrl=safeUrl(l.audio_url||"");
+  const audioUrl=secureAudioUrl(l.audio_url||"");
   const hasAudio=audioUrl!=="#";
+  const sourceUrl=safeUrl(l.url||"");
+  const hasTranscript=!!l.transcript_available&&!!l.transcript_url;
 
   $("#lesson").innerHTML=`
     <div class="row">
-      <span class="pill">${evening?"INTENSIVE LISTENING":"LISTEN + READ"}</span>
-      <span class="muted">${l.duration||""}</span>
+      <span class="pill">${evening?"EVENING NEWS":"MORNING ENGLISH"}</span>
+      <span class="muted">${esc(l.duration||"")}</span>
     </div>
 
     <div class="title">${esc(l.title)}</div>
     <div class="muted">${esc(l.source)} · ${esc(l.topic||"")}</div>
+    ${l.published?`<p class="muted">방송일: ${esc(l.published)}</p>`:""}
 
-    <p>
-      <a class="btn" href="${safeUrl(l.url)}" target="_blank" rel="noopener">
-        언론사 원문 및 실제 오디오 확인 ↗
-      </a>
-    </p>
+    ${sourceUrl!=="#"?`
+      <p>
+        <a class="btn secondary" href="${sourceUrl}" target="_blank" rel="noopener">
+          BBC 공식 에피소드 페이지 ↗
+        </a>
+      </p>
+    `:""}
 
     ${hasAudio?`
       <section class="word" style="margin:16px 0;padding:16px">
-        <h3>언론사 제공 실제 오디오</h3>
-        <audio controls preload="none" style="width:100%">
-          <source src="${audioUrl}">
+        <h3>BBC 실제 오디오</h3>
+        <audio controls preload="none" playsinline style="width:100%">
+          <source src="${audioUrl}" type="audio/mpeg">
           오디오를 재생할 수 없습니다.
         </audio>
-        <p class="muted">RSS에 첨부된 오디오 파일입니다.</p>
+        <p class="muted">
+          ${evening
+            ?"BBC World Service의 실제 뉴스 앵커 보도입니다."
+            :"BBC Learning English의 학습자용 뉴스 오디오입니다."}
+        </p>
       </section>
     `:`
       <div class="notice">
-        이 기사에는 RSS에서 확인된 오디오 파일이 없습니다.
-        아래 합성 음성 또는 언론사 원문을 이용하세요.
+        현재 실제 오디오 주소를 찾지 못했어요.
+        BBC 공식 에피소드 페이지에서 확인할 수 있습니다.
       </div>
     `}
 
-    <section class="word" style="margin:16px 0;padding:16px">
-      <h3>문장별 뉴스 듣기</h3>
-      <p class="muted">제목과 요약을 문장 단위로 나눠 영어로 읽어줍니다.</p>
-
-      <div style="padding:14px;background:rgba(127,127,127,.08);border-radius:10px">
-        <div class="muted" id="sentenceCounter">0 / 0</div>
-        <p id="sentenceDisplay">문장을 준비하고 있습니다.</p>
-      </div>
-
-      <div class="actions">
-        <button class="btn" id="sentencePlay">▶ 현재 문장</button>
-        <button class="btn secondary" id="sentenceRepeat">반복</button>
-        <button class="btn secondary" id="sentencePrev">이전</button>
-        <button class="btn secondary" id="sentenceNext">다음</button>
-      </div>
-
-      <div class="fieldtitle">전체 음성 재생</div>
-      <div class="actions">
-        <button class="btn" id="newsSpeak">▶ 재생</button>
-        <button class="btn secondary" id="newsPause">일시정지</button>
-        <button class="btn secondary" id="newsResume">이어 듣기</button>
-        <button class="btn secondary" id="newsStop">정지</button>
-      </div>
-
-      <div class="fieldtitle">재생 속도</div>
-      <select id="newsSpeechRate" class="input">
-        <option value="0.8">0.8배속</option>
-        <option value="1">1.0배속</option>
-        <option value="1.2">1.2배속</option>
-      </select>
-
-      <p id="newsSpeechStatus" class="muted">재생 버튼을 눌러 시작하세요.</p>
-    </section>
-
-    <div class="notice">
-      미검증 학습 콘텐츠입니다.
-      받아쓰기 완료 선언 전에는 요약을 숨깁니다.
-    </div>
-
-    ${(!evening||r.dictationDone)&&l.summary?`
-      <div class="fieldtitle">뉴스 요약</div>
-      <p class="muted">${esc(l.summary)}</p>
+    ${l.summary?`
+      <section class="word" style="margin:16px 0;padding:14px">
+        <h3>자료 안내</h3>
+        <p class="muted">${esc(l.summary)}</p>
+      </section>
     `:""}
 
+    <div class="notice">
+      합성 음성은 사용하지 않습니다.
+      ${hasTranscript
+        ?"공식 transcript가 연결되어 있습니다."
+        :"현재 이 에피소드의 공식 자막은 RSS에서 확인되지 않았습니다."}
+    </div>
+
     <div class="fieldtitle">1. 첫 청취 후 요약</div>
-    <p class="muted">핵심 사건과 기자의 논지를 정리하세요.</p>
+    <p class="muted">핵심 사건과 기자의 논지를 영어 또는 한국어로 정리하세요.</p>
     <textarea id="summary" placeholder="청취 요약">${esc(r.summary)}</textarea>
 
     ${evening?`
       <div class="fieldtitle">2. 받아쓰기</div>
-      <textarea id="dictation" placeholder="원문을 보지 않고 들리는 대로 작성하세요.">${esc(r.dictation)}</textarea>
+      <p class="muted">원문을 보지 않고 들리는 대로 작성하세요.</p>
+      <textarea id="dictation" placeholder="들은 내용을 입력하세요.">${esc(r.dictation)}</textarea>
       <div class="actions">
         <button class="btn secondary" id="notdone">작성 중</button>
         <button class="btn" id="dictdone">받아쓰기 완료 선언</button>
       </div>
-      <div class="muted">${r.dictationDone?"완료 선언 기록됨. 요약이 공개되었습니다.":"완료 선언 전에는 요약을 숨깁니다."}</div>
+      <div class="muted">
+        ${r.dictationDone?"받아쓰기 완료를 기록했어요.":"완료 선언 전에는 답안을 공개하지 않습니다."}
+      </div>
+      ${!hasTranscript?`
+        <div class="notice">
+          공식 받아쓰기 원문이 제공되지 않아 자동 정답 비교는 할 수 없습니다.
+          완료 선언은 학습 기록용으로만 저장됩니다.
+        </div>
+      `:""}
     `:""}
 
     <div class="fieldtitle">${evening?"3":"2"}. 난이도 체감</div>
@@ -599,8 +446,6 @@ function render(){
       <button class="btn" id="complete">학습 완료</button>
     </div>
   `;
-
-  bindNewsSpeech(l);
 
   $("#save").onclick=()=>store(false);
   $("#complete").onclick=()=>store(true);
@@ -621,6 +466,7 @@ function render(){
 function store(done){
   const l=current();
   const r=rec(l.id);
+
   r.summary=$("#summary").value;
   r.dictation=$("#dictation")?.value||"";
   r.notes=$("#notes").value;
@@ -668,7 +514,6 @@ function renderVocabulary(){
       <input id="wordSearch" class="input" placeholder="예: resilience">
       <button class="btn" id="searchWord">검색</button>
     </div>
-
     <div id="wordResult"></div>
     <div class="fieldtitle">저장한 단어 ${words.length}개</div>
     <div id="savedWords">
@@ -770,14 +615,15 @@ async function searchVocabulary(){
   }
 }
 
+/* 탭 이동 */
 document.querySelectorAll(".tab").forEach(b=>{
   b.onclick=()=>{
-    stopNewsSpeech();
     session=b.dataset.session;
     render();
   };
 });
 
+/* 사용자 직접 학습 자료 등록 */
 $("#addLesson")?.addEventListener("click",()=>{
   const title=$("#customTitle").value.trim();
   const source=$("#customSource").value.trim();
@@ -789,6 +635,7 @@ $("#addLesson")?.addEventListener("click",()=>{
   }
 
   const status=$("#customStatus").value;
+
   db.lessons=db.lessons.filter(x=>!(x.date===today&&x.session===session));
 
   db.lessons.push({
@@ -801,7 +648,8 @@ $("#addLesson")?.addEventListener("click",()=>{
     audio_url:"",
     status,
     topic:"사용자 선택",
-    duration:session==="morning"?"약 10분":"약 1분 구간"
+    duration:session==="morning"?"사용자 자료":"사용자 자료",
+    auto:false
   });
 
   save();
@@ -809,6 +657,7 @@ $("#addLesson")?.addEventListener("click",()=>{
   alert("오늘 학습 자료를 저장했습니다.");
 });
 
+/* 백업 내보내기 */
 $("#export")?.addEventListener("click",()=>{
   const blob=new Blob([JSON.stringify(db,null,2)],{type:"application/json"});
   const a=document.createElement("a");
@@ -818,6 +667,7 @@ $("#export")?.addEventListener("click",()=>{
   URL.revokeObjectURL(a.href);
 });
 
+/* 백업 복원 */
 $("#importFile")?.addEventListener("change",async e=>{
   const f=e.target.files[0];
   if(!f)return;
@@ -839,6 +689,7 @@ $("#importFile")?.addEventListener("change",async e=>{
   }
 });
 
+/* 앱 시작 */
 if("serviceWorker" in navigator){
   window.addEventListener("load",()=>{
     navigator.serviceWorker.register("sw.js").catch(()=>{});
