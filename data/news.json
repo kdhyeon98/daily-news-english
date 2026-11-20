@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-20T15:25:27.549389+00:00",
+  "updated_at": "2026-11-20T21:58:59.338258+00:00",
   "articles": [
+    {
+      "id": "b489ac03011e847a",
+      "title": "UK to explore even closer ties with EU after agreeing deal, says Burnham",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o?at_medium=RSS&at_campaign=rss",
+      "summary": "The UK-EU deal agreed on Friday covers British food exports, emissions trading and a youth experience scheme.",
+      "published": "Fri, 20 Nov 2026 17:49:48 GMT"
+    },
+    {
+      "id": "b1ffe06b42b6644b",
+      "title": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
+      "summary": "Nobody was hurt and no damage has been reported, but Warsaw described the incident as a \"provocation\" from Moscow.",
+      "published": "Fri, 20 Nov 2026 16:54:29 GMT"
+    },
     {
       "id": "57f7a6cabf16791e",
       "title": "Russia targets Kyiv crossings days after Ukraine hits Crimean Bridge",
@@ -11,13 +29,40 @@
       "published": "Fri, 20 Nov 2026 13:01:16 GMT"
     },
     {
-      "id": "b1ffe06b42b6644b",
-      "title": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+      "id": "d88d0288efc8318c",
+      "title": "Gérard Depardieu and French author investigated over sexual allegations",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
-      "summary": "Nobody was hurt and no damage has been reported, but Warsaw described the incident as a \"provocation\" from Moscow.",
-      "published": "Fri, 20 Nov 2026 13:52:04 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c9ly43pj10mvo?at_medium=RSS&at_campaign=rss",
+      "summary": "A judicial investigation was launched after a complaint was filed last year over \"allegations of a sexual nature\".",
+      "published": "Fri, 20 Nov 2026 19:45:20 GMT"
+    },
+    {
+      "id": "53ba164e0140f69f",
+      "title": "Anthropic shares fall after blockbuster opening as wider tech sell-off continues",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+      "summary": "Other tech companies have also taken a hit as share markets broadly slump.",
+      "published": "Fri, 20 Nov 2026 20:00:53 GMT"
+    },
+    {
+      "id": "d020b8aa67dc2154",
+      "title": "Trump threatens ban on US firms building AI data centres overseas",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+      "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.",
+      "published": "Fri, 20 Nov 2026 20:54:12 GMT"
+    },
+    {
+      "id": "96853c2bcb76b246",
+      "title": "Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cq702ez8d4lwo?at_medium=RSS&at_campaign=rss",
+      "summary": "Nikhil Gupta pleaded guilty to murder-for-hire, conspiracy to commit murder-for-hire, and conspiracy to commit money laundering in February.",
+      "published": "Fri, 20 Nov 2026 19:27:49 GMT"
     },
     {
       "id": "08e02bb46220c500",
@@ -26,16 +71,25 @@
       "topic": "World",
       "url": "https://www.bbc.co.uk/news/articles/c69vwyjp0339o?at_medium=RSS&at_campaign=rss",
       "summary": "Police officials called for \"greater efforts to prevent... violence\" against women and children.",
-      "published": "Fri, 20 Nov 2026 10:56:02 GMT"
+      "published": "Fri, 20 Nov 2026 15:55:16 GMT"
     },
     {
-      "id": "8543ddf4a5288125",
-      "title": "White House removes cyber-security chief after series of tech outages",
+      "id": "c157e47151ebf2f3",
+      "title": "Texas death-row inmate screams as execution takes more than one hour",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo?at_medium=RSS&at_campaign=rss",
-      "summary": "CBS is reporting he has been fired after losing the confidence of White House chief of staff Stephen Miller.",
-      "published": "Fri, 20 Nov 2026 13:28:32 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/ck20vl1dd8qzo?at_medium=RSS&at_campaign=rss",
+      "summary": "This prolonged execution comes weeks after Christa Pike survived the lethal injection of the same drug.",
+      "published": "Fri, 20 Nov 2026 12:42:37 GMT"
+    },
+    {
+      "id": "5d3635131266ce9d",
+      "title": "Catherine Zeta-Jones' daughter says parents warned her about 'nepo baby' label",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cmgj35zvjyp9o?at_medium=RSS&at_campaign=rss",
+      "summary": "Carys Douglas, 23, made her stage debut this year in Anton Chekhov's play, The Seagull, in the US.",
+      "published": "Fri, 20 Nov 2026 15:55:02 GMT"
     },
     {
       "id": "ff5afed7ad5ce552",
@@ -47,6 +101,24 @@
       "published": "Fri, 20 Nov 2026 10:16:19 GMT"
     },
     {
+      "id": "8543ddf4a5288125",
+      "title": "White House removes cyber-security chief after series of tech outages",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo?at_medium=RSS&at_campaign=rss",
+      "summary": "He has been fired after losing the confidence of new White House chief of staff Stephen Miller, according to reports.",
+      "published": "Fri, 20 Nov 2026 19:03:56 GMT"
+    },
+    {
+      "id": "98395b11ead76bc2",
+      "title": "Massive hope for pancreatic cancer pill after trial saw tumours vanish",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cqrmgjnzz9l0o?at_medium=RSS&at_campaign=rss",
+      "summary": "Daily pill daraxonrasib appears to shrink and possibly even eliminate tumours in some patients with one of the deadliest cancers.",
+      "published": "Fri, 20 Nov 2026 00:08:22 GMT"
+    },
+    {
       "id": "c8cbc07c0aa7aeb6",
       "title": "Nigeria moves to end jail terms for attempted suicide",
       "source": "BBC",
@@ -54,15 +126,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cm3rgnvxj339o?at_medium=RSS&at_campaign=rss",
       "summary": "Nigeria's proposed reform follows years of calls from psychiatrists and a parallel Senate bill.",
       "published": "Fri, 20 Nov 2026 06:32:17 GMT"
-    },
-    {
-      "id": "923a007fa0f3d1a7",
-      "title": "'I tell my son it's just fireworks': Life inside Yemeni city besieged by Houthis",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cx7v2d8q879eo?at_medium=RSS&at_campaign=rss",
-      "summary": "Orla Guerin speaks to seven people trapped in the key city of Taiz, cut off from the outside world for weeks.",
-      "published": "Fri, 20 Nov 2026 00:13:21 GMT"
     },
     {
       "id": "92ca9ff247094edd",
@@ -74,175 +137,31 @@
       "published": "Fri, 20 Nov 2026 00:50:24 GMT"
     },
     {
-      "id": "8febbadd7da71c0f",
-      "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
+      "id": "fb730324063a16ca",
+      "title": "What the new UK-EU deal could mean for future post-Brexit relations",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
-      "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
-      "published": "Thu, 19 Nov 2026 23:33:51 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/c90k6gl3lyxeo?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC's political and Europe editors analyse the new agreements between the UK and EU.",
+      "published": "Fri, 20 Nov 2026 21:43:22 GMT"
     },
     {
-      "id": "eeaf96b77ff1efc7",
-      "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
+      "id": "fcf486052c46ea43",
+      "title": "Cost of living protests sweep across Europe",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss",
-      "summary": "While the presidents have previously met for one-on-one meetings, this is their first trilateral discussion.",
-      "published": "Thu, 19 Nov 2026 17:38:22 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/c6dx12ppeqn4o?at_medium=RSS&at_campaign=rss",
+      "summary": "Thousands marched across European cities on Friday to protest against the cost of living and other issues.",
+      "published": "Fri, 20 Nov 2026 16:45:34 GMT"
     },
     {
-      "id": "968ebb26e1aec61e",
-      "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+      "id": "0417e0a9af903990",
+      "title": "What we know about the latest Russian missile strikes on Ukraine",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
-      "summary": "The unprecedented International Court of Justice verdict concerns a 2017 military crackdown that killed thousands.",
-      "published": "Thu, 19 Nov 2026 20:07:02 GMT"
-    },
-    {
-      "id": "7fe4b6c1ddd6166d",
-      "title": "US army warns detonation of unstable explosives will create toxic plume",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmlye2334wlyo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Army has delayed the controlled explosion of unstable lead azide in eastern Iowa to Monday after concerns from residents and lawmakers.",
-      "published": "Fri, 20 Nov 2026 01:27:27 GMT"
-    },
-    {
-      "id": "4a8309431ec4f087",
-      "title": "Fiona the hippo dies after swallowing a hat at Cincinnati Zoo",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwz0k3172xzko?at_medium=RSS&at_campaign=rss",
-      "summary": "Fiona, who became an internet star after her premature birth in 2017, \"fought until she couldn’t anymore\", the zoo says.",
-      "published": "Thu, 19 Nov 2026 23:40:29 GMT"
-    },
-    {
-      "id": "8df418cc1b024dda",
-      "title": "China issues Mount Fuji warning as family of missing climber offers reward",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c61wr088jnzzo?at_medium=RSS&at_campaign=rss",
-      "summary": "The $75,000 reward offered by Chen Jie's family has sparked fears of more reckless climbing attempts.",
-      "published": "Fri, 20 Nov 2026 04:13:22 GMT"
-    },
-    {
-      "id": "a178720431e75cf7",
-      "title": "California targets Nvidia in China AI chip probe",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqn70vxp5p4no?at_medium=RSS&at_campaign=rss",
-      "summary": "The probe by California, where the AI chipmaker has its global headquarters, follows former CEO Jensen Huang's departure.",
-      "published": "Thu, 19 Nov 2026 23:04:30 GMT"
-    },
-    {
-      "id": "fbc93b31b43bde95",
-      "title": "Judge finds Thomas Markle mentally fit to stand trial on child abuse charges",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/crgj35ldz2zxo?at_medium=RSS&at_campaign=rss",
-      "summary": "Markle, who has denied possessing images of child sex abuse was deemed competent after an evaluation by a court-appointed psychiatrist.",
-      "published": "Thu, 19 Nov 2026 22:48:22 GMT"
-    },
-    {
-      "id": "1f1b3b7bf5bc7801",
-      "title": "Trump posthumously pardons US baseball legend Pete Rose",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cx1l0pm7l9jmo?at_medium=RSS&at_campaign=rss",
-      "summary": "Rose, who died in 2024, was given a lifetime ban from the sport for betting on games but was reinstated last year.",
-      "published": "Thu, 19 Nov 2026 23:51:50 GMT"
-    },
-    {
-      "id": "1548d446c7c63613",
-      "title": "Dozens missing after boat carrying migrants sinks off Senegal's coast",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&at_campaign=rss",
-      "summary": "At least four bodies have been recovered from the boat which was reportedly carrying between 50 and 100 people.",
-      "published": "Thu, 19 Nov 2026 15:52:26 GMT"
-    },
-    {
-      "id": "ecb256426dd1c275",
-      "title": "Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-      "summary": "The bridge - a symbol of Russia's occupation of the Crimean Peninsula - suffered major damaged following a combined attack by Ukraine earlier this week.",
-      "published": "Thu, 19 Nov 2026 13:07:35 GMT"
-    },
-    {
-      "id": "877afe82f192b0c8",
-      "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&at_campaign=rss",
-      "summary": "Châtaigniers en fleurs was painted in 1890 in the final two months of Vincent van Gogh's life.",
-      "published": "Thu, 19 Nov 2026 00:49:19 GMT"
-    },
-    {
-      "id": "0f1dfbdae502ca8b",
-      "title": "Venezuela signs military deal with US less than a year after Maduro's removal",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo?at_medium=RSS&at_campaign=rss",
-      "summary": "The US Secretary of Defence says Venezuela has \"gone from our most aggressive regional threat to a compliant security partner\".",
-      "published": "Thu, 19 Nov 2026 13:31:23 GMT"
-    },
-    {
-      "id": "20aed2f8500b9a48",
-      "title": "Susan Smith denied parole again 32 years after drowning her two sons",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/ckdd1y09eqjmo?at_medium=RSS&at_campaign=rss",
-      "summary": "At a hearing on the possibility of parole, Smith said she wished she could change the past, and her two children \"did not deserve to die\".",
-      "published": "Thu, 19 Nov 2026 17:23:34 GMT"
-    },
-    {
-      "id": "eb1e212b48f5a233",
-      "title": "US consortium wins huge Kenya mining deal, beating Chinese rivals",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm9q84gp0gr3o?at_medium=RSS&at_campaign=rss",
-      "summary": "The Mrima Hill site is estimated to hold deposits of critical minerals worth more than $60bn (£45bn).",
-      "published": "Thu, 19 Nov 2026 12:56:30 GMT"
-    },
-    {
-      "id": "1003cd7da12c85aa",
-      "title": "Survivors of Uganda's deadly landslide seek justice at the UN",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c920xgxp5785o?at_medium=RSS&at_campaign=rss",
-      "summary": "Survivors reject relocation plans they say ignore their safety, land rights and livelihoods.",
-      "published": "Thu, 19 Nov 2026 09:21:54 GMT"
-    },
-    {
-      "id": "29b28d61ecc7b2f0",
-      "title": "Florida pastor found guilty over role in assassination of Haitian president",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm702q0lg50po?at_medium=RSS&at_campaign=rss",
-      "summary": "Christian Emmanuel Sanon is convicted of involvement in the plot that resulted in the killing of Jovenel Moïse.",
-      "published": "Thu, 19 Nov 2026 11:44:57 GMT"
-    },
-    {
-      "id": "4bae7c9dd7b588be",
-      "title": "Israeli military completes ground operation in Gaza beyond Yellow Line",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
-      "summary": "Hamas condemned the incursion, which the Israeli military said was to dismantle a \"terror tunnel\", as a \"flagrant\" ceasefire violation.",
-      "published": "Thu, 19 Nov 2026 17:03:23 GMT"
-    },
-    {
-      "id": "068c8774918ba656",
-      "title": "How did Anthropic's stock market debut unfold?",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cwg7l01vg081o?at_medium=RSS&at_campaign=rss",
-      "summary": "The BBC's Samira Hussain breaks down the AI company's first day as a publicly traded company, as shares closed up 17%.",
-      "published": "Thu, 19 Nov 2026 23:52:25 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/c65y19wy3xl8o?at_medium=RSS&at_campaign=rss",
+      "summary": "What we know about the latest Russian missile strikes on Ukraine.",
+      "published": "Fri, 20 Nov 2026 15:14:01 GMT"
     },
     {
       "id": "4019b71fab57e454",
@@ -254,15 +173,6 @@
       "published": "Thu, 19 Nov 2026 22:54:03 GMT"
     },
     {
-      "id": "c51e08d264041602",
-      "title": "Rohingya genocide: What was said in court and what happens now?",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/c60qj10j0ld5o?at_medium=RSS&at_campaign=rss",
-      "summary": "The verdict marks the first time a state has ever been found to have committed genocide by an international court.",
-      "published": "Thu, 19 Nov 2026 17:35:05 GMT"
-    },
-    {
       "id": "d9c4d2e33d041e62",
       "title": "BBC correspondents discuss what Trump, Xi and Putin got out of historic talks",
       "source": "BBC",
@@ -272,31 +182,22 @@
       "published": "Thu, 19 Nov 2026 17:23:29 GMT"
     },
     {
-      "id": "7a2a34188fae0860",
-      "title": "Indian driver wins $1.3m in life-changing lottery prize",
+      "id": "923a007fa0f3d1a7",
+      "title": "'I tell my son it's just fireworks': Life inside Yemeni city besieged by Houthis",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cke89vdn75gyo?at_medium=RSS&at_campaign=rss",
-      "summary": "A truck driver's fortunes have changed overnight after he won a Diwali lottery in the northern Indian state of Punjab.",
-      "published": "Thu, 19 Nov 2026 11:38:09 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cx7v2d8q879eo?at_medium=RSS&at_campaign=rss",
+      "summary": "Orla Guerin speaks to seven people trapped in the key city of Taiz, cut off from the outside world for weeks.",
+      "published": "Fri, 20 Nov 2026 00:13:21 GMT"
     },
     {
-      "id": "85038a35caf4181e",
-      "title": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India",
+      "id": "95e1b8e14af6b170",
+      "title": "Mysterious Mercury is about to get a visitor - after spacecraft's eight-year epic voyage",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw1m4ym7ez2eo?at_medium=RSS&at_campaign=rss",
-      "summary": "Cumin-laced sodas are capturing a bigger market share in India as demand for homegrown flavours goes up.",
-      "published": "Thu, 19 Nov 2026 23:29:00 GMT"
-    },
-    {
-      "id": "07fa03897d2f5c4b",
-      "title": "More climate money for Africa? Europe says use what's already pledged",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c6074k5jjrzko?at_medium=RSS&at_campaign=rss",
-      "summary": "African countries at the UN climate summit in Turkey are demanding more funding from developed nations to help them cope with climate change.",
-      "published": "Fri, 20 Nov 2026 05:03:43 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c39w9l4v1p9ro?at_medium=RSS&at_campaign=rss",
+      "summary": "The mission is set to give us our best ever view of Mercury - the closest planet to the Sun.",
+      "published": "Fri, 20 Nov 2026 05:59:56 GMT"
     },
     {
       "id": "32f8af7ce63f8c42",
@@ -308,31 +209,31 @@
       "published": "Fri, 20 Nov 2026 00:13:24 GMT"
     },
     {
-      "id": "b294a552230e3405",
-      "title": "This is a remarkable diplomatic moment for China's Xi - but it comes with pitfalls",
+      "id": "07fa03897d2f5c4b",
+      "title": "More climate money for Africa? Europe says use what's already pledged",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o?at_medium=RSS&at_campaign=rss",
-      "summary": "The meeting comes with challenges as there are things Xi does not appear keen to discuss with Putin and Trump.",
-      "published": "Thu, 19 Nov 2026 04:42:52 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c6074k5jjrzko?at_medium=RSS&at_campaign=rss",
+      "summary": "African countries at the UN climate summit in Turkey are demanding more funding from developed nations to help them cope with climate change.",
+      "published": "Fri, 20 Nov 2026 05:03:43 GMT"
     },
     {
-      "id": "f93ed37b5789392d",
-      "title": "'It's a dream come true' – South African DJ celebrates featuring in GTA 6",
+      "id": "85038a35caf4181e",
+      "title": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/crx20q3qy0vxo?at_medium=RSS&at_campaign=rss",
-      "summary": "DJ lag, one of South Africa's best-known electronic music producers, is among several African stars to feature on Grand Theft Auto 6.",
-      "published": "Thu, 19 Nov 2026 10:32:10 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cw1m4ym7ez2eo?at_medium=RSS&at_campaign=rss",
+      "summary": "Cumin-laced sodas are capturing a bigger market share in India as demand for homegrown flavours goes up.",
+      "published": "Thu, 19 Nov 2026 23:29:00 GMT"
     },
     {
-      "id": "53ba164e0140f69f",
-      "title": "Anthropic shares fall a day after blockbuster opening",
+      "id": "50da3b38d638e680",
+      "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
       "source": "BBC",
       "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-      "summary": "Other tech companies have also taken a hit as share markets broadly slump.",
-      "published": "Fri, 20 Nov 2026 15:16:52 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
+      "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements.",
+      "published": "Fri, 20 Nov 2026 16:41:52 GMT"
     },
     {
       "id": "cf3caef10eb550cc",
@@ -342,6 +243,15 @@
       "url": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
       "summary": "People stocking up on long-life food drove retail sales higher October, according to official data.",
       "published": "Fri, 20 Nov 2026 09:44:56 GMT"
+    },
+    {
+      "id": "b6973fc351e5f01d",
+      "title": "Should AI be judging our credit worthiness?",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
+      "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
+      "published": "Fri, 20 Nov 2026 07:32:19 GMT"
     },
     {
       "id": "c470866a6d60f036",
@@ -359,16 +269,7 @@
       "topic": "Business",
       "url": "https://www.bbc.co.uk/news/articles/cmx278n2genyo?at_medium=RSS&at_campaign=rss",
       "summary": "New rules on what Airbnb hosts can reasonably ask guests to do could mean fewer chores but higher costs for customers.",
-      "published": "Fri, 20 Nov 2026 09:55:20 GMT"
-    },
-    {
-      "id": "b6973fc351e5f01d",
-      "title": "Should AI be judging our credit worthiness?",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
-      "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
-      "published": "Fri, 20 Nov 2026 07:32:19 GMT"
+      "published": "Fri, 20 Nov 2026 15:48:35 GMT"
     },
     {
       "id": "5ef06037f3faa4d5",
@@ -396,6 +297,24 @@
       "url": "https://www.bbc.co.uk/news/articles/c6eq49zyx7p4o?at_medium=RSS&at_campaign=rss",
       "summary": "Supermarkets, warehouses, restaurants and stadiums have been scrambling to make their devices safe.",
       "published": "Fri, 20 Nov 2026 00:02:07 GMT"
+    },
+    {
+      "id": "8febbadd7da71c0f",
+      "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
+      "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
+      "published": "Thu, 19 Nov 2026 23:33:51 GMT"
+    },
+    {
+      "id": "a178720431e75cf7",
+      "title": "California targets Nvidia in China AI chip probe",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cqn70vxp5p4no?at_medium=RSS&at_campaign=rss",
+      "summary": "The probe by California, where the AI chipmaker has its global headquarters, follows former CEO Jensen Huang's departure.",
+      "published": "Thu, 19 Nov 2026 23:04:30 GMT"
     },
     {
       "id": "1c9f1ec88723e6c1",
@@ -522,24 +441,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cm5y1eejk292o?at_medium=RSS&at_campaign=rss",
       "summary": "The Amazon chairman says he was originally \"biased against\" Pattinson \"because he's already so famous\".",
       "published": "Wed, 18 Nov 2026 04:00:54 GMT"
-    },
-    {
-      "id": "76312383b194b3de",
-      "title": "Government backs welfare shake-up to prevent 'lost generation'",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/ck79210y125xo?at_medium=RSS&at_campaign=rss",
-      "summary": "Ex-minister Alan Milburn has set out plans to divert spending from benefits towards job support.",
-      "published": "Tue, 17 Nov 2026 18:43:05 GMT"
-    },
-    {
-      "id": "581e2a01b93253d3",
-      "title": "Speed camera fault may have allowed drivers to escape fines",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c5y4j7z373kzo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Home Office has revoked approval that allowed footage from speed cameras to be used in evidence.",
-      "published": "Tue, 17 Nov 2026 20:04:54 GMT"
     },
     {
       "id": "010b3a1c8069f2a8",
@@ -713,15 +614,6 @@
       "published": "Fri, 20 Nov 2026 06:12:28 GMT"
     },
     {
-      "id": "23704d6b091a33a8",
-      "title": "More support for households reliant on heating oil",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cwm2mj7vezr3o?at_medium=RSS&at_campaign=rss",
-      "summary": "North Northamptonshire Council is encouraging eligible residents to apply for more support.",
-      "published": "Thu, 19 Nov 2026 15:22:31 GMT"
-    },
-    {
       "id": "27179cdad45769a7",
       "title": "My hometown shows that high streets have to change or die",
       "source": "BBC",
@@ -767,6 +659,15 @@
       "published": "Tue, 30 Jun 2026 23:05:19 GMT"
     },
     {
+      "id": "d74ec7a6cac5cfb4",
+      "title": "Could you spot a fake banknote?",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/videos/c6808y974d13o?at_medium=RSS&at_campaign=rss",
+      "summary": "A landlord says he took £100 in fake banknotes during his pub's opening weekend.",
+      "published": "Fri, 20 Nov 2026 15:40:40 GMT"
+    },
+    {
       "id": "acb595aad8920bf6",
       "title": "The secret cyber scramble to protect UK fridge freezers",
       "source": "BBC",
@@ -776,6 +677,24 @@
       "published": "Fri, 20 Nov 2026 15:08:16 GMT"
     },
     {
+      "id": "068c8774918ba656",
+      "title": "How did Anthropic's stock market debut unfold?",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/videos/cwg7l01vg081o?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC's Samira Hussain breaks down the AI company's first day as a publicly traded company, as shares closed up 17%.",
+      "published": "Thu, 19 Nov 2026 23:52:25 GMT"
+    },
+    {
+      "id": "7a2a34188fae0860",
+      "title": "Indian driver wins $1.3m in life-changing lottery prize",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/videos/cke89vdn75gyo?at_medium=RSS&at_campaign=rss",
+      "summary": "A truck driver's fortunes have changed overnight after he won a Diwali lottery in the northern Indian state of Punjab.",
+      "published": "Thu, 19 Nov 2026 11:38:09 GMT"
+    },
+    {
       "id": "0e74cf8e826ca907",
       "title": "Who are the investors ready to jump on Anthropic?",
       "source": "BBC",
@@ -783,15 +702,6 @@
       "url": "https://www.bbc.co.uk/news/videos/c6y0x84xx22wo?at_medium=RSS&at_campaign=rss",
       "summary": "The BBC's Samira Hussain speaks to a retail investor eagerly waiting for the AI company's stock to go live on Thursday.",
       "published": "Thu, 19 Nov 2026 01:22:38 GMT"
-    },
-    {
-      "id": "df58c3ac4bf77bb9",
-      "title": "Business Daily",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/sounds/play/w3ct8gm9?at_medium=RSS&at_campaign=rss",
-      "summary": "We examine the business of the Claude chatbot maker as it starts selling shares",
-      "published": "Wed, 18 Nov 2026 21:30:00 GMT"
     },
     {
       "id": "eb2f6d1f6a76ebef",
@@ -810,15 +720,6 @@
       "url": "https://www.bbc.co.uk/news/articles/c6z74ep2n17zo?at_medium=RSS&at_campaign=rss",
       "summary": "The game, which was in development for 13 years, is set become one of the world's most popular entertainment products ever.",
       "published": "Thu, 19 Nov 2026 12:26:39 GMT"
-    },
-    {
-      "id": "d8da16886db7756f",
-      "title": "Grand Theft Auto 6 is a masterpiece, say critics",
-      "source": "BBC",
-      "topic": "Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cw8r75xm8v4po?at_medium=RSS&at_campaign=rss",
-      "summary": "Critics have their say as to whether GTA 6, the most anticipated video game of all time, lives up to the hype.",
-      "published": "Wed, 18 Nov 2026 17:34:25 GMT"
     },
     {
       "id": "1b098827987d9fe3",
@@ -900,6 +801,105 @@
       "url": "https://www.bbc.co.uk/news/articles/c8xgdv9e007o?at_medium=RSS&at_campaign=rss",
       "summary": "The government wants more homes to have heat pumps to cut fossil fuel use and drive down energy bills.",
       "published": "Fri, 20 Nov 2026 10:24:52 GMT"
+    },
+    {
+      "id": "fa6ad01cfc568813",
+      "title": "Wading bird called Phil tracked in epic migration to Siberia and back",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c6qj5dl29zqro?at_medium=RSS&at_campaign=rss",
+      "summary": "A bird has astonished conservationists by completing a 6,800-mile round trip to Siberia and back.",
+      "published": "Thu, 19 Nov 2026 13:35:29 GMT"
+    },
+    {
+      "id": "1003cd7da12c85aa",
+      "title": "Survivors of Uganda's deadly landslide seek justice at the UN",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c920xgxp5785o?at_medium=RSS&at_campaign=rss",
+      "summary": "Survivors reject relocation plans they say ignore their safety, land rights and livelihoods.",
+      "published": "Thu, 19 Nov 2026 09:21:54 GMT"
+    },
+    {
+      "id": "c3b22e300a070dce",
+      "title": "Torrential rain causes widespread flooding in South Florida",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/videos/crgj3205jv98o?at_medium=RSS&at_campaign=rss",
+      "summary": "Entire neighbourhoods remain under water as disruptions impact schools, roads, hospitals and airports.",
+      "published": "Wed, 18 Nov 2026 20:29:18 GMT"
+    },
+    {
+      "id": "3b99d3adae83c4f5",
+      "title": "Stormont department failing to protect wild birds, investigation finds",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c8p3vwevreyqo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Office for Environmental Protection said Daera had not complied with environmental law requiring it to classify and update Special Protection Areas.",
+      "published": "Wed, 18 Nov 2026 12:13:32 GMT"
+    },
+    {
+      "id": "e012b7345c873673",
+      "title": "I want to know if toxic lagoon fire caused my husband's rare deadly cancer",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cm62y2e4qd9yo?at_medium=RSS&at_campaign=rss",
+      "summary": "Steve Williams died of lung cancer 14 years after falling in to a lagoon at a toxic waste dump fire.",
+      "published": "Wed, 18 Nov 2026 10:48:49 GMT"
+    },
+    {
+      "id": "2acbaa557a8c7ead",
+      "title": "What's gone wrong at Britain's worst bathing site?",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cm752w35lkz3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC looks at why in a dry summer with few sewage spills, one bathing site failed so many water quality tests.",
+      "published": "Wed, 18 Nov 2026 06:12:44 GMT"
+    },
+    {
+      "id": "b2d5638f441152da",
+      "title": "Government risks missing climate targets if EV rules weakened, adviser warns",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c63rgqg5l9l2o?at_medium=RSS&at_campaign=rss",
+      "summary": "The UK could miss legally binding climate targets if EV targets are cut, an adviser warns",
+      "published": "Wed, 18 Nov 2026 00:44:48 GMT"
+    },
+    {
+      "id": "0c76433c2bc5ed53",
+      "title": "Pakistan's solar revolution is so successful the national grid is lagging behind",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/ckvg2n2q3103o?at_medium=RSS&at_campaign=rss",
+      "summary": "People installing their own solar panels has helped boost the solar share of Pakistan's electricity from 1% to 28%.",
+      "published": "Tue, 17 Nov 2026 23:34:56 GMT"
+    },
+    {
+      "id": "7939e37c21a64040",
+      "title": "Fears toxic lagoon fire led to cancer and miscarriages",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/videos/cw074g4jk87vo?at_medium=RSS&at_campaign=rss",
+      "summary": "The incident took place in Llwyneinion in August 1980.",
+      "published": "Tue, 17 Nov 2026 22:39:23 GMT"
+    },
+    {
+      "id": "57f5b4720823cfff",
+      "title": "Wildlife conservation cash targets ex-colliery sites",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cmx2785nzpw2o?at_medium=RSS&at_campaign=rss",
+      "summary": "The project aims to create and restore habitats for amphibians and lizards at sites in Yorkshire.",
+      "published": "Fri, 20 Nov 2026 06:21:50 GMT"
+    },
+    {
+      "id": "ce78f6fa9ef5a5ec",
+      "title": "Oil firm fined for breaking environmental rules hundreds of times",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy5de1177yo?at_medium=RSS&at_campaign=rss",
+      "summary": "Ten charges involved oil, cyanide and other pollutants entering local waterways.",
+      "published": "Thu, 19 Nov 2026 19:58:27 GMT"
     }
   ],
   "audio_lessons": {
@@ -924,11 +924,11 @@
       "title": "BBC News",
       "description": "실제 뉴스 앵커의 5분 뉴스 보도",
       "feed_url": "https://podcast.voice.api.bbci.co.uk/rss/audio/p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr",
-      "episode_title": "20/11/2026 15:01 GMT",
-      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdhvx7tl0.mp3",
+      "episode_title": "20/11/2026 21:01 GMT",
+      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdhvx8k1s.mp3",
       "transcript_url": "",
-      "episode_url": "http://www.bbc.co.uk/programmes/w1730nkzqql8t5d",
-      "published": "Fri, 20 Nov 2026 15:06:00 GMT",
+      "episode_url": "http://www.bbc.co.uk/programmes/w1730nkzqql9jn5",
+      "published": "Fri, 20 Nov 2026 21:06:00 GMT",
       "duration": "300",
       "audio_available": true,
       "transcript_available": false
