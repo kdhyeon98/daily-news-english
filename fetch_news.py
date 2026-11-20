@@ -28,6 +28,27 @@ def tag_text(element, name):
             return child.text or ""
     return ""
 
+def find_audio(item):
+    for child in item.iter():
+        name = child.tag.split("}")[-1].lower()
+
+        if name not in ("enclosure", "content"):
+            continue
+
+        url = child.attrib.get("url", "").strip()
+        mime = child.attrib.get("type", "").lower()
+
+        if not url.startswith("https://"):
+            continue
+
+        if (
+            mime.startswith("audio/")
+            or re.search(r"\.(mp3|m4a|aac|ogg|wav)(\?|$)", url, re.I)
+        ):
+            return url
+
+    return ""
+
 articles = []
 seen = set()
 
@@ -37,11 +58,13 @@ for source, topic, feed_url in FEEDS:
             feed_url,
             headers={"User-Agent": "DailyNewsEnglish/1.0"}
         )
+
         with urllib.request.urlopen(request, timeout=20) as response:
             root = ET.fromstring(response.read())
 
         for item in root.iter():
             kind = item.tag.split("}")[-1]
+
             if kind not in ("item", "entry"):
                 continue
 
@@ -60,6 +83,7 @@ for source, topic, feed_url in FEEDS:
                 or tag_text(item, "summary")
                 or tag_text(item, "content")
             )
+
             published = (
                 tag_text(item, "pubDate")
                 or tag_text(item, "published")
@@ -70,9 +94,13 @@ for source, topic, feed_url in FEEDS:
                 continue
 
             article_id = hashlib.sha256(link.encode()).hexdigest()[:16]
+
             if article_id in seen:
                 continue
+
             seen.add(article_id)
+
+            audio_url = find_audio(item)
 
             articles.append({
                 "id": article_id,
@@ -81,7 +109,9 @@ for source, topic, feed_url in FEEDS:
                 "topic": topic,
                 "url": link,
                 "summary": summary[:600],
-                "published": published
+                "published": published,
+                "audio_url": audio_url,
+                "has_audio": bool(audio_url)
             })
 
     except Exception as error:
@@ -96,9 +126,13 @@ data = {
 
 output = Path("data/news.json")
 output.parent.mkdir(parents=True, exist_ok=True)
+
 output.write_text(
     json.dumps(data, ensure_ascii=False, indent=2),
     encoding="utf-8"
 )
 
+audio_count = sum(1 for article in articles if article["has_audio"])
+
 print(f"Saved {len(articles)} articles to {output}")
+print(f"Articles with audio: {audio_count}")
