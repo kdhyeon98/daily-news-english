@@ -8,7 +8,7 @@ from html import unescape
 import re
 import hashlib
 
-FEEDS = [
+NEWS_FEEDS = [
     ("BBC", "World", "https://feeds.bbci.co.uk/news/world/rss.xml"),
     ("BBC", "Business", "https://feeds.bbci.co.uk/news/business/rss.xml"),
     ("BBC", "Technology", "https://feeds.bbci.co.uk/news/technology/rss.xml"),
@@ -18,110 +18,181 @@ FEEDS = [
     ("Guardian", "Technology", "https://www.theguardian.com/technology/rss"),
 ]
 
+PODCAST_FEEDS = [
+    {
+        "session": "morning",
+        "source": "BBC Learning English",
+        "level": "Upper-intermediate",
+        "url": "https://podcasts.files.bbci.co.uk/p05hw4bq.rss",
+    },
+    {
+        "session": "evening",
+        "source": "BBC World Service",
+        "level": "Authentic news bulletin",
+        "url": "https://podcast.voice.api.bbci.co.uk/rss/audio/p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr",
+    },
+]
+
+
+def local_name(tag):
+    return tag.split("}")[-1]
+
+
 def clean(value):
     value = re.sub(r"<[^>]+>", " ", value or "")
     return re.sub(r"\s+", " ", unescape(value)).strip()
 
-def tag_text(element, name):
+
+def child_text(element, names):
     for child in element:
-        if child.tag.split("}")[-1] == name:
-            return child.text or ""
+        if local_name(child.tag) in names:
+            if child.text:
+                return child.text.strip()
     return ""
 
-def find_audio(item):
+
+def get_link(item):
+    for child in item:
+        if local_name(child.tag) == "link":
+            href = child.attrib.get("href", "")
+            if href:
+                return href
+            if child.text:
+                return child.text.strip()
+    return ""
+
+
+def get_audio_url(item):
     for child in item.iter():
-        name = child.tag.split("}")[-1].lower()
+        name = local_name(child.tag).lower()
 
-        if name not in ("enclosure", "content"):
-            continue
+        if name in ("enclosure", "content"):
+            url = child.attrib.get("url", "")
+            media_type = child.attrib.get("type", "").lower()
 
-        url = child.attrib.get("url", "").strip()
-        mime = child.attrib.get("type", "").lower()
-
-        if not url.startswith("https://"):
-            continue
-
-        if (
-            mime.startswith("audio/")
-            or re.search(r"\.(mp3|m4a|aac|ogg|wav)(\?|$)", url, re.I)
-        ):
-            return url
+            if url and (
+                media_type.startswith("audio/")
+                or re.search(r"\.(mp3|m4a|aac|ogg|wav)(\?|$)", url, re.I)
+            ):
+                return url
 
     return ""
 
-articles = []
-seen = set()
 
-for source, topic, feed_url in FEEDS:
-    try:
-        request = urllib.request.Request(
-            feed_url,
-            headers={"User-Agent": "DailyNewsEnglish/1.0"}
-        )
+def fetch_xml(url):
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": "DailyNewsEnglish/1.0"}
+    )
+    with urllib.request.urlopen(request, timeout=25) as response:
+        return ET.fromstring(response.read())
 
-        with urllib.request.urlopen(request, timeout=20) as response:
-            root = ET.fromstring(response.read())
 
-        for item in root.iter():
-            kind = item.tag.split("}")[-1]
+def fetch_news():
+    articles = []
+    seen = set()
 
-            if kind not in ("item", "entry"):
-                continue
+    for source, topic, feed_url in NEWS_FEEDS:
+        try:
+            root = fetch_xml(feed_url)
 
-            title = clean(tag_text(item, "title"))
-            link = tag_text(item, "link").strip()
+            for item in root.iter():
+                if local_name(item.tag) not in ("item", "entry"):
+                    continue
 
-            if not link:
-                for child in item:
-                    if child.tag.split("}")[-1] == "link":
-                        link = child.attrib.get("href", "")
-                        if link:
-                            break
+                title = clean(child_text(item, {"title"}))
+                link = get_link(item)
 
-            summary = clean(
-                tag_text(item, "description")
-                or tag_text(item, "summary")
-                or tag_text(item, "content")
+                summary = clean(
+                    child_text(item, {"description", "summary", "encoded"})
+                )
+
+                published = child_text(
+                    item, {"pubDate", "published", "updated"}
+                )
+
+                if not title or not link.startswith("https://"):
+                    continue
+
+                article_id = hashlib.sha256(
+                    link.encode()
+                ).hexdigest()[:16]
+
+                if article_id in seen:
+                    continue
+
+                seen.add(article_id)
+
+                articles.append({
+                    "id": article_id,
+                    "title": title,
+                    "source": source,
+                    "topic": topic,
+                    "url": link,
+                    "summary": summary[:1000],
+                    "published": published
+                })
+
+        except Exception as error:
+            print(f"News feed error ({source}/{topic}): {error}")
+
+    return articles[:100]
+
+
+def fetch_podcasts():
+    lessons = []
+
+    for feed in PODCAST_FEEDS:
+        try:
+            root = fetch_xml(feed["url"])
+
+            for item in root.iter():
+                if local_name(item.tag) not in ("item", "entry"):
+                    continue
+
+                title = clean(child_text(item, {"title"}))
+                description = clean(
+                    child_text(item, {"description", "summary", "encoded"})
+                )
+                audio_url = get_audio_url(item)
+                episode_url = get_link(item)
+
+                if not title or not audio_url:
+                    continue
+
+                episode_id = hashlib.sha256(
+                    audio_url.encode()
+                ).hexdigest()[:16]
+
+                lessons.append({
+                    "id": episode_id,
+                    "session": feed["session"],
+                    "source": feed["source"],
+                    "level": feed["level"],
+                    "title": title,
+                    "description": description[:2000],
+                    "audio_url": audio_url,
+                    "episode_url": episode_url,
+                    "published": child_text(
+                        item, {"pubDate", "published", "updated"}
+                    )
+                })
+
+                # 최신 에피소드만 수집
+                break
+
+        except Exception as error:
+            print(
+                f"Podcast feed error ({feed['source']}): {error}"
             )
 
-            published = (
-                tag_text(item, "pubDate")
-                or tag_text(item, "published")
-                or tag_text(item, "updated")
-            )
+    return lessons
 
-            if not title or not link.startswith("https://"):
-                continue
-
-            article_id = hashlib.sha256(link.encode()).hexdigest()[:16]
-
-            if article_id in seen:
-                continue
-
-            seen.add(article_id)
-
-            audio_url = find_audio(item)
-
-            articles.append({
-                "id": article_id,
-                "title": title,
-                "source": source,
-                "topic": topic,
-                "url": link,
-                "summary": summary[:600],
-                "published": published,
-                "audio_url": audio_url,
-                "has_audio": bool(audio_url)
-            })
-
-    except Exception as error:
-        print(f"Feed error ({source}/{topic}): {error}")
-
-articles = articles[:100]
 
 data = {
     "updated_at": datetime.now(timezone.utc).isoformat(),
-    "articles": articles
+    "articles": fetch_news(),
+    "audio_lessons": fetch_podcasts()
 }
 
 output = Path("data/news.json")
@@ -132,7 +203,13 @@ output.write_text(
     encoding="utf-8"
 )
 
-audio_count = sum(1 for article in articles if article["has_audio"])
+print(f"Saved {len(data['articles'])} articles")
+print(f"Saved {len(data['audio_lessons'])} audio lessons")
 
-print(f"Saved {len(articles)} articles to {output}")
-print(f"Articles with audio: {audio_count}")
+for lesson in data["audio_lessons"]:
+    print(
+        lesson["session"],
+        lesson["source"],
+        lesson["title"],
+        bool(lesson["audio_url"])
+    )
