@@ -8,6 +8,8 @@ from html import unescape
 import re
 import hashlib
 
+
+# 기존 뉴스 기사 피드: 그대로 유지
 NEWS_FEEDS = [
     ("BBC", "World", "https://feeds.bbci.co.uk/news/world/rss.xml"),
     ("BBC", "Business", "https://feeds.bbci.co.uk/news/business/rss.xml"),
@@ -18,24 +20,25 @@ NEWS_FEEDS = [
     ("Guardian", "Technology", "https://www.theguardian.com/technology/rss"),
 ]
 
-PODCAST_FEEDS = [
-    {
-        "session": "morning",
+
+# BBC 공식 팟캐스트 피드
+AUDIO_FEEDS = {
+    "morning": {
         "source": "BBC Learning English",
-        "level": "Upper-intermediate",
-        "url": "https://podcasts.files.bbci.co.uk/p05hw4bq.rss",
+        "title": "Learning English from the News",
+        "feed_url": "https://podcasts.files.bbci.co.uk/p05hw4bq.rss",
+        "description": "학습자를 위한 뉴스 영어 콘텐츠"
     },
-    {
-        "session": "evening",
+    "evening": {
         "source": "BBC World Service",
-        "level": "Authentic news bulletin",
-        "url": "https://podcast.voice.api.bbci.co.uk/rss/audio/p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr",
-    },
-]
-
-
-def local_name(tag):
-    return tag.split("}")[-1]
+        "title": "BBC News",
+        "feed_url": (
+            "https://podcast.voice.api.bbci.co.uk/rss/audio/"
+            "p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr"
+        ),
+        "description": "실제 뉴스 앵커의 5분 뉴스 보도"
+    }
+}
 
 
 def clean(value):
@@ -43,156 +46,267 @@ def clean(value):
     return re.sub(r"\s+", " ", unescape(value)).strip()
 
 
+def local_name(tag):
+    return tag.split("}")[-1].lower()
+
+
 def child_text(element, names):
+    if isinstance(names, str):
+        names = [names]
+
     for child in element:
         if local_name(child.tag) in names:
             if child.text:
                 return child.text.strip()
+
     return ""
+
+
+def child_element(element, name):
+    for child in element:
+        if local_name(child.tag) == name.lower():
+            return child
+    return None
 
 
 def get_link(item):
-    for child in item:
-        if local_name(child.tag) == "link":
-            href = child.attrib.get("href", "")
-            if href:
-                return href
-            if child.text:
-                return child.text.strip()
-    return ""
+    link_element = child_element(item, "link")
+
+    if link_element is None:
+        return ""
+
+    return (
+        link_element.attrib.get("href")
+        or (link_element.text or "").strip()
+    )
 
 
 def get_audio_url(item):
-    for child in item.iter():
-        name = local_name(child.tag).lower()
+    # RSS enclosure
+    for child in item:
+        name = local_name(child.tag)
 
-        if name in ("enclosure", "content"):
-            url = child.attrib.get("url", "")
+        if name == "enclosure":
             media_type = child.attrib.get("type", "").lower()
+            url = child.attrib.get("url", "")
 
             if url and (
                 media_type.startswith("audio/")
-                or re.search(r"\.(mp3|m4a|aac|ogg|wav)(\?|$)", url, re.I)
+                or re.search(
+                    r"\.(mp3|m4a|aac|ogg|wav)(\?|$)",
+                    url,
+                    re.I
+                )
+            ):
+                return url
+
+        # Media RSS content
+        if name == "content":
+            media_type = child.attrib.get("type", "").lower()
+            url = child.attrib.get("url", "")
+
+            if url and (
+                media_type.startswith("audio/")
+                or re.search(
+                    r"\.(mp3|m4a|aac|ogg|wav)(\?|$)",
+                    url,
+                    re.I
+                )
             ):
                 return url
 
     return ""
 
 
+def get_transcript(item):
+    # Podcasting 2.0 transcript extension
+    for child in item.iter():
+        if local_name(child.tag) != "transcript":
+            continue
+
+        url = child.attrib.get("url", "")
+        mime = child.attrib.get("type", "").lower()
+
+        if url and (
+            "text" in mime
+            or "html" in mime
+            or "json" in mime
+        ):
+            return url
+
+    return ""
+
+
+def get_duration(item):
+    value = child_text(item, "duration")
+
+    if not value:
+        return ""
+
+    return value
+
+
 def fetch_xml(url):
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "DailyNewsEnglish/1.0"}
+        headers={
+            "User-Agent": "DailyNewsEnglish/2.0",
+            "Accept": "application/rss+xml, application/xml, text/xml"
+        }
     )
-    with urllib.request.urlopen(request, timeout=25) as response:
+
+    with urllib.request.urlopen(request, timeout=30) as response:
         return ET.fromstring(response.read())
 
 
-def fetch_news():
-    articles = []
-    seen = set()
+# --------------------------------------------------
+# 1. 기존 뉴스 기사 수집
+# --------------------------------------------------
 
-    for source, topic, feed_url in NEWS_FEEDS:
-        try:
-            root = fetch_xml(feed_url)
+articles = []
+seen = set()
 
-            for item in root.iter():
-                if local_name(item.tag) not in ("item", "entry"):
-                    continue
+for source, topic, feed_url in NEWS_FEEDS:
+    try:
+        root = fetch_xml(feed_url)
 
-                title = clean(child_text(item, {"title"}))
-                link = get_link(item)
+        for item in root.iter():
+            if local_name(item.tag) not in ("item", "entry"):
+                continue
 
-                summary = clean(
-                    child_text(item, {"description", "summary", "encoded"})
+            title = clean(child_text(item, "title"))
+            link = get_link(item)
+
+            summary = clean(
+                child_text(
+                    item,
+                    ["description", "summary", "encoded"]
                 )
-
-                published = child_text(
-                    item, {"pubDate", "published", "updated"}
-                )
-
-                if not title or not link.startswith("https://"):
-                    continue
-
-                article_id = hashlib.sha256(
-                    link.encode()
-                ).hexdigest()[:16]
-
-                if article_id in seen:
-                    continue
-
-                seen.add(article_id)
-
-                articles.append({
-                    "id": article_id,
-                    "title": title,
-                    "source": source,
-                    "topic": topic,
-                    "url": link,
-                    "summary": summary[:1000],
-                    "published": published
-                })
-
-        except Exception as error:
-            print(f"News feed error ({source}/{topic}): {error}")
-
-    return articles[:100]
-
-
-def fetch_podcasts():
-    lessons = []
-
-    for feed in PODCAST_FEEDS:
-        try:
-            root = fetch_xml(feed["url"])
-
-            for item in root.iter():
-                if local_name(item.tag) not in ("item", "entry"):
-                    continue
-
-                title = clean(child_text(item, {"title"}))
-                description = clean(
-                    child_text(item, {"description", "summary", "encoded"})
-                )
-                audio_url = get_audio_url(item)
-                episode_url = get_link(item)
-
-                if not title or not audio_url:
-                    continue
-
-                episode_id = hashlib.sha256(
-                    audio_url.encode()
-                ).hexdigest()[:16]
-
-                lessons.append({
-                    "id": episode_id,
-                    "session": feed["session"],
-                    "source": feed["source"],
-                    "level": feed["level"],
-                    "title": title,
-                    "description": description[:2000],
-                    "audio_url": audio_url,
-                    "episode_url": episode_url,
-                    "published": child_text(
-                        item, {"pubDate", "published", "updated"}
-                    )
-                })
-
-                # 최신 에피소드만 수집
-                break
-
-        except Exception as error:
-            print(
-                f"Podcast feed error ({feed['source']}): {error}"
             )
 
-    return lessons
+            published = child_text(
+                item,
+                ["pubdate", "published", "updated"]
+            )
 
+            if not title or not link.startswith("https://"):
+                continue
+
+            article_id = hashlib.sha256(
+                link.encode("utf-8")
+            ).hexdigest()[:16]
+
+            if article_id in seen:
+                continue
+
+            seen.add(article_id)
+
+            articles.append({
+                "id": article_id,
+                "title": title,
+                "source": source,
+                "topic": topic,
+                "url": link,
+                "summary": summary[:600],
+                "published": published
+            })
+
+    except Exception as error:
+        print(f"News feed error ({source}/{topic}): {error}")
+
+
+articles = articles[:100]
+
+
+# --------------------------------------------------
+# 2. 아침·저녁 실제 오디오 수집
+# --------------------------------------------------
+
+audio_lessons = {}
+
+for session, config in AUDIO_FEEDS.items():
+
+    lesson = {
+        "session": session,
+        "source": config["source"],
+        "title": config["title"],
+        "description": config["description"],
+        "feed_url": config["feed_url"],
+        "episode_title": "",
+        "audio_url": "",
+        "transcript_url": "",
+        "episode_url": "",
+        "published": "",
+        "duration": "",
+        "audio_available": False,
+        "transcript_available": False
+    }
+
+    try:
+        root = fetch_xml(config["feed_url"])
+
+        episodes = []
+
+        for item in root.iter():
+            if local_name(item.tag) not in ("item", "entry"):
+                continue
+
+            episode_title = clean(
+                child_text(item, "title")
+            )
+
+            audio_url = get_audio_url(item)
+
+            if not episode_title or not audio_url:
+                continue
+
+            episodes.append({
+                "title": episode_title,
+                "audio_url": audio_url,
+                "transcript_url": get_transcript(item),
+                "episode_url": get_link(item),
+                "published": child_text(
+                    item,
+                    ["pubdate", "published", "updated"]
+                ),
+                "duration": get_duration(item)
+            })
+
+        if episodes:
+            latest = episodes[0]
+
+            lesson.update({
+                "episode_title": latest["title"],
+                "audio_url": latest["audio_url"],
+                "transcript_url": latest["transcript_url"],
+                "episode_url": latest["episode_url"],
+                "published": latest["published"],
+                "duration": latest["duration"],
+                "audio_available": True,
+                "transcript_available": bool(
+                    latest["transcript_url"]
+                )
+            })
+
+        print(
+            f"Audio feed ({session}): "
+            f"{len(episodes)} episodes found"
+        )
+
+    except Exception as error:
+        print(f"Audio feed error ({session}): {error}")
+
+    audio_lessons[session] = lesson
+
+
+# --------------------------------------------------
+# 3. 기존 데이터 + 오디오 데이터 저장
+# --------------------------------------------------
 
 data = {
     "updated_at": datetime.now(timezone.utc).isoformat(),
-    "articles": fetch_news(),
-    "audio_lessons": fetch_podcasts()
+    "articles": articles,
+    "audio_lessons": audio_lessons
 }
 
 output = Path("data/news.json")
@@ -203,13 +317,13 @@ output.write_text(
     encoding="utf-8"
 )
 
-print(f"Saved {len(data['articles'])} articles")
-print(f"Saved {len(data['audio_lessons'])} audio lessons")
+print(f"Saved {len(articles)} news articles.")
 
-for lesson in data["audio_lessons"]:
+for session, lesson in audio_lessons.items():
     print(
-        lesson["session"],
-        lesson["source"],
-        lesson["title"],
-        bool(lesson["audio_url"])
+        f"{session}: "
+        f"audio={lesson['audio_available']}, "
+        f"transcript={lesson['transcript_available']}"
     )
+
+print(f"Saved audio lessons to {output}")
