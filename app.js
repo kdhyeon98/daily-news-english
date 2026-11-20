@@ -12,6 +12,8 @@ let session = "morning";
 let articles = [];
 let newsUtterance = null;
 let newsSpeechRate = 1;
+let speechSentences = [];
+let speechIndex = 0;
 
 const articleWordCache = new Map();
 
@@ -114,6 +116,7 @@ function assignNews(){
         title:a.title,
         source:a.source,
         url:a.url,
+        audio_url:a.audio_url||"",
         status:"unverified",
         topic:a.topic,
         summary:a.summary,
@@ -152,13 +155,13 @@ function renderNews(){
 
     const manual=$("#addLesson")?.closest(".card");
     if(manual)manual.before(section);
-    else $(".shell").append(section);
+    else $(".shell")?.append(section);
   }
 
   if(!articles.length){
     section.innerHTML=`
       <h2>오늘의 자동 뉴스</h2>
-      <p class="muted">뉴스 데이터를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.</p>
+      <p class="muted">뉴스 데이터를 불러오지 못했어요.</p>
       <button class="btn secondary" id="reloadNews">뉴스 다시 불러오기</button>`;
   }else{
     section.innerHTML=`
@@ -202,6 +205,7 @@ function renderNews(){
         title:article.title,
         source:article.source,
         url:article.url,
+        audio_url:article.audio_url||"",
         status:"unverified",
         topic:article.topic,
         summary:article.summary,
@@ -239,10 +243,7 @@ function extractCandidates(article){
   return Object.entries(counts)
     .map(([word,count])=>({
       word,
-      score:
-        Math.min(word.length,12)+
-        count*2+
-        (ADVANCED_WORDS.has(word)?12:0)
+      score:Math.min(word.length,12)+count*2+(ADVANCED_WORDS.has(word)?12:0)
     }))
     .sort((a,b)=>b.score-a.score)
     .slice(0,5)
@@ -250,9 +251,7 @@ function extractCandidates(article){
 }
 
 async function getWordInfo(word){
-  let part="";
-  let definition="";
-  let example="";
+  let part="",definition="",example="";
   let meaning="한국어 뜻을 가져오지 못했어요.";
 
   try{
@@ -262,19 +261,10 @@ async function getWordInfo(word){
 
     if(response.ok){
       const data=await response.json();
-      const entry=data[0];
-      const meanings=entry.meanings||[];
-
+      const meanings=data[0].meanings||[];
       part=meanings.map(m=>m.partOfSpeech||"").filter(Boolean).slice(0,2).join(", ");
-      definition=meanings
-        .slice(0,2)
-        .map(m=>m.definitions?.[0]?.definition||"")
-        .filter(Boolean)
-        .join(" / ");
-
-      example=meanings
-        .flatMap(m=>m.definitions||[])
-        .find(d=>d.example)?.example||"";
+      definition=meanings.slice(0,2).map(m=>m.definitions?.[0]?.definition||"").filter(Boolean).join(" / ");
+      example=meanings.flatMap(m=>m.definitions||[]).find(d=>d.example)?.example||"";
     }
   }catch(error){
     console.log("Dictionary unavailable:",word,error);
@@ -282,17 +272,15 @@ async function getWordInfo(word){
 
   try{
     const response=await fetch(
-      "https://api.mymemory.translated.net/get?q="+
-      encodeURIComponent(word)+"&langpair=en|ko"
+      "https://api.mymemory.translated.net/get?q="+encodeURIComponent(word)+"&langpair=en|ko"
     );
-
     if(response.ok){
       const data=await response.json();
       const translated=data.responseData?.translatedText;
       if(translated&&data.responseStatus===200)meaning=translated;
     }
   }catch(error){
-    console.log("Translation unavailable:",word,error);
+    console.log("Translation unavailable:",error);
   }
 
   return {word,part,definition,example,meaning};
@@ -302,25 +290,21 @@ async function extractArticleVocabulary(article){
   const panel=$("#article-vocab-"+article.id);
   if(!panel)return;
 
-  panel.innerHTML='<p class="muted">기사에서 어휘를 찾고 사전 정보를 가져오는 중이에요...</p>';
-
+  panel.innerHTML='<p class="muted">어휘 정보를 가져오는 중이에요...</p>';
   const candidates=extractCandidates(article);
 
   if(!candidates.length){
-    panel.innerHTML='<p class="muted">이 기사 요약에서는 어휘 후보를 찾지 못했어요. 다른 기사를 선택해 주세요.</p>';
+    panel.innerHTML='<p class="muted">어휘 후보를 찾지 못했어요.</p>';
     return;
   }
 
   const results=await Promise.all(candidates.map(getWordInfo));
-
-  results.forEach(item=>{
-    articleWordCache.set(item.word.toLowerCase(),item);
-  });
+  results.forEach(item=>articleWordCache.set(item.word.toLowerCase(),item));
 
   panel.innerHTML=`
     <div style="margin-top:14px;padding:12px;background:rgba(127,127,127,.08);border-radius:10px">
       <b>이 기사에서 찾은 핵심 어휘</b>
-      <p class="muted">제목과 RSS 요약에 등장한 단어를 분석했어요.</p>
+      <p class="muted">제목과 RSS 요약을 분석했어요.</p>
       ${results.map(item=>`
         <div class="word" style="padding:12px 0;border-bottom:1px solid #ddd">
           <b>${esc(item.word)}</b>
@@ -331,8 +315,7 @@ async function extractArticleVocabulary(article){
           <button class="btn secondary" data-save-article-word="${esc(item.word.toLowerCase())}">단어장에 저장</button>
         </div>
       `).join("")}
-    </div>
-  `;
+    </div>`;
 
   panel.querySelectorAll("[data-save-article-word]").forEach(button=>{
     button.addEventListener("click",()=>{
@@ -366,91 +349,124 @@ function saveVocabularyWord(item,button){
 }
 
 function stopNewsSpeech(){
-  if("speechSynthesis" in window){
-    window.speechSynthesis.cancel();
-  }
+  if("speechSynthesis" in window)window.speechSynthesis.cancel();
   newsUtterance=null;
 }
 
+function splitSentences(text){
+  return (text||"")
+    .replace(/\s+/g," ")
+    .match(/[^.!?]+[.!?]+|[^.!?]+$/g)
+    ?.map(s=>s.trim())
+    .filter(Boolean)||[];
+}
+
+function updateSentenceDisplay(){
+  const display=$("#sentenceDisplay");
+  const counter=$("#sentenceCounter");
+
+  if(display){
+    display.textContent=speechSentences[speechIndex]||"문장이 없습니다.";
+  }
+
+  if(counter){
+    counter.textContent=`${speechSentences.length?speechIndex+1:0} / ${speechSentences.length}`;
+  }
+}
+
+function speakCurrentSentence(){
+  if(!speechSentences.length)return;
+
+  stopNewsSpeech();
+
+  const text=speechSentences[speechIndex];
+  const utterance=new SpeechSynthesisUtterance(text);
+  utterance.lang="en-US";
+  utterance.rate=newsSpeechRate;
+
+  const voices=window.speechSynthesis.getVoices();
+  const voice=voices.find(v=>v.lang==="en-US")||voices.find(v=>v.lang.startsWith("en"));
+  if(voice)utterance.voice=voice;
+
+  utterance.onstart=()=>{
+    const status=$("#newsSpeechStatus");
+    if(status)status.textContent="문장을 재생하고 있습니다.";
+  };
+
+  utterance.onend=()=>{
+    const status=$("#newsSpeechStatus");
+    if(status)status.textContent="재생이 끝났습니다.";
+    newsUtterance=null;
+  };
+
+  utterance.onerror=()=>{
+    const status=$("#newsSpeechStatus");
+    if(status)status.textContent="음성 재생에 실패했습니다.";
+    newsUtterance=null;
+  };
+
+  newsUtterance=utterance;
+  window.speechSynthesis.speak(utterance);
+  updateSentenceDisplay();
+}
+
 function bindNewsSpeech(article){
-  const speak=$("#newsSpeak");
-  const pause=$("#newsPause");
-  const resume=$("#newsResume");
-  const stop=$("#newsStop");
   const rate=$("#newsSpeechRate");
   const status=$("#newsSpeechStatus");
 
-  if(!speak)return;
+  speechSentences=splitSentences(
+    [article.title,article.summary].filter(Boolean).join(". ")
+  );
+  speechIndex=0;
+  updateSentenceDisplay();
 
-  rate.value=String(newsSpeechRate);
+  if(rate){
+    rate.value=String(newsSpeechRate);
+    rate.onchange=()=>{
+      newsSpeechRate=Number(rate.value);
+    };
+  }
 
-  rate.onchange=()=>{
-    newsSpeechRate=Number(rate.value);
-  };
-
-  speak.onclick=()=>{
+  $("#newsSpeak")?.addEventListener("click",()=>{
     if(!("speechSynthesis" in window)){
       status.textContent="이 기기에서는 음성 재생을 지원하지 않습니다.";
       return;
     }
+    speakCurrentSentence();
+  });
 
-    const text=[article.title,article.summary]
-      .filter(Boolean)
-      .join(". ");
-
-    if(!text.trim()){
-      status.textContent="재생할 뉴스 내용이 없습니다. 언론사 원문을 이용해 주세요.";
-      return;
-    }
-
-    stopNewsSpeech();
-
-    const utterance=new SpeechSynthesisUtterance(text);
-    utterance.lang="en-US";
-    utterance.rate=newsSpeechRate;
-
-    const voices=window.speechSynthesis.getVoices();
-    const voice=voices.find(v=>v.lang==="en-US")
-      ||voices.find(v=>v.lang.startsWith("en"));
-
-    if(voice)utterance.voice=voice;
-
-    utterance.onstart=()=>{
-      status.textContent="영어 음성을 재생하고 있습니다.";
-    };
-
-    utterance.onend=()=>{
-      status.textContent="재생이 끝났습니다.";
-      newsUtterance=null;
-    };
-
-    utterance.onerror=()=>{
-      status.textContent="재생에 실패했습니다. 원문 링크를 이용해 주세요.";
-      newsUtterance=null;
-    };
-
-    newsUtterance=utterance;
-    window.speechSynthesis.speak(utterance);
-  };
-
-  pause.onclick=()=>{
+  $("#newsPause")?.addEventListener("click",()=>{
     if(window.speechSynthesis?.speaking){
       window.speechSynthesis.pause();
       status.textContent="일시정지했습니다.";
     }
-  };
+  });
 
-  resume.onclick=()=>{
+  $("#newsResume")?.addEventListener("click",()=>{
     if(window.speechSynthesis?.paused){
       window.speechSynthesis.resume();
       status.textContent="이어서 재생합니다.";
     }
-  };
+  });
 
-  stop.onclick=()=>{
+  $("#newsStop")?.addEventListener("click",()=>{
     stopNewsSpeech();
     status.textContent="재생을 정지했습니다.";
-  };
+  });
+
+  $("#sentencePlay")?.addEventListener("click",speakCurrentSentence);
+
+  $("#sentenceRepeat")?.addEventListener("click",speakCurrentSentence);
+
+  $("#sentencePrev")?.addEventListener("click",()=>{
+    speechIndex=Math.max(0,speechIndex-1);
+    speakCurrentSentence();
+  });
+
+  $("#sentenceNext")?.addEventListener("click",()=>{
+    speechIndex=Math.min(speechSentences.length-1,speechIndex+1);
+    speakCurrentSentence();
+  });
 }
 
 function render(){
@@ -479,6 +495,8 @@ function render(){
   const l=current();
   const r=rec(l.id);
   const evening=session==="evening";
+  const audioUrl=safeUrl(l.audio_url||"");
+  const hasAudio=audioUrl!=="#";
 
   $("#lesson").innerHTML=`
     <div class="row">
@@ -495,15 +513,39 @@ function render(){
       </a>
     </p>
 
-    <div class="notice">
-      원문에 실제 음성이나 영상이 있다면 언론사 페이지에서 이용하세요.
-      아래 앱 음성은 기기에서 생성하는 영어 합성 음성입니다.
-    </div>
+    ${hasAudio?`
+      <section class="word" style="margin:16px 0;padding:16px">
+        <h3>언론사 제공 실제 오디오</h3>
+        <audio controls preload="none" style="width:100%">
+          <source src="${audioUrl}">
+          오디오를 재생할 수 없습니다.
+        </audio>
+        <p class="muted">RSS에 첨부된 오디오 파일입니다.</p>
+      </section>
+    `:`
+      <div class="notice">
+        이 기사에는 RSS에서 확인된 오디오 파일이 없습니다.
+        아래 합성 음성 또는 언론사 원문을 이용하세요.
+      </div>
+    `}
 
     <section class="word" style="margin:16px 0;padding:16px">
-      <h3>뉴스 듣기</h3>
-      <p class="muted">뉴스 제목과 요약을 영어 음성으로 읽어줍니다.</p>
+      <h3>문장별 뉴스 듣기</h3>
+      <p class="muted">제목과 요약을 문장 단위로 나눠 영어로 읽어줍니다.</p>
 
+      <div style="padding:14px;background:rgba(127,127,127,.08);border-radius:10px">
+        <div class="muted" id="sentenceCounter">0 / 0</div>
+        <p id="sentenceDisplay">문장을 준비하고 있습니다.</p>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="sentencePlay">▶ 현재 문장</button>
+        <button class="btn secondary" id="sentenceRepeat">반복</button>
+        <button class="btn secondary" id="sentencePrev">이전</button>
+        <button class="btn secondary" id="sentenceNext">다음</button>
+      </div>
+
+      <div class="fieldtitle">전체 음성 재생</div>
       <div class="actions">
         <button class="btn" id="newsSpeak">▶ 재생</button>
         <button class="btn secondary" id="newsPause">일시정지</button>
@@ -518,14 +560,18 @@ function render(){
         <option value="1.2">1.2배속</option>
       </select>
 
-      <p id="newsSpeechStatus" class="muted">
-        재생 버튼을 눌러 영어 듣기를 시작하세요.
-      </p>
+      <p id="newsSpeechStatus" class="muted">재생 버튼을 눌러 시작하세요.</p>
     </section>
 
-    <div class="notice">미검증 콘텐츠입니다. 받아쓰기 정답을 공개하지 않습니다.</div>
+    <div class="notice">
+      미검증 학습 콘텐츠입니다.
+      받아쓰기 완료 선언 전에는 요약을 숨깁니다.
+    </div>
 
-    ${l.summary?`<p class="muted">${esc(l.summary)}</p>`:""}
+    ${(!evening||r.dictationDone)&&l.summary?`
+      <div class="fieldtitle">뉴스 요약</div>
+      <p class="muted">${esc(l.summary)}</p>
+    `:""}
 
     <div class="fieldtitle">1. 첫 청취 후 요약</div>
     <p class="muted">핵심 사건과 기자의 논지를 정리하세요.</p>
@@ -538,7 +584,7 @@ function render(){
         <button class="btn secondary" id="notdone">작성 중</button>
         <button class="btn" id="dictdone">받아쓰기 완료 선언</button>
       </div>
-      <div class="muted">${r.dictationDone?"완료 선언 기록됨.":"완료 선언 전에는 정답을 공개하지 않습니다."}</div>
+      <div class="muted">${r.dictationDone?"완료 선언 기록됨. 요약이 공개되었습니다.":"완료 선언 전에는 요약을 숨깁니다."}</div>
     `:""}
 
     <div class="fieldtitle">${evening?"3":"2"}. 난이도 체감</div>
@@ -594,8 +640,7 @@ function renderHistory(){
   }
 
   db.records.slice().reverse().forEach(r=>{
-    const l=db.lessons.find(x=>x.id===r.lessonId)
-      ||demo.find(x=>x.id===r.lessonId);
+    const l=db.lessons.find(x=>x.id===r.lessonId)||demo.find(x=>x.id===r.lessonId);
 
     html+=`
       <div class="word">
@@ -697,10 +742,7 @@ async function searchVocabulary(){
       if(translationResponse.ok){
         const translationData=await translationResponse.json();
         const translated=translationData.responseData?.translatedText;
-
-        if(translated&&translationData.responseStatus===200){
-          korean=translated;
-        }
+        if(translated&&translationData.responseStatus===200)korean=translated;
       }
     }catch(error){
       console.log("Translation unavailable",error);
@@ -719,14 +761,12 @@ async function searchVocabulary(){
 
     $("#saveWord").onclick=()=>{
       const item={word:entry.word,part,meaning:korean,definition,example};
-      const button=$("#saveWord");
-      saveVocabularyWord(item,button);
+      saveVocabularyWord(item,$("#saveWord"));
     };
   }catch(error){
     result.innerHTML=`
       <p class="muted">검색 결과를 찾지 못했어요.</p>
-      <p class="muted">철자를 확인하거나 잠시 후 다시 시도해 주세요.</p>
-    `;
+      <p class="muted">철자를 확인하거나 잠시 후 다시 시도해 주세요.</p>`;
   }
 }
 
@@ -758,6 +798,7 @@ $("#addLesson")?.addEventListener("click",()=>{
     title,
     source,
     url,
+    audio_url:"",
     status,
     topic:"사용자 선택",
     duration:session==="morning"?"약 10분":"약 1분 구간"
