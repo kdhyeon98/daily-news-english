@@ -1,4 +1,5 @@
-const CACHE = "dne-static-v2";
+
+const CACHE = "dne-static-v3";
 
 const FILES = [
   "./",
@@ -41,9 +42,20 @@ self.addEventListener("fetch", event => {
     return;
   }
 
+  if (url.pathname.endsWith("/app.js") || url.pathname.endsWith("/index.html")) {
+    event.respondWith(
+      fetch(request, { cache: "no-store" }).then(response => {
+        if (response.ok) {
+          const copy = response.clone();
+          caches.open(CACHE).then(cache => cache.put(request, copy));
+        }
+        return response;
+      }).catch(() => caches.match(request))
+    );
+    return;
+  }
+
   event.respondWith(
-    caches.match(request).then(
-      cached => cached || fetch(request)
-    )
+    caches.match(request).then(cached => cached || fetch(request))
   );
 });
