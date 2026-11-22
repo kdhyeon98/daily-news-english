@@ -3,7 +3,10 @@ name: Daily News Update
 
 on:
   schedule:
-    - cron: "13 21 * * *"
+    # 한국 시간 오전 7시 13분
+    - cron: "13 22 * * *"
+    # 한국 시간 오후 5시 13분
+    - cron: "13 8 * * *"
   workflow_dispatch:
 
 permissions:
@@ -16,6 +19,7 @@ concurrency:
 jobs:
   update-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -36,12 +40,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          git pull --rebase origin main
           git add data/news.json
 
           if git diff --cached --quiet; then
             echo "No news changes to save."
           else
             git commit -m "Update daily news"
-            git pull --rebase origin main
             git push origin HEAD:main
           fi
