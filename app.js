@@ -1,17 +1,20 @@
-
 const $ = s => document.querySelector(s);
 const today = new Date().toLocaleDateString("en-CA");
 const key = "dne-zero-v1";
 
-let db = JSON.parse(localStorage.getItem(key) || '{"lessons":[],"records":[]}');
-db.lessons = db.lessons || [];
-db.records = db.records || [];
-db.vocabulary = db.vocabulary || [];
+let db;
+try {
+  db = JSON.parse(localStorage.getItem(key) || '{"lessons":[],"records":[],"vocabulary":[]}');
+} catch {
+  db = { lessons: [], records: [], vocabulary: [] };
+}
+db.lessons = Array.isArray(db.lessons) ? db.lessons : [];
+db.records = Array.isArray(db.records) ? db.records : [];
+db.vocabulary = Array.isArray(db.vocabulary) ? db.vocabulary : [];
 
 let session = "morning";
 let articles = [];
 let audioLessons = {};
-
 const articleWordCache = new Map();
 
 const demo = [
@@ -107,14 +110,11 @@ function assignAudioLessons(){
   ["morning","evening"].forEach(s=>{
     const a=audioLessons[s];
     if(!a||!a.audio_available||!a.audio_url)return;
-
     const existing=db.lessons.find(x=>x.date===today&&x.session===s);
 
-    // 사용자가 직접 등록한 수업은 덮어쓰지 않음
     if(existing&&!existing.auto)return;
 
     const id=existing?.id||`audio-${today}-${s}`;
-
     const lesson={
       id,
       date:today,
@@ -151,7 +151,6 @@ async function loadNews(){
     const data=await response.json();
     articles=Array.isArray(data.articles)?data.articles:[];
     audioLessons=data.audio_lessons||{};
-
     assignAudioLessons();
     renderNews();
     render();
@@ -168,7 +167,6 @@ function renderNews(){
     section=document.createElement("section");
     section.id="newsFeed";
     section.className="card";
-
     const manual=$("#addLesson")?.closest(".card");
     if(manual)manual.before(section);
     else $(".shell")?.append(section);
@@ -364,7 +362,6 @@ function render(){
       <span class="pill">${evening?"EVENING NEWS":"MORNING ENGLISH"}</span>
       <span class="muted">${esc(l.duration||"")}</span>
     </div>
-
     <div class="title">${esc(l.title)}</div>
     <div class="muted">${esc(l.source)} · ${esc(l.topic||"")}</div>
     ${l.published?`<p class="muted">방송일: ${esc(l.published)}</p>`:""}
@@ -451,29 +448,38 @@ function render(){
   $("#complete").onclick=()=>store(true);
 
   $("#notdone")?.addEventListener("click",()=>{
-    r.dictationDone=false;
-    upsert(r);
-    render();
+    saveDictationState(false);
   });
 
   $("#dictdone")?.addEventListener("click",()=>{
-    r.dictationDone=true;
-    upsert(r);
-    render();
+    saveDictationState(true);
   });
 }
 
+/* 입력값을 화면 갱신 전에 모두 저장 */
+function readForm(r){
+  r.summary=$("#summary")?.value??r.summary??"";
+  r.dictation=$("#dictation")?.value??r.dictation??"";
+  r.notes=$("#notes")?.value??r.notes??"";
+  r.difficulty=Number($("#difficulty")?.value||r.difficulty||3);
+  r.updatedAt=new Date().toISOString();
+  return r;
+}
+
+/* 받아쓰기 상태 저장 */
+function saveDictationState(done){
+  const l=current();
+  const r=readForm(rec(l.id));
+  r.dictationDone=done;
+  upsert(r);
+  render();
+}
+
+/* 일반 학습 진도 저장 */
 function store(done){
   const l=current();
-  const r=rec(l.id);
-
-  r.summary=$("#summary").value;
-  r.dictation=$("#dictation")?.value||"";
-  r.notes=$("#notes").value;
-  r.difficulty=Number($("#difficulty").value);
+  const r=readForm(rec(l.id));
   r.completed=done||r.completed;
-  r.updatedAt=new Date().toISOString();
-
   upsert(r);
   render();
 }
@@ -495,6 +501,8 @@ function renderHistory(){
           ${r.completed?"완료":"진행 중"} · 난이도 ${r.difficulty}/5 ·
           ${r.updatedAt?new Date(r.updatedAt).toLocaleString("ko-KR"):""}
         </div>
+        <p>${esc(r.summary||"")}</p>
+        ${r.dictation?`<p>${esc(r.dictation)}</p>`:""}
       </div>`;
   });
 
@@ -508,7 +516,6 @@ function renderVocabulary(){
   $("#lesson").innerHTML=`
     <h2>나만의 영어 단어장</h2>
     <p class="muted">뉴스 어휘를 추출하거나 직접 검색해 저장하세요.</p>
-
     <div class="fieldtitle">단어 검색</div>
     <div class="actions">
       <input id="wordSearch" class="input" placeholder="예: resilience">
@@ -565,7 +572,6 @@ async function searchVocabulary(){
     const data=await dictionaryResponse.json();
     const entry=data[0];
     const meanings=entry.meanings||[];
-
     const definitions=meanings.slice(0,3).map(m=>({
       part:m.partOfSpeech||"",
       definition:m.definitions?.[0]?.definition||"",
@@ -623,40 +629,6 @@ document.querySelectorAll(".tab").forEach(b=>{
   };
 });
 
-/* 사용자 직접 학습 자료 등록 */
-$("#addLesson")?.addEventListener("click",()=>{
-  const title=$("#customTitle").value.trim();
-  const source=$("#customSource").value.trim();
-  const url=safeUrl($("#customUrl").value.trim());
-
-  if(!title||!source||url==="#"){
-    alert("제목, 언론사, 유효한 URL을 입력하세요.");
-    return;
-  }
-
-  const status=$("#customStatus").value;
-
-  db.lessons=db.lessons.filter(x=>!(x.date===today&&x.session===session));
-
-  db.lessons.push({
-    id:crypto.randomUUID(),
-    date:today,
-    session,
-    title,
-    source,
-    url,
-    audio_url:"",
-    status,
-    topic:"사용자 선택",
-    duration:session==="morning"?"사용자 자료":"사용자 자료",
-    auto:false
-  });
-
-  save();
-  render();
-  alert("오늘 학습 자료를 저장했습니다.");
-});
-
 /* 백업 내보내기 */
 $("#export")?.addEventListener("click",()=>{
   const blob=new Blob([JSON.stringify(db,null,2)],{type:"application/json"});
@@ -674,7 +646,6 @@ $("#importFile")?.addEventListener("change",async e=>{
 
   try{
     const data=JSON.parse(await f.text());
-
     if(!Array.isArray(data.lessons)||!Array.isArray(data.records)){
       throw Error();
     }
