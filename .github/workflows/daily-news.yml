@@ -3,9 +3,7 @@ name: Daily News Update
 
 on:
   schedule:
-    # 한국 시간 오전 7시 13분
     - cron: "13 22 * * *"
-    # 한국 시간 오후 5시 13분
     - cron: "13 8 * * *"
   workflow_dispatch:
 
@@ -32,13 +30,15 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Sync repository before fetching
+        run: git pull --rebase origin main
+
       - name: Fetch latest news
         run: python fetch_news.py
 
       - name: Save news data
         run: |
           set -e
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -46,11 +46,7 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No news changes to save."
-            exit 0
+          else
+            git commit -m "Update daily news"
+            git push origin HEAD:main
           fi
-
-          git commit -m "Update daily news"
-
-          git pull --rebase --autostash origin main
-
-          git push origin HEAD:main
