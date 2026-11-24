@@ -1,23 +1,41 @@
 {
-  "updated_at": "2026-11-23T23:02:10.235505+00:00",
+  "updated_at": "2026-11-24T09:09:15.298662+00:00",
   "articles": [
     {
-      "id": "66403463587777bc",
-      "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+      "id": "25d043b118adad46",
+      "title": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss",
-      "summary": "Megaspeed has been accused of funneling AI chips to China after a former executive's affair with Jensen Huang became public.",
-      "published": "Mon, 23 Nov 2026 22:45:51 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+      "summary": "Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company's stock value.",
+      "published": "Tue, 24 Nov 2026 04:36:31 GMT"
     },
     {
-      "id": "cb29a20e38ef835b",
-      "title": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+      "id": "c2d8990c4b9f1e11",
+      "title": "What China's Xi could take away from Jensen Huang's return to Nvidia",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Kremlin warns of an \"escalation of tensions in the region\", but declines to comment directly on the attacks in Libya.",
-      "published": "Mon, 23 Nov 2026 15:41:23 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c63rgpy50x98o?at_medium=RSS&at_campaign=rss",
+      "summary": "Huang being back at the helm of Nvidia is no guarantee of relief for Beijing.",
+      "published": "Tue, 24 Nov 2026 07:26:27 GMT"
+    },
+    {
+      "id": "8a11be66dc0b8ac7",
+      "title": "Nato chief vows defence against space threat after Russian nuclear satellite reports",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo?at_medium=RSS&at_campaign=rss",
+      "summary": "German media said Russia planned to launch a satellite with a nuclear warhead into space in coming weeks.",
+      "published": "Tue, 24 Nov 2026 02:15:59 GMT"
+    },
+    {
+      "id": "4acc4486706bb165",
+      "title": "India's 'cockroach' party leader says he was stopped from flying to UK",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cm5y1ezx2gqyo?at_medium=RSS&at_campaign=rss",
+      "summary": "Saurav Das said that immigration authorities at Delhi airport told him that his passport had been \"flagged\".",
+      "published": "Tue, 24 Nov 2026 05:33:07 GMT"
     },
     {
       "id": "8b0993be5d17e9fa",
@@ -29,22 +47,13 @@
       "published": "Mon, 23 Nov 2026 20:48:35 GMT"
     },
     {
-      "id": "1221712236f0eeea",
-      "title": "Iranian authorities flog singer who performed without hijab, lawyers say",
+      "id": "d5d2228e02af8ab1",
+      "title": "Gisèle Pelicot 'humiliated' after nude photos sent to media to promote book",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cq1j6585l5g6o?at_medium=RSS&at_campaign=rss",
-      "summary": "Parastoo Ahmadi, three musicians and a producer were reportedly given 74 lashes in Qom.",
-      "published": "Mon, 23 Nov 2026 18:04:20 GMT"
-    },
-    {
-      "id": "df8cf82ed3b7a0b0",
-      "title": "What failure of COP31 reveals about a divided world",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cky970n83rvjo?at_medium=RSS&at_campaign=rss",
-      "summary": "Interests of oil-producing countries, a US boycott and a dispute over finance may have torpedoed climate talks.",
-      "published": "Mon, 23 Nov 2026 17:24:25 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cm3eg502nxw2o?at_medium=RSS&at_campaign=rss",
+      "summary": "The publisher of an essay on coercive control apologises for \"an unfortunate and inappropriate communication\".",
+      "published": "Mon, 23 Nov 2026 21:24:47 GMT"
     },
     {
       "id": "81800622d8bc9a04",
@@ -56,31 +65,31 @@
       "published": "Mon, 23 Nov 2026 17:07:25 GMT"
     },
     {
-      "id": "593cf9abec850eba",
-      "title": "India pledges $1.6bn to Nepal in reset of ties",
+      "id": "ff6c6aedbd710a87",
+      "title": "DR Congo says aircraft missing as rebels claim to shoot down plane",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwx2ervemj4ko?at_medium=RSS&at_campaign=rss",
-      "summary": "As Nepal rebuilds after deadly floods, its prime minister sets contentious issues aside to secure Indian funding, port access and a new train service.",
-      "published": "Mon, 23 Nov 2026 13:39:30 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cwy7r5z8gg65o?at_medium=RSS&at_campaign=rss",
+      "summary": "A South African fighter pilot and a Ugandan officer are reportedly among those aboard the downed plane.",
+      "published": "Tue, 24 Nov 2026 08:35:41 GMT"
     },
     {
-      "id": "8a02e349b2bd0ff7",
-      "title": "Search and rescue teams race against time to find survivors after Nigeria boat tragedy",
+      "id": "1221712236f0eeea",
+      "title": "Iranian authorities flog singer who performed without hijab, lawyers say",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cq7820xjm49po?at_medium=RSS&at_campaign=rss",
-      "summary": "The government blames overcrowding, poor maintenance, and missing life jackets for boat accidents.",
-      "published": "Mon, 23 Nov 2026 12:43:40 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cq1j6585l5g6o?at_medium=RSS&at_campaign=rss",
+      "summary": "Parastoo Ahmadi, three musicians and a producer were reportedly given 74 lashes in Qom.",
+      "published": "Mon, 23 Nov 2026 18:04:20 GMT"
     },
     {
-      "id": "0f7f1d297cd7ac74",
-      "title": "Prominent Zimbabwean preacher arrested on sexual assault allegations",
+      "id": "b1d82f5106d46801",
+      "title": "Bangladesh's ex-PM Sheikh Hasina says she plans to return on 16 December",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cxyvdmjr893zo?at_medium=RSS&at_campaign=rss",
-      "summary": "Uebert Angel, a British-Zimbabwean national, leads a charismatic church with branches in several countries.",
-      "published": "Mon, 23 Nov 2026 14:55:14 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c60rk1yj07xeo?at_medium=RSS&at_campaign=rss",
+      "summary": "Hasina has spoken several times of her desire to return, but this is the first time she has set a date.",
+      "published": "Tue, 24 Nov 2026 06:23:01 GMT"
     },
     {
       "id": "f6d36288d7834960",
@@ -92,148 +101,49 @@
       "published": "Mon, 23 Nov 2026 17:14:50 GMT"
     },
     {
-      "id": "c3f0c850050ebaf6",
-      "title": "Flights cancelled in Belgium due to cost-of-living strike",
+      "id": "e000e454f6b288cb",
+      "title": "King Charles and Elton John pay tribute to Australian music legend Molly Meldrum",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwdr155e2d05o?at_medium=RSS&at_campaign=rss",
-      "summary": "A series of strikes have hit Belgium in recent months as the prime minister struggles to agree a budget to cut costs.",
-      "published": "Mon, 23 Nov 2026 13:34:02 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c3qj57rkd2k1o?at_medium=RSS&at_campaign=rss",
+      "summary": "The promoter and broadcaster helped define the music tastes of Australians for decades.",
+      "published": "Tue, 24 Nov 2026 00:23:25 GMT"
     },
     {
-      "id": "c21768189b7cd320",
-      "title": "Mexican soldiers attacked in wake of drug lord's arrest",
+      "id": "ad724bcf8f7740f0",
+      "title": "UK sanctions top Myanmar military leaders after Rohingya genocide ruling",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c5rmgkv2lk73o?at_medium=RSS&at_campaign=rss",
-      "summary": "Eight suspects are arrested after firing on soldiers trying to re-establish order following the arrest of 'El Chapo Isidro'.",
-      "published": "Mon, 23 Nov 2026 14:54:03 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c6wy4ng1rznxo?at_medium=RSS&at_campaign=rss",
+      "summary": "The UK is joined by several other nations in recognising an ICJ ruling that Myanmar carried out genocide.",
+      "published": "Mon, 23 Nov 2026 21:03:34 GMT"
     },
     {
-      "id": "a107945cc9c74b63",
-      "title": "Miley Cyrus marries Maxx Morando in California ceremony",
+      "id": "e0495d6a5040b0f6",
+      "title": "Cheers and applause as Jensen Huang returns to Nvidia office",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cq8e0p87l89lo?at_medium=RSS&at_campaign=rss",
-      "summary": "The couple have been together for four years and were engaged in 2025.",
-      "published": "Sun, 22 Nov 2026 21:22:40 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/ckedq2edqegzo?at_medium=RSS&at_campaign=rss",
+      "summary": "BBC's Lily Jamali reports from Nvidia's headquarters, where she gauges the reaction to Huang's return after Trump says he brokered a deal.",
+      "published": "Tue, 24 Nov 2026 01:21:41 GMT"
     },
     {
-      "id": "476e3de4bfff99a8",
-      "title": "Kenya and DR Congo agree to restore ties after tensions over conflict",
+      "id": "eb3ae9634767b876",
+      "title": "Outrage after ICE arrest father and daughter at Seattle airport",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmvg2qnn95vro?at_medium=RSS&at_campaign=rss",
-      "summary": "The two leaders committed to upholding sovereignty and \"non-interference in the internal affairs of states\".",
-      "published": "Mon, 23 Nov 2026 08:53:01 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/crd910g5x882o?at_medium=RSS&at_campaign=rss",
+      "summary": "ICE officers arrested two passengers, a father and daughter, as they were boarding a flight in Seattle on Saturday.",
+      "published": "Mon, 23 Nov 2026 22:59:07 GMT"
     },
     {
-      "id": "1a67c979a6d70941",
-      "title": "Nigeria's president says he is also hit by water and power cuts plaguing country",
+      "id": "de264d24b1a82fc1",
+      "title": "First Lady Melania Trump welcomes this year's White House Christmas tree",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cv1j65xjjk65o?at_medium=RSS&at_campaign=rss",
-      "summary": "Bola Tinubu says he was shaving last week when the water cut out - an experience familiar to many Nigerians.",
-      "published": "Mon, 23 Nov 2026 14:26:33 GMT"
-    },
-    {
-      "id": "88ba4b4797cf6601",
-      "title": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go?at_medium=RSS&at_campaign=rss",
-      "summary": "Eleven people are dead in the attack on Dymer, with rescue efforts ongoing to find those still missing from the residential building.",
-      "published": "Mon, 23 Nov 2026 05:33:17 GMT"
-    },
-    {
-      "id": "1702b449ef0b09d7",
-      "title": "South Korea education minister resigns over exam cheating scandal",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw3dgk29d37no?at_medium=RSS&at_campaign=rss",
-      "summary": "Choi Kyo-jin admits last-minute measures to stop AI-assisted cheating during the college entrance exam caused chaos.",
-      "published": "Sun, 22 Nov 2026 09:20:45 GMT"
-    },
-    {
-      "id": "7e5383763bcf3b01",
-      "title": "Democrats win largest House majority since 1992 after flipping North Carolina seat",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c6vg29g7dlyno?at_medium=RSS&at_campaign=rss",
-      "summary": "Democrats have now won at least 258 seats in the midterms compared to Republicans, who hold at least 173 seats.",
-      "published": "Mon, 23 Nov 2026 13:02:05 GMT"
-    },
-    {
-      "id": "a9bb7c6e29da205c",
-      "title": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
-      "summary": "Finnish defence forces say that Ukraine was likely behind the drone strike on Saturday. Kyiv has yet to comment.",
-      "published": "Sun, 22 Nov 2026 17:18:26 GMT"
-    },
-    {
-      "id": "7ca3eed99935d152",
-      "title": "US Army to detonate tonnes of unstable explosives in Iowa despite court order",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cvglrx764gdxo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Army says \"swift action\" is necessary to protect its personnel and nearby communities around its ammunition plant in Iowa.",
-      "published": "Sun, 22 Nov 2026 18:29:46 GMT"
-    },
-    {
-      "id": "737a9facdd26faa1",
-      "title": "Three killed and dozens missing after fire at Indonesian factory",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw8dvg5pgm0eo?at_medium=RSS&at_campaign=rss",
-      "summary": "At least three people were killed and many more feared dead after a fire at a confectionary factory.",
-      "published": "Sun, 22 Nov 2026 14:05:20 GMT"
-    },
-    {
-      "id": "d53e011b61eef9a5",
-      "title": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss",
-      "summary": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities.",
-      "published": "Sun, 22 Nov 2026 01:25:03 GMT"
-    },
-    {
-      "id": "f52c822b3d4b2383",
-      "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
-      "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
-      "published": "Mon, 23 Nov 2026 00:33:36 GMT"
-    },
-    {
-      "id": "1c64d44e2f0cbfcc",
-      "title": "FBI reportedly investigating apparent hack of its criminal database",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
-      "summary": "The National Crime Information Center database is used by federal and local law enforcement to share information.",
-      "published": "Sun, 22 Nov 2026 00:10:44 GMT"
-    },
-    {
-      "id": "490042f26061ca85",
-      "title": "Lock of former US President George Washington's hair sells for $4,000",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwe9k23dpz0do?at_medium=RSS&at_campaign=rss",
-      "summary": "The hair was given as a sign of friendship shortly before Washington's death in 1799, according to a descendent of its former owner.",
-      "published": "Sat, 21 Nov 2026 22:01:19 GMT"
-    },
-    {
-      "id": "4c2b336b765a0af0",
-      "title": "'Biggest U-turn in economic history': Experts react to Jensen Huang's return to Nvidia",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cq8r7e35mkzlo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Nvidia CEO was reinstated after weeks of controversy over his affair with an alleged Chinese spy.",
-      "published": "Mon, 23 Nov 2026 18:43:00 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/c51k9vp48d2vo?at_medium=RSS&at_campaign=rss",
+      "summary": "The official 2026 White House Christmas tree is an 18-foot fir from Silent Night Evergreens, a farm in Endeavor, Wisconsin.",
+      "published": "Mon, 23 Nov 2026 18:49:19 GMT"
     },
     {
       "id": "3b152dca00dd577e",
@@ -254,13 +164,13 @@
       "published": "Sun, 22 Nov 2026 22:37:43 GMT"
     },
     {
-      "id": "4d2dfd34c10fd72a",
-      "title": "What's next after no deal at COP31 climate talks?",
+      "id": "c63e4cf44e0ffbe2",
+      "title": "Dad who discovered daughter's murder on Facebook feels ignored by South African police",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cr1ewge81q4qo?at_medium=RSS&at_campaign=rss",
-      "summary": "The talks have been the longest-running in the summit's history, with negotiations breaking down two days after they had been due to end.",
-      "published": "Mon, 23 Nov 2026 05:34:39 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cqglr0d5jejxo?at_medium=RSS&at_campaign=rss",
+      "summary": "South African communities tell the BBC of measures they're taking to keep women safe after a wave of horrific killings.",
+      "published": "Tue, 24 Nov 2026 00:02:15 GMT"
     },
     {
       "id": "8006ba0f9c438f1c",
@@ -281,15 +191,6 @@
       "published": "Mon, 23 Nov 2026 15:49:52 GMT"
     },
     {
-      "id": "6352bd0d59b48f2b",
-      "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
-      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.",
-      "published": "Mon, 23 Nov 2026 00:08:00 GMT"
-    },
-    {
       "id": "4279a33688d6c96d",
       "title": "Five takeaways from the failed climate talks COP31",
       "source": "BBC",
@@ -299,13 +200,31 @@
       "published": "Mon, 23 Nov 2026 06:33:50 GMT"
     },
     {
-      "id": "a201ec4f423e6ef2",
-      "title": "Nigerian youth have shown their power in the past - why aren't they shaping this election?",
+      "id": "6352bd0d59b48f2b",
+      "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/ck4g174n020eo?at_medium=RSS&at_campaign=rss",
-      "summary": "Fewer young people have registered to vote in next year's election than in 2023 - are young people losing faith in democracy?",
-      "published": "Sun, 22 Nov 2026 00:10:37 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
+      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.",
+      "published": "Mon, 23 Nov 2026 00:08:00 GMT"
+    },
+    {
+      "id": "d116c3d9f1d39074",
+      "title": "Britain's landlords are getting bigger. A two-tier rental market may follow",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c6n90g2l82d1o?at_medium=RSS&at_campaign=rss",
+      "summary": "Increasing numbers of corporate landlords could usher in big changes for renters",
+      "published": "Tue, 24 Nov 2026 00:28:48 GMT"
+    },
+    {
+      "id": "f53d7a9d4f31c892",
+      "title": "BBC secret filming shows dog breeder selling sick puppies for £2k each",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c8d36d43y8po?at_medium=RSS&at_campaign=rss",
+      "summary": "The breeder's rating was downgraded but he continued to advertise as five-star, investigation finds.",
+      "published": "Tue, 24 Nov 2026 00:11:08 GMT"
     },
     {
       "id": "17eac4eb1153e4b4",
@@ -315,6 +234,15 @@
       "url": "https://www.bbc.co.uk/news/articles/ckr5g8edl94eo?at_medium=RSS&at_campaign=rss",
       "summary": "Huang's role at the centre of his company's journey to lynchpin of AI proved crucial.",
       "published": "Mon, 23 Nov 2026 17:11:58 GMT"
+    },
+    {
+      "id": "1799c0a1447805d6",
+      "title": "I pay £250 a month for someone else to do my life admin - it's worth it",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c6zjr3g13zkno?at_medium=RSS&at_campaign=rss",
+      "summary": "Busy mothers on both sides of the Atlantic are paying companies to handle their to-do lists.",
+      "published": "Tue, 24 Nov 2026 00:01:04 GMT"
     },
     {
       "id": "90dea8d2d19230c9",
@@ -423,6 +351,15 @@
       "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
       "summary": "We put four AI models to the test to see if they could save us money on a new TV.",
       "published": "Sat, 21 Nov 2026 00:06:11 GMT"
+    },
+    {
+      "id": "f52c822b3d4b2383",
+      "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
+      "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
+      "published": "Mon, 23 Nov 2026 00:33:36 GMT"
     },
     {
       "id": "50da3b38d638e680",
@@ -641,6 +578,15 @@
       "published": "Mon, 23 Nov 2026 13:52:40 GMT"
     },
     {
+      "id": "c3f0c850050ebaf6",
+      "title": "Flights cancelled in Belgium due to cost-of-living strike",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cwdr155e2d05o?at_medium=RSS&at_campaign=rss",
+      "summary": "A series of strikes have hit Belgium in recent months as the prime minister struggles to agree a budget to cut costs.",
+      "published": "Mon, 23 Nov 2026 13:34:02 GMT"
+    },
+    {
       "id": "d4cb95a734715081",
       "title": "Who is taking part in France's recent street protests?",
       "source": "BBC",
@@ -713,6 +659,15 @@
       "published": "Mon, 23 Nov 2026 21:40:30 GMT"
     },
     {
+      "id": "4c2b336b765a0af0",
+      "title": "'Biggest U-turn in economic history': Experts react to Jensen Huang's return to Nvidia",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/videos/cq8r7e35mkzlo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Nvidia CEO was reinstated after weeks of controversy over his affair with an alleged Chinese spy.",
+      "published": "Mon, 23 Nov 2026 18:43:00 GMT"
+    },
+    {
       "id": "de9a73c591d33851",
       "title": "Nvidia reinstates CEO after affair with alleged spy",
       "source": "BBC",
@@ -738,6 +693,15 @@
       "url": "https://www.bbc.co.uk/sounds/play/m0034lmq?at_medium=RSS&at_campaign=rss",
       "summary": "The money stolen by criminals through fake investments doubles in just two years.",
       "published": "Sat, 21 Nov 2026 12:30:00 GMT"
+    },
+    {
+      "id": "66403463587777bc",
+      "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+      "source": "BBC",
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss",
+      "summary": "Megaspeed has been accused of funneling AI chips to China after a former executive's affair with Jensen Huang became public.",
+      "published": "Mon, 23 Nov 2026 23:16:08 GMT"
     },
     {
       "id": "c2c96bd84b3ba5df",
@@ -839,6 +803,15 @@
       "published": "Sat, 03 Oct 2026 01:00:00 GMT"
     },
     {
+      "id": "df8cf82ed3b7a0b0",
+      "title": "What failure of COP31 reveals about a divided world",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cky970n83rvjo?at_medium=RSS&at_campaign=rss",
+      "summary": "Interests of oil-producing countries, a US boycott and a dispute over finance may have torpedoed climate talks.",
+      "published": "Mon, 23 Nov 2026 17:24:25 GMT"
+    },
+    {
       "id": "e4dc3fa8f4ea0ce6",
       "title": "Longest-ever UN climate talks end with no deal as deep divisions exposed",
       "source": "BBC",
@@ -900,6 +873,33 @@
       "url": "https://www.bbc.co.uk/news/articles/cq4gn0dg9194o?at_medium=RSS&at_campaign=rss",
       "summary": "Hundreds of young birds were also rescued from the fire, which comes as foie gras is under renewed scrutiny over animal welfare concerns.",
       "published": "Fri, 20 Nov 2026 22:57:26 GMT"
+    },
+    {
+      "id": "a6322da124324731",
+      "title": "What are heat pumps and how much do they cost?",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c8xgdv9e007o?at_medium=RSS&at_campaign=rss",
+      "summary": "The government wants more homes to have heat pumps to cut fossil fuel use and drive down energy bills.",
+      "published": "Fri, 20 Nov 2026 10:24:52 GMT"
+    },
+    {
+      "id": "07fa03897d2f5c4b",
+      "title": "More climate money for Africa? Europe says use what's already pledged",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c6074k5jjrzko?at_medium=RSS&at_campaign=rss",
+      "summary": "African countries at the UN climate summit in Turkey are demanding more funding from developed nations to help them cope with climate change.",
+      "published": "Fri, 20 Nov 2026 05:03:43 GMT"
+    },
+    {
+      "id": "fa6ad01cfc568813",
+      "title": "Wading bird called Phil tracked in epic migration to Siberia and back",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c6qj5dl29zqro?at_medium=RSS&at_campaign=rss",
+      "summary": "A bird has astonished conservationists by completing a 6,800-mile round trip to Siberia and back.",
+      "published": "Thu, 19 Nov 2026 13:35:29 GMT"
     }
   ],
   "audio_lessons": {
@@ -924,11 +924,11 @@
       "title": "BBC News",
       "description": "실제 뉴스 앵커의 5분 뉴스 보도",
       "feed_url": "https://podcast.voice.api.bbci.co.uk/rss/audio/p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr",
-      "episode_title": "23/11/2026 22:01 GMT",
-      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw46p6sc.mp3",
+      "episode_title": "24/11/2026 09:01 GMT",
+      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw46qjzs.mp3",
       "transcript_url": "",
-      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zwq6cr",
-      "published": "Mon, 23 Nov 2026 22:06:00 GMT",
+      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zwrjl5",
+      "published": "Tue, 24 Nov 2026 09:06:00 GMT",
       "duration": "300",
       "audio_available": true,
       "transcript_available": false
