@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-11-24T23:06:25.028488+00:00",
+  "updated_at": "2026-11-25T09:14:38.515992+00:00",
   "articles": [
+    {
+      "id": "4980e212d8f2fd41",
+      "title": "Russia's own figures show it has lost almost 500,000 people in Ukraine war",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cmx27g533zwyo?at_medium=RSS&at_campaign=rss",
+      "summary": "Leaked data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in Russia.",
+      "published": "Wed, 25 Nov 2026 00:56:51 GMT"
+    },
     {
       "id": "2a1422ea57bb08bb",
       "title": "US attorney general dodges questions about Nvidia investigation",
@@ -8,16 +17,88 @@
       "topic": "World",
       "url": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
       "summary": "Nvidia's share price have fallen 7% as lawmakers demand answers about President Donald Trump's involvement in Huang's reinstatement.",
-      "published": "Tue, 24 Nov 2026 21:19:42 GMT"
+      "published": "Wed, 25 Nov 2026 03:44:07 GMT"
     },
     {
-      "id": "a77a44f3631df568",
-      "title": "French ex-President Sarkozy and wife Carla Bruni to face trial",
+      "id": "762ce6d7fedd6d19",
+      "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c65y17pwv1z7o?at_medium=RSS&at_campaign=rss",
-      "summary": "It is the latest case involving Nicolas Sarkozy who became the first French ex-president to go to jail last year.",
-      "published": "Tue, 24 Nov 2026 16:49:07 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss",
+      "summary": "The verdict follows a months-long trial in New York.",
+      "published": "Wed, 25 Nov 2026 02:59:27 GMT"
+    },
+    {
+      "id": "6cd45e2d2b78eb32",
+      "title": "Four years after huge asteroid crash, a spacecraft has now returned to assess the damage",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss",
+      "summary": "The mission is studying an asteroid deliberately knocked off course by a colliding spacecraft.",
+      "published": "Wed, 25 Nov 2026 06:00:36 GMT"
+    },
+    {
+      "id": "04d7a75d17591af0",
+      "title": "The rising cost of putting food on the table in India",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cmy0xj41kl50o?at_medium=RSS&at_campaign=rss",
+      "summary": "India's food inflation is broadening, squeezing household budgets.",
+      "published": "Wed, 25 Nov 2026 01:02:13 GMT"
+    },
+    {
+      "id": "931118a83c11690e",
+      "title": "Thomas Markle charged in US for possessing child sex abuse images",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/crwy4egxn592o?at_medium=RSS&at_campaign=rss",
+      "summary": "The FBI arrested Markle on 6 November after a search of a storage unit he had allegedly rented in Los Angeles uncovered the abuse material.",
+      "published": "Wed, 25 Nov 2026 01:40:42 GMT"
+    },
+    {
+      "id": "d28edd583d67403a",
+      "title": "Kilmar Ábrego García leaves US for Spain, ending Trump deportation battle",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c6808pyy5dl9o?at_medium=RSS&at_campaign=rss",
+      "summary": "Ábrego García's deportation to El Salvador and return to the US became a flashpoint in the debate over President Donald Trump's immigration agenda.",
+      "published": "Wed, 25 Nov 2026 06:36:00 GMT"
+    },
+    {
+      "id": "728942263f493f65",
+      "title": "These North Koreans say they were spied on, beaten and jailed for being Christian",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cqgkv8kp7145o?at_medium=RSS&at_campaign=rss",
+      "summary": "A new report has testimonies from hundreds of defectors who say they were persecuted because of their faith.",
+      "published": "Tue, 24 Nov 2026 23:03:59 GMT"
+    },
+    {
+      "id": "2d4be277456770f9",
+      "title": "Zimbabwe issues arrest warrant for Robert Mugabe's son over missed court date",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c6d917jn5gq7o?at_medium=RSS&at_campaign=rss",
+      "summary": "The son of Zimbabwe's late former President Robert Mugabe has faced multiple legal troubles in the recent past.",
+      "published": "Wed, 25 Nov 2026 07:26:54 GMT"
+    },
+    {
+      "id": "803932ad076bb2b6",
+      "title": "Is China behind a wave of AI fake videos targeting Taiwan?",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cv702rw7dzx5o?at_medium=RSS&at_campaign=rss",
+      "summary": "The network attacked key figures in the ruling DPP, including President Lai and mayoral candidate Shen.",
+      "published": "Tue, 24 Nov 2026 23:05:11 GMT"
+    },
+    {
+      "id": "e8a823548b9b67b0",
+      "title": "Israeli air strike kills Hamas internal security chief in Gaza",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o?at_medium=RSS&at_campaign=rss",
+      "summary": "Naeem Abu Nahel, who had been in the post for two months, is among seven Palestinians reportedly killed in Israeli strikes on Tuesday.",
+      "published": "Tue, 24 Nov 2026 15:35:53 GMT"
     },
     {
       "id": "4acc4486706bb165",
@@ -27,15 +108,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cm5y1ezx2gqyo?at_medium=RSS&at_campaign=rss",
       "summary": "Saurav Das says immigration authorities at Delhi airport told him his passport had been flagged.",
       "published": "Tue, 24 Nov 2026 18:07:46 GMT"
-    },
-    {
-      "id": "762ce6d7fedd6d19",
-      "title": "Huawei found guilty of stealing trade secrets but acquitted of racketeering",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss",
-      "summary": "The verdict follows a months-long trial in New York.",
-      "published": "Tue, 24 Nov 2026 22:24:23 GMT"
     },
     {
       "id": "318e9d12844de6ba",
@@ -56,13 +128,13 @@
       "published": "Tue, 24 Nov 2026 19:10:31 GMT"
     },
     {
-      "id": "e8a823548b9b67b0",
-      "title": "Israeli air strike kills Hamas internal security chief in Gaza",
+      "id": "a77a44f3631df568",
+      "title": "French ex-President Sarkozy and wife Carla Bruni to face trial",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o?at_medium=RSS&at_campaign=rss",
-      "summary": "Naeem Abu Nahel, who had been in the post for two months, is among seven Palestinians reportedly killed in Israeli strikes on Tuesday.",
-      "published": "Tue, 24 Nov 2026 15:35:53 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c65y17pwv1z7o?at_medium=RSS&at_campaign=rss",
+      "summary": "It is the latest case involving Nicolas Sarkozy who became the first French ex-president to go to jail last year.",
+      "published": "Tue, 24 Nov 2026 16:49:07 GMT"
     },
     {
       "id": "8a11be66dc0b8ac7",
@@ -101,24 +173,6 @@
       "published": "Mon, 23 Nov 2026 21:24:47 GMT"
     },
     {
-      "id": "1bacfc6abde8051b",
-      "title": "Zimbabwean convicted in South Africa of trying to fight in Ukraine",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmqj5qlj5yz9o?at_medium=RSS&at_campaign=rss",
-      "summary": "Hundreds of people from different African countries have been recruited to fight for Russia, according to Ukraine.",
-      "published": "Tue, 24 Nov 2026 17:04:00 GMT"
-    },
-    {
-      "id": "95409503e917c1fb",
-      "title": "Car bomb tears through Colombian city wounding more than 20",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cjqlq2n4np7do?at_medium=RSS&at_campaign=rss",
-      "summary": "The explosion is the latest in a string of attacks on buildings housing the security forces and government offices.",
-      "published": "Tue, 24 Nov 2026 11:45:52 GMT"
-    },
-    {
       "id": "ff6c6aedbd710a87",
       "title": "DR Congo says military aircraft missing as rebels claim to shoot down plane",
       "source": "BBC",
@@ -155,22 +209,22 @@
       "published": "Tue, 24 Nov 2026 06:23:01 GMT"
     },
     {
-      "id": "f6d36288d7834960",
-      "title": "Comedian impersonates Trump's dance moves, mocks trade talks at Canada press dinner",
+      "id": "291d938a9bf3eed5",
+      "title": "Moment Chinese space mission lifts off with first Pakistan astronaut aboard",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cr930y92dyx4o?at_medium=RSS&at_campaign=rss",
-      "summary": "The impersonator, Canadian comedian Mark Critch, poked fun at the US president's search for a new press secretary and US-Canada trade talks.",
-      "published": "Mon, 23 Nov 2026 17:14:50 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/cmz74l0yzzvyo?at_medium=RSS&at_campaign=rss",
+      "summary": "China launched its Shenzhou-24 space mission to bring three astronauts to its Tiangong space station.",
+      "published": "Wed, 25 Nov 2026 03:28:37 GMT"
     },
     {
-      "id": "e000e454f6b288cb",
-      "title": "King Charles and Elton John pay tribute to Australian music legend Molly Meldrum",
+      "id": "e7995c112ae8e4c6",
+      "title": "Watch: Flock of turkeys chases woman on Massachusetts pavement",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c3qj57rkd2k1o?at_medium=RSS&at_campaign=rss",
-      "summary": "The promoter and broadcaster helped define the music tastes of Australians for decades.",
-      "published": "Tue, 24 Nov 2026 00:23:25 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/cknv4mq93gd2o?at_medium=RSS&at_campaign=rss",
+      "summary": "The woman said she had to jump into a stranger's car to escape a flock of turkeys that chased her down the sidewalk.",
+      "published": "Tue, 24 Nov 2026 22:07:30 GMT"
     },
     {
       "id": "e3786350c1a3934d",
@@ -191,15 +245,6 @@
       "published": "Tue, 24 Nov 2026 01:21:41 GMT"
     },
     {
-      "id": "eb3ae9634767b876",
-      "title": "Outrage after ICE arrest father and daughter at Seattle airport",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/crd910g5x882o?at_medium=RSS&at_campaign=rss",
-      "summary": "ICE officers arrested two passengers, a father and daughter, as they were boarding a flight in Seattle on Saturday.",
-      "published": "Mon, 23 Nov 2026 22:59:07 GMT"
-    },
-    {
       "id": "de264d24b1a82fc1",
       "title": "First Lady Melania Trump welcomes this year's White House Christmas tree",
       "source": "BBC",
@@ -218,13 +263,49 @@
       "published": "Mon, 23 Nov 2026 11:34:10 GMT"
     },
     {
-      "id": "3a79b8d5c4b42531",
-      "title": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+      "id": "912dcc7ffb345aa1",
+      "title": "Trump's rescue of Nvidia's Huang brings political risks",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cre3dvd1k9y1o?at_medium=RSS&at_campaign=rss",
-      "summary": "The BBC's Sarah Rainsford reports from the scene of a collapsed residential building in Ukraine's Kyiv region.",
-      "published": "Sun, 22 Nov 2026 22:37:43 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/ckj05m2zdyryo?at_medium=RSS&at_campaign=rss",
+      "summary": "The US president's intercession to reinstate CEO Jensen Huang has inextricably linked their fates.",
+      "published": "Wed, 25 Nov 2026 01:03:05 GMT"
+    },
+    {
+      "id": "209b69b840618609",
+      "title": "My family died in Ukraine. My mum blamed Zelensky's troops - the truth is complicated",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cw24e17v9e51o?at_medium=RSS&at_campaign=rss",
+      "summary": "BBC journalist Anastasiya Gribanova investigates who killed her father and grandparents in the war.",
+      "published": "Wed, 25 Nov 2026 00:54:13 GMT"
+    },
+    {
+      "id": "e52c5615989a587e",
+      "title": "Lies, a disguise and surfboard bags: how a jealous Sydney policeman tried to cover up double murder",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cmrrg749d02do?at_medium=RSS&at_campaign=rss",
+      "summary": "Beau Lamarre was on Wednesday found guilty of murdering his ex Jesse Baird, and Baird's new partner Luke Davies.",
+      "published": "Wed, 25 Nov 2026 01:51:43 GMT"
+    },
+    {
+      "id": "f89a15703d397d9c",
+      "title": "Clashing political visions reflect a divided Spain ahead of election",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cq5y1212y4pwo?at_medium=RSS&at_campaign=rss",
+      "summary": "Sunday’s election could see a far-right party enter the Spanish government for first time.",
+      "published": "Wed, 25 Nov 2026 00:58:34 GMT"
+    },
+    {
+      "id": "c86c32fe26579512",
+      "title": "Shot in the face at 15: The lives shattered by Cameroon's decade of conflict",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/crd6128y1qn1o?at_medium=RSS&at_campaign=rss",
+      "summary": "More than half a million people have fled their homes since separatist groups demanded independence for Cameroon's English-speaking regions.",
+      "published": "Wed, 25 Nov 2026 01:00:36 GMT"
     },
     {
       "id": "c63e4cf44e0ffbe2",
@@ -236,49 +317,49 @@
       "published": "Tue, 24 Nov 2026 00:02:15 GMT"
     },
     {
-      "id": "8b0993be5d17e9fa",
-      "title": "What strike on Russian ship in Libya says about spread of Ukraine war",
+      "id": "42887a31417738a7",
+      "title": "Energy bills to rise by 26% from January",
       "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo?at_medium=RSS&at_campaign=rss",
-      "summary": "Ukraine's sinking of a Russian battleship at a port in Libya raises the stakes of the war a notch, writes Frank Gardner.",
-      "published": "Mon, 23 Nov 2026 20:48:35 GMT"
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o?at_medium=RSS&at_campaign=rss",
+      "summary": "A household using a typical amount of energy would see its annual bill rise from £1,723 to £2,166 if this level was sustained for a year.",
+      "published": "Wed, 25 Nov 2026 08:38:13 GMT"
     },
     {
-      "id": "8006ba0f9c438f1c",
-      "title": "'I want to destroy capitalism, not France': On the streets with the French ultra left",
+      "id": "be54e905a796b4ce",
+      "title": "US preparing to unveil plan for new tariffs on global trading partners",
       "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cw074km48myeo?at_medium=RSS&at_campaign=rss",
-      "summary": "The BBC meets the far-left protesters French President Emmanuel Macron says are trying to bring down the Republic.",
-      "published": "Mon, 23 Nov 2026 13:09:52 GMT"
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+      "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
+      "published": "Wed, 25 Nov 2026 00:38:01 GMT"
     },
     {
-      "id": "00916c7a76a8c68a",
-      "title": "The rise and fall and rise again of Jensen Huang",
+      "id": "b1db65a692ce60ef",
+      "title": "What will the energy cap changes mean for my bills?",
       "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo?at_medium=RSS&at_campaign=rss",
-      "summary": "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable return.",
-      "published": "Mon, 23 Nov 2026 15:49:52 GMT"
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cdd29v8mp9jo?at_medium=RSS&at_campaign=rss",
+      "summary": "Regulator Ofgem is raising the cap affecting the energy bills of millions of households.",
+      "published": "Wed, 25 Nov 2026 00:33:25 GMT"
     },
     {
-      "id": "4279a33688d6c96d",
-      "title": "Five takeaways from the failed climate talks COP31",
+      "id": "88ab6f2dc35843e6",
+      "title": "'I only use the washing machine on a Sunday' - how we're keeping our energy bills down",
       "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm75237wlp3lo?at_medium=RSS&at_campaign=rss",
-      "summary": "The COP31 summit in Antalya was the longest-running climate talks in UN history.",
-      "published": "Mon, 23 Nov 2026 06:33:50 GMT"
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c820qnznkrn4o?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC speaks to three people about steps they take to keep their energy bills under control.",
+      "published": "Wed, 25 Nov 2026 00:30:52 GMT"
     },
     {
-      "id": "6352bd0d59b48f2b",
-      "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+      "id": "3267b6051ed13edd",
+      "title": "Why tiny cars are taking off across Europe",
       "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
-      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.",
-      "published": "Mon, 23 Nov 2026 00:08:00 GMT"
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy9jne0g7qo?at_medium=RSS&at_campaign=rss",
+      "summary": "Once seen as a car for elderly, rural people, tiny cars are being embraced by a younger demographic.",
+      "published": "Wed, 25 Nov 2026 00:34:05 GMT"
     },
     {
       "id": "a4e986911abd23a3",
@@ -306,15 +387,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
       "summary": "Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company's stock value.",
       "published": "Tue, 24 Nov 2026 10:53:37 GMT"
-    },
-    {
-      "id": "1799c0a1447805d6",
-      "title": "I pay £250 a month for someone else to do my life admin - it's worth it",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6zjr3g13zkno?at_medium=RSS&at_campaign=rss",
-      "summary": "Busy mothers on both sides of the Atlantic are paying companies to handle their to-do lists.",
-      "published": "Tue, 24 Nov 2026 00:01:04 GMT"
     },
     {
       "id": "b4ca89cb58d43161",
@@ -362,139 +434,22 @@
       "published": "Mon, 23 Nov 2026 16:12:35 GMT"
     },
     {
-      "id": "10dbd86aaa46e879",
-      "title": "Capita shares plunge 70% as boss quits after civil service pensions failure",
+      "id": "1799c0a1447805d6",
+      "title": "I pay £250 a month for someone else to do my life admin - it's worth it",
       "source": "BBC",
       "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c65y1qqw3kjxo?at_medium=RSS&at_campaign=rss",
-      "summary": "Public sector workers have been hit by delays to pension payments, in a scheme overseen by Capita since last year.",
-      "published": "Mon, 23 Nov 2026 11:24:37 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c6zjr3g13zkno?at_medium=RSS&at_campaign=rss",
+      "summary": "Busy mothers on both sides of the Atlantic are paying companies to handle their to-do lists.",
+      "published": "Tue, 24 Nov 2026 00:01:04 GMT"
     },
     {
-      "id": "631f92e9a86c8817",
-      "title": "Next data accessed in cyber breach",
+      "id": "6352bd0d59b48f2b",
+      "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
       "source": "BBC",
       "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cqj3kjr7ez3vo?at_medium=RSS&at_campaign=rss",
-      "summary": "The fashion retailer says there is no evidence customers' personal data was compromised.",
-      "published": "Mon, 23 Nov 2026 12:34:07 GMT"
-    },
-    {
-      "id": "4e9c039fa30c9fb3",
-      "title": "Catering giant to switch main share listing to US in further blow to UK",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/ckz74098jq5po?at_medium=RSS&at_campaign=rss",
-      "summary": "A growing number of firms have been leaving the UK to list shares in the US in recent years.",
-      "published": "Mon, 23 Nov 2026 09:54:04 GMT"
-    },
-    {
-      "id": "ea4a6f618532f789",
-      "title": "Energy bills will soar - here's how you can ease the pain",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
-      "summary": "Household energy bills are about to increase but there are ways to keep a lid on your expenditure.",
-      "published": "Mon, 23 Nov 2026 01:05:07 GMT"
-    },
-    {
-      "id": "8b1572b79a8c7c3b",
-      "title": "Poundland is facing collapse - what's gone wrong?",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
-      "summary": "Poundland has a matter of days to find a buyer or face collapsing into administration. Why?",
-      "published": "Mon, 23 Nov 2026 10:09:25 GMT"
-    },
-    {
-      "id": "89a22c5c973fa7b5",
-      "title": "Pip assessments need 'fundamental overhaul', report to say",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cvlyj3rn201xo?at_medium=RSS&at_campaign=rss",
-      "summary": "Disability Minister Sir Stephen Timms says he will recommend major reforms to the personal independence payment.",
-      "published": "Mon, 23 Nov 2026 17:59:55 GMT"
-    },
-    {
-      "id": "683e7e8098425dbc",
-      "title": "South East Water reports loss after supply issues",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6n90j1qxel8o?at_medium=RSS&at_campaign=rss",
-      "summary": "South East Water records a pre-tax loss of £22.9m in the six months to 30 September.",
-      "published": "Mon, 23 Nov 2026 10:19:46 GMT"
-    },
-    {
-      "id": "8fb6792a24df18bc",
-      "title": "Hundreds of applications, no replies: Inside the job ghosting problem‌",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cm2d94le23xyo?at_medium=RSS&at_campaign=rss",
-      "summary": "People say they often hear nothing back after applying for jobs. But could employers be forced to respond to every applicant?",
-      "published": "Sun, 22 Nov 2026 00:04:07 GMT"
-    },
-    {
-      "id": "1cdf64ba775d6a8e",
-      "title": "Centrica boss says he is 'hugely concerned' over impact of soaring energy bills",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6jre7gpdw13o?at_medium=RSS&at_campaign=rss",
-      "summary": "Chris O'Shea says the number of people unable or unwilling to pay their energy bills will increase when prices jump in the new year.",
-      "published": "Sun, 22 Nov 2026 13:50:21 GMT"
-    },
-    {
-      "id": "47de4a29b250ca71",
-      "title": "Can AI really help spot Black Friday deals? We put it to the test",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
-      "summary": "We put four AI models to the test to see if they could save us money on a new TV.",
-      "published": "Sat, 21 Nov 2026 00:06:11 GMT"
-    },
-    {
-      "id": "f52c822b3d4b2383",
-      "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
-      "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
-      "published": "Mon, 23 Nov 2026 00:33:36 GMT"
-    },
-    {
-      "id": "50da3b38d638e680",
-      "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
-      "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements.",
-      "published": "Fri, 20 Nov 2026 16:41:52 GMT"
-    },
-    {
-      "id": "ea9526b5723a2b32",
-      "title": "MP criticises Guernsey and Jersey company ownership register plans",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cqkgmy2nxy4lo?at_medium=RSS&at_campaign=rss",
-      "summary": "Sir Andrew Mitchell says access should be easier for people tackling financial crime.",
-      "published": "Sun, 22 Nov 2026 07:22:05 GMT"
-    },
-    {
-      "id": "b489ac03011e847a",
-      "title": "UK to explore even closer ties with EU after agreeing deal, says Burnham",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o?at_medium=RSS&at_campaign=rss",
-      "summary": "The UK-EU deal agreed on Friday covers British food exports, emissions trading and a youth experience scheme.",
-      "published": "Fri, 20 Nov 2026 17:49:48 GMT"
-    },
-    {
-      "id": "d020b8aa67dc2154",
-      "title": "Trump threatens ban on US firms building AI data centres overseas",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
-      "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.",
-      "published": "Fri, 20 Nov 2026 20:54:12 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
+      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.",
+      "published": "Mon, 23 Nov 2026 00:08:00 GMT"
     },
     {
       "id": "b6973fc351e5f01d",
@@ -641,31 +596,13 @@
       "published": "Thu, 08 Oct 2026 23:09:56 GMT"
     },
     {
-      "id": "12607bb5a36a5040",
-      "title": "Welfare cuts: What's been happening with Pip and universal credit?",
+      "id": "ea4a6f618532f789",
+      "title": "Energy bills will soar - here's how you can ease the pain",
       "source": "BBC",
       "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cj924xvzrr2o?at_medium=RSS&at_campaign=rss",
-      "summary": "The government commissioned a review into Pip last year after it was forced to water down planned cuts to benefits.",
-      "published": "Mon, 23 Nov 2026 13:52:40 GMT"
-    },
-    {
-      "id": "c3f0c850050ebaf6",
-      "title": "Flights cancelled in Belgium due to cost-of-living strike",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/articles/cwdr155e2d05o?at_medium=RSS&at_campaign=rss",
-      "summary": "A series of strikes have hit Belgium in recent months as the prime minister struggles to agree a budget to cut costs.",
-      "published": "Mon, 23 Nov 2026 13:34:02 GMT"
-    },
-    {
-      "id": "d4cb95a734715081",
-      "title": "Who is taking part in France's recent street protests?",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/videos/cw5y188vzxn8o?at_medium=RSS&at_campaign=rss",
-      "summary": "President Macron has blamed the unrest on the radical left, but who are the protesters and what are they fighting for?",
-      "published": "Mon, 23 Nov 2026 09:25:52 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
+      "summary": "Household energy bills are about to increase but there are ways to keep a lid on your expenditure.",
+      "published": "Wed, 25 Nov 2026 09:05:41 GMT"
     },
     {
       "id": "27179cdad45769a7",
@@ -776,6 +713,15 @@
       "published": "Mon, 23 Nov 2026 23:16:08 GMT"
     },
     {
+      "id": "00916c7a76a8c68a",
+      "title": "The rise and fall and rise again of Jensen Huang",
+      "source": "BBC",
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo?at_medium=RSS&at_campaign=rss",
+      "summary": "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable return.",
+      "published": "Mon, 23 Nov 2026 15:49:52 GMT"
+    },
+    {
       "id": "c2c96bd84b3ba5df",
       "title": "GTA 6 hacker released on licence with warning 'don't let this happen again'",
       "source": "BBC",
@@ -785,6 +731,15 @@
       "published": "Mon, 23 Nov 2026 14:08:50 GMT"
     },
     {
+      "id": "47de4a29b250ca71",
+      "title": "Can AI really help spot Black Friday deals? We put it to the test",
+      "source": "BBC",
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
+      "summary": "We put four AI models to the test to see if they could save us money on a new TV.",
+      "published": "Sat, 21 Nov 2026 00:06:11 GMT"
+    },
+    {
       "id": "f1bb42fd1c541aea",
       "title": "In a year of AI solving maths problems, an Anthropic worker says he may have cracked the biggest",
       "source": "BBC",
@@ -792,15 +747,6 @@
       "url": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
       "summary": "A mathematician at Anthropic says he used an AI to prove the famed Riemann hypothesis, though verification will take some time.",
       "published": "Fri, 20 Nov 2026 23:08:57 GMT"
-    },
-    {
-      "id": "5ef06037f3faa4d5",
-      "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
-      "source": "BBC",
-      "topic": "Technology",
-      "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-      "summary": "The mammoth figure surpasses every video game launch and single-day film box office record.",
-      "published": "Fri, 20 Nov 2026 22:53:24 GMT"
     },
     {
       "id": "3d8f05f75b9061b9",
@@ -875,6 +821,24 @@
       "published": "Sat, 03 Oct 2026 01:00:00 GMT"
     },
     {
+      "id": "af29473d6bca7877",
+      "title": "China's Shenzhou-24 carries Pakistan's first astronaut into space",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c6x2e0j3kx28o?at_medium=RSS&at_campaign=rss",
+      "summary": "Muhammad Zeeshan Ali, a former fighter pilot, is the first foreigner to join a Chinese crewed space mission.",
+      "published": "Wed, 25 Nov 2026 04:46:23 GMT"
+    },
+    {
+      "id": "6791e8a4e26fa519",
+      "title": "Will there be a White Christmas this year?",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/weather/articles/ckdd16vdplpeo?at_medium=RSS&at_campaign=rss",
+      "summary": "It is just a month until the big day but what do the early signs say about the chances of a white Christmas in the UK?",
+      "published": "Wed, 25 Nov 2026 01:03:24 GMT"
+    },
+    {
       "id": "04ae87c4a928cd9f",
       "title": "Badger cull ruled out by Welsh government after speculation",
       "source": "BBC",
@@ -900,6 +864,42 @@
       "url": "https://www.bbc.co.uk/weather/articles/c5742nplemnno?at_medium=RSS&at_campaign=rss",
       "summary": "Two storms, including a major Nor'easter on the east coast, are expected to impact millions of people celebrating the holiday with family and friends.",
       "published": "Tue, 24 Nov 2026 11:40:46 GMT"
+    },
+    {
+      "id": "df8cf82ed3b7a0b0",
+      "title": "What failure of COP31 reveals about a divided world",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cky970n83rvjo?at_medium=RSS&at_campaign=rss",
+      "summary": "Interests of oil-producing countries, a US boycott and a dispute over finance may have torpedoed climate talks.",
+      "published": "Mon, 23 Nov 2026 17:24:25 GMT"
+    },
+    {
+      "id": "4279a33688d6c96d",
+      "title": "Five takeaways from the failed climate talks COP31",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cm75237wlp3lo?at_medium=RSS&at_campaign=rss",
+      "summary": "The COP31 summit in Antalya was the longest-running climate talks in UN history.",
+      "published": "Mon, 23 Nov 2026 06:33:50 GMT"
+    },
+    {
+      "id": "e4dc3fa8f4ea0ce6",
+      "title": "Longest-ever UN climate talks end with no deal as deep divisions exposed",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cqwy06zrd26lo?at_medium=RSS&at_campaign=rss",
+      "summary": "The prime minister of Australia, which co-hosted COP31, attributed the failure to \"difficult geopolitical times\".",
+      "published": "Mon, 23 Nov 2026 05:15:06 GMT"
+    },
+    {
+      "id": "0773d3d170944a83",
+      "title": "What's next after no deal at COP31 climate summit?",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/videos/cx987g7q019go?at_medium=RSS&at_campaign=rss",
+      "summary": "The COP31 climate summit in Turkey has formally come to an end after countries failed to agree a deal.",
+      "published": "Sun, 22 Nov 2026 18:28:48 GMT"
     }
   ],
   "audio_lessons": {
@@ -924,11 +924,11 @@
       "title": "BBC News",
       "description": "실제 뉴스 앵커의 5분 뉴스 보도",
       "feed_url": "https://podcast.voice.api.bbci.co.uk/rss/audio/p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr",
-      "episode_title": "24/11/2026 22:01 GMT",
-      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw46s3pg.mp3",
+      "episode_title": "25/11/2026 09:01 GMT",
+      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw46tfww.mp3",
       "transcript_url": "",
-      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zwt38v",
-      "published": "Tue, 24 Nov 2026 22:06:00 GMT",
+      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zwvfh8",
+      "published": "Wed, 25 Nov 2026 09:06:00 GMT",
       "duration": "300",
       "audio_available": true,
       "transcript_available": false
