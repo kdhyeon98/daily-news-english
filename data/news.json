@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-11-27T09:12:09.568508+00:00",
+  "updated_at": "2026-11-27T23:06:10.041379+00:00",
   "articles": [
+    {
+      "id": "65e067513a05324a",
+      "title": "Spanish PM and rivals rally supporters in final pitch for votes",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/c8wy5p4gdnwvo?at_medium=RSS&at_campaign=rss",
+      "summary": "Prime Minister Pedro Sánchez wants to defy the polls, and his main rivals accuse him of not telling the truth and of \"betrayal\".",
+      "published": "Fri, 27 Nov 2026 21:55:53 GMT"
+    },
     {
       "id": "2eccc11da40e85e3",
       "title": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
@@ -8,61 +17,52 @@
       "topic": "World",
       "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
       "summary": "Ukraine's president voices frustration with US and says it is not pushing Russia hard enough in peace talks to end the war.",
-      "published": "Fri, 27 Nov 2026 09:07:48 GMT"
+      "published": "Fri, 27 Nov 2026 18:00:40 GMT"
     },
     {
-      "id": "a067c0da2f1d9669",
-      "title": "Major Thanksgiving storm brings flooding, flight delays across US",
+      "id": "1eab93bf7e54c93e",
+      "title": "Weary of war but with no sign of backing down, Kyiv faces another punishing winter",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
-      "summary": "Almost one million customers in the US had no power on Thursday evening as storms descended on both US coasts, bringing wind gusts, heavy rain and flooding.",
-      "published": "Fri, 27 Nov 2026 05:15:26 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
+      "summary": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?",
+      "published": "Fri, 27 Nov 2026 18:42:50 GMT"
     },
     {
-      "id": "531caf503c7fef54",
-      "title": "Watch: Roofs torn off and streets under water as severe weather hits US",
+      "id": "5813550398040e4f",
+      "title": "'We couldn't give up that easily': Marching bands scramble to cover costs after Thanksgiving parade rearranged",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cq808d704m22o?at_medium=RSS&at_campaign=rss",
-      "summary": "Hundreds of thousands have been affected by storms in the country as the Thanksgiving holiday weekend begins.",
-      "published": "Thu, 26 Nov 2026 19:26:16 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/ckd71ypy9e8eo?at_medium=RSS&at_campaign=rss",
+      "summary": "Stormy weather in New York City prompted organisers to push back the Macy's parade by two days - leaving some musicians stuck.",
+      "published": "Fri, 27 Nov 2026 20:06:31 GMT"
     },
     {
-      "id": "7d6be5dc19172846",
-      "title": "New Zealand's ruling coalition falls short of parliamentary majority by one seat",
+      "id": "f53be474bc7fc47c",
+      "title": "Brazil pushes back on Macron calling its meat 'doped'",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c670278qk879o?at_medium=RSS&at_campaign=rss",
-      "summary": "The right-leaning ruling bloc led by the National Party has fallen short of the majority needed to govern.",
-      "published": "Fri, 27 Nov 2026 03:28:15 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c6rrg28npvzeo?at_medium=RSS&at_campaign=rss",
+      "summary": "France's president made the comment while speaking to French farming representatives, months after the EU banned Brazil beef and poultry products.",
+      "published": "Fri, 27 Nov 2026 15:54:15 GMT"
     },
     {
-      "id": "0c801dca8e73e521",
-      "title": "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
+      "id": "6ccc7c31dee7390a",
+      "title": "Prosecutors seek 25-year prison term for 'poison seller' Kenneth Law",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
-      "summary": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm.",
-      "published": "Thu, 26 Nov 2026 05:00:24 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cmx2898wq2qjo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Canadian man, who pleaded guilty to 14 counts of aiding and abetting suicide earlier this year, will be sentenced at a later date.",
+      "published": "Fri, 27 Nov 2026 22:03:46 GMT"
     },
     {
-      "id": "e4297a5a2ecfdc50",
-      "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
+      "id": "1bc3f2e2255b4e74",
+      "title": "Capsized tanker carrying 7,000 tonnes of diesel to be towed away from Ibiza",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cvglrz5yr79go?at_medium=RSS&at_campaign=rss",
-      "summary": "Marvin Reuter is contesting extradition to France, where he could face smuggling, criminal conspiracy and involuntary manslaughter charges.",
-      "published": "Thu, 26 Nov 2026 05:00:27 GMT"
-    },
-    {
-      "id": "44e71f7f5015b6ee",
-      "title": "Gérard Depardieu to stand trial for alleged rape of actress in 2018, court rules",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o?at_medium=RSS&at_campaign=rss",
-      "summary": "A Paris appeals court rules Depardieu will go on trial for the alleged rape of Charlotte Arnould.",
-      "published": "Thu, 26 Nov 2026 14:44:26 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cvrlgz6g0ekgo?at_medium=RSS&at_campaign=rss",
+      "summary": "There are fears of a major oil spillage off Ibiza but the ship's fuel tanks are so far intact.",
+      "published": "Fri, 27 Nov 2026 20:34:45 GMT"
     },
     {
       "id": "1c0565d52f665d4b",
@@ -74,139 +74,58 @@
       "published": "Fri, 27 Nov 2026 08:13:43 GMT"
     },
     {
-      "id": "5a12d8427988c919",
-      "title": "Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one",
+      "id": "5ef4be14e1a178df",
+      "title": "Canada's top court largely upholds Quebec ban on religious symbols for public servants",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&at_campaign=rss",
-      "summary": "The possible environmental damage is still being assessed by Spain's sea rescue service.",
-      "published": "Thu, 26 Nov 2026 22:01:22 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cq3dgpy9lem3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The law faced legal challenges from a range of groups, including female Muslim, Sikh and Catholic teachers, who argued it violated their fundamental rights.",
+      "published": "Fri, 27 Nov 2026 16:53:46 GMT"
     },
     {
-      "id": "976736d634d0cfa5",
-      "title": "Pregnant US inmate escapes in prison vehicle after medical appointment",
+      "id": "c8eeaea13d408f69",
+      "title": "Italy's former police chief rejected mafia inquiry allegations before death",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c9m2jke85xzxo?at_medium=RSS&at_campaign=rss",
-      "summary": "Rebecca Taylor had been imprisoned in New Mexico for multiple theft and burglary charges.",
-      "published": "Thu, 26 Nov 2026 14:35:22 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c69q8yjj1v0po?at_medium=RSS&at_campaign=rss",
+      "summary": "The contents of an eight-page letter by Gianni De Gennaro have been revealed days after his body was found at his Tuscany home.",
+      "published": "Fri, 27 Nov 2026 07:28:10 GMT"
     },
     {
-      "id": "0f889ad86b232033",
-      "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
+      "id": "e056cc8e97bf4372",
+      "title": "Rare turtles found inside baggage at Amsterdam airport",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
-      "summary": "The pair were technicians for German company Rheinmetall, according to Italy's foreign ministry.",
-      "published": "Thu, 26 Nov 2026 21:17:53 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cm5y1380q3vgo?at_medium=RSS&at_campaign=rss",
+      "summary": "The endangered reptiles were bound with duct tape to prevent them moving, officials say.",
+      "published": "Fri, 27 Nov 2026 13:38:07 GMT"
     },
     {
-      "id": "5897d0f37fb9f99b",
-      "title": "Egyptian authorities arrest motorist over tanker crash that killed 31",
+      "id": "60bd6b1a9655a231",
+      "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c3gre90l0g45o?at_medium=RSS&at_campaign=rss",
-      "summary": "Officials say the man confessed to travelling at speed and clipping the fuel truck as he was overtaking traffic.",
-      "published": "Thu, 26 Nov 2026 12:16:06 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss",
+      "summary": "Paul Mackenzie is found guilty of killing his followers, weeks after being jailed for the mass murder of children.",
+      "published": "Fri, 27 Nov 2026 17:19:31 GMT"
     },
     {
-      "id": "1ee02381ce0bfcd0",
-      "title": "Hope for millions as cheaper HIV prevention jab reaches Africa",
+      "id": "517112579bf8b7c1",
+      "title": "Severe Thanksgiving storms leave roads flooded and trees fallen",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmly7jve72r2o?at_medium=RSS&at_campaign=rss",
-      "summary": "Lenacapavir, administered as an injection twice a year, is nearly 100% effective at preventing HIV infection.",
-      "published": "Thu, 26 Nov 2026 11:00:39 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/ckvg20y511p4o?at_medium=RSS&at_campaign=rss",
+      "summary": "Hundreds of thousands of people were without power after severe weather hit both coasts of the United States during the Thanksgiving holiday.",
+      "published": "Fri, 27 Nov 2026 16:46:47 GMT"
     },
     {
-      "id": "740614d037a97d3b",
-      "title": "Myanmar refuses to comply with parts of ICJ genocide ruling",
+      "id": "c5e1d62c5803183c",
+      "title": "'It's impossible': Spain's young people on housing ahead of Sunday's election",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c61wr87wyg5wo?at_medium=RSS&at_campaign=rss",
-      "summary": "A landmark ruling by the International Court of Justice (ICJ) convicted Myanmar of genocide against its Rohingya minority.",
-      "published": "Thu, 26 Nov 2026 10:25:51 GMT"
-    },
-    {
-      "id": "79a17237bc68ab6e",
-      "title": "Tributes for Duran Duran guitarist Andy Taylor after his death aged 65",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmp3vk6vr44po?at_medium=RSS&at_campaign=rss",
-      "summary": "Simon Le Bon and his other bandmates say Taylor \"brought an indelible fire and swagger to our music\".",
-      "published": "Thu, 26 Nov 2026 12:33:23 GMT"
-    },
-    {
-      "id": "d47facffc6b66e7d",
-      "title": "Nine injured, three critically, after Bangkok oil refinery explosion",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/crx209kwk4kzo?at_medium=RSS&at_campaign=rss",
-      "summary": "Black smoke could be seen across Bangkok's skyline after the blast, as officials urged residents to leave the area.",
-      "published": "Thu, 26 Nov 2026 16:21:19 GMT"
-    },
-    {
-      "id": "dffc17fc9dc8761b",
-      "title": "Politics and peek-a-boo in Australian parliament as senator brings baby to work",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cmvg23djw8v9o?at_medium=RSS&at_campaign=rss",
-      "summary": "Senator Lidia Thorpe kept 6-month-old Aaliyah entertained, as her mum Senator Fatima Payman, participated in an online safety bill debate.",
-      "published": "Thu, 26 Nov 2026 09:49:42 GMT"
-    },
-    {
-      "id": "dd4c603c20bbf197",
-      "title": "Hamas political official and wife among eight Palestinians killed in Israeli strikes on Gaza",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqvg2n4mzl1jo?at_medium=RSS&at_campaign=rss",
-      "summary": "The killings are the latest from a series of near daily attacks by Israel against what it says are Hamas targets.",
-      "published": "Thu, 26 Nov 2026 10:14:08 GMT"
-    },
-    {
-      "id": "b271d52226ceeea6",
-      "title": "Thirteen dead as mine disaster highlights illegal hunt for gold",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmde1zr0nlyro?at_medium=RSS&at_campaign=rss",
-      "summary": "Indonesian authorities say another 13 are missing in the illegal gold mine, which flooded on Monday.",
-      "published": "Thu, 26 Nov 2026 07:31:24 GMT"
-    },
-    {
-      "id": "05c65400c78fcefd",
-      "title": "DR Congo demands answers over Ugandan general's threats",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwz0k90rgpm8o?at_medium=RSS&at_campaign=rss",
-      "summary": "Gen Kainerugaba threatened a rebel takeover of a mineral-rich area in DR Congo in controversial X posts.",
-      "published": "Thu, 26 Nov 2026 07:24:39 GMT"
-    },
-    {
-      "id": "ab16224e8d1cd5dd",
-      "title": "New UK-EU treaty has 10-year termination clause",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
-      "summary": "Text of the treaties was published this afternoon, alongside legislation designed to enact the bulk of the deal.",
-      "published": "Thu, 26 Nov 2026 15:23:17 GMT"
-    },
-    {
-      "id": "31fbcbb6e2132992",
-      "title": "Guinea orders residents to clean up the capital months after deadly rubbish dump collapse",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqwy4377yxnlo?at_medium=RSS&at_campaign=rss",
-      "summary": "The capital's main rubbish dump has been closed since the disaster, leading to rubbish piling up in the streets.",
-      "published": "Thu, 26 Nov 2026 07:43:48 GMT"
-    },
-    {
-      "id": "29f2b2d83a49bfb7",
-      "title": "Musk's plan to send a million SpaceX data satellites into space approved",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power.",
-      "published": "Thu, 26 Nov 2026 09:27:44 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/cm9w9y8947xqo?at_medium=RSS&at_campaign=rss",
+      "summary": "Europe correspondent Nick Beake speaks to one couple kept apart by high rents in Valencia.",
+      "published": "Fri, 27 Nov 2026 06:09:31 GMT"
     },
     {
       "id": "84c0a249884bc4ed",
@@ -218,35 +137,26 @@
       "published": "Thu, 26 Nov 2026 22:06:20 GMT"
     },
     {
-      "id": "c5e1d62c5803183c",
-      "title": "Could housing decide Spain's general election?",
+      "id": "e4297a5a2ecfdc50",
+      "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cm9w9y8947xqo?at_medium=RSS&at_campaign=rss",
-      "summary": "Europe correspondent Nick Beake speaks to one couple kept apart by high rents in Valencia.",
-      "published": "Fri, 27 Nov 2026 06:09:31 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/cvglrz5yr79go?at_medium=RSS&at_campaign=rss",
+      "summary": "Marvin Reuter is contesting extradition to France, where he could face smuggling, criminal conspiracy and involuntary manslaughter charges.",
+      "published": "Thu, 26 Nov 2026 05:00:27 GMT"
     },
     {
-      "id": "b084591b14edb85c",
-      "title": "My dad's watch stopped the moment he died - I found it in the ashes of Hong Kong tower fire",
+      "id": "531caf503c7fef54",
+      "title": "Watch: Roofs torn off and streets under water as severe weather hits US",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/c6evr2y40v0jo?at_medium=RSS&at_campaign=rss",
-      "summary": "The city marks a year since a huge blaze tore through seven apartment blocks, killing 168 people.",
-      "published": "Thu, 26 Nov 2026 23:03:16 GMT"
-    },
-    {
-      "id": "c5abc518dc8370bd",
-      "title": "Watch: Alaskan flying team airdrops Thanksgiving turkeys to remote communities",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/videos/cvze7yk7dy5lo?at_medium=RSS&at_campaign=rss",
-      "summary": "For the last few years, the \"turkey bombers\" have taken to the skies for the benefit of residents in off-grid communities.",
-      "published": "Thu, 26 Nov 2026 09:22:34 GMT"
+      "url": "https://www.bbc.co.uk/news/videos/cq808d704m22o?at_medium=RSS&at_campaign=rss",
+      "summary": "Hundreds of thousands have been affected by storms in the country as the Thanksgiving holiday weekend begins.",
+      "published": "Thu, 26 Nov 2026 19:26:16 GMT"
     },
     {
       "id": "da1e6fed24ce0ae9",
-      "title": "Houthi attacks test Saudi Arabia's image of security",
+      "title": "Inside Saudi Arabia, Houthi attacks test kingdom's image of security",
       "source": "BBC",
       "topic": "World",
       "url": "https://www.bbc.co.uk/news/articles/c6ly7jgv7jzdo?at_medium=RSS&at_campaign=rss",
@@ -332,7 +242,7 @@
       "topic": "Business",
       "url": "https://www.bbc.co.uk/news/articles/cw8dv11dp2yeo?at_medium=RSS&at_campaign=rss",
       "summary": "Solo-dining is being embraced as a self-care trend and it's reshaping the restaurant industry.",
-      "published": "Fri, 27 Nov 2026 07:46:02 GMT"
+      "published": "Fri, 27 Nov 2026 10:10:36 GMT"
     },
     {
       "id": "3c01055c44d74eef",
@@ -398,6 +308,15 @@
       "published": "Thu, 26 Nov 2026 11:21:45 GMT"
     },
     {
+      "id": "ab16224e8d1cd5dd",
+      "title": "New UK-EU treaty has 10-year termination clause",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
+      "summary": "Text of the treaties was published this afternoon, alongside legislation designed to enact the bulk of the deal.",
+      "published": "Thu, 26 Nov 2026 15:23:17 GMT"
+    },
+    {
       "id": "36cd3c0348009494",
       "title": "Car finance compensation payments explained",
       "source": "BBC",
@@ -432,6 +351,15 @@
       "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
       "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
       "published": "Thu, 26 Nov 2026 04:10:58 GMT"
+    },
+    {
+      "id": "29f2b2d83a49bfb7",
+      "title": "Musk's plan to send a million SpaceX data satellites into space approved",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power.",
+      "published": "Thu, 26 Nov 2026 09:27:44 GMT"
     },
     {
       "id": "42b954009353f086",
@@ -623,6 +551,15 @@
       "published": "Thu, 08 Oct 2026 23:09:56 GMT"
     },
     {
+      "id": "79656fdd26d2e6ca",
+      "title": "Will new energy fixes cost more in January?",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/videos/cwjd7y4jk581o?at_medium=RSS&at_campaign=rss",
+      "summary": "Energy bills will soar by 26% for millions of households in January after a surge in gas prices sparked by the Iran war.",
+      "published": "Fri, 27 Nov 2026 16:05:32 GMT"
+    },
+    {
       "id": "a0408bf03b3e3651",
       "title": "'We're scared to turn our heating on'",
       "source": "BBC",
@@ -711,15 +648,6 @@
       "url": "https://www.bbc.co.uk/news/videos/cmqlq07d71yko?at_medium=RSS&at_campaign=rss",
       "summary": "Scots describe how an increase in energy bills will affect them.",
       "published": "Wed, 25 Nov 2026 16:56:47 GMT"
-    },
-    {
-      "id": "3f365d1f73e14fb4",
-      "title": "Why has Poundland collapsed and what happens next?",
-      "source": "BBC",
-      "topic": "Business",
-      "url": "https://www.bbc.co.uk/news/videos/ckregn0gq2ydo?at_medium=RSS&at_campaign=rss",
-      "summary": "The retail chain has collapsed just one year after being bought for £1 by an American firm.",
-      "published": "Wed, 25 Nov 2026 16:24:30 GMT"
     },
     {
       "id": "762ce6d7fedd6d19",
@@ -875,6 +803,33 @@
       "published": "Sat, 03 Oct 2026 01:00:00 GMT"
     },
     {
+      "id": "a38c1440c2b10cd0",
+      "title": "Hundreds of thousands still without power a day after US slammed with Thanksgiving storms",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss",
+      "summary": "Pennsylvania and neighbouring states remain badly affected on Friday after both coasts were lashed with wind and rain.",
+      "published": "Fri, 27 Nov 2026 22:29:46 GMT"
+    },
+    {
+      "id": "a84f71235d1a87c8",
+      "title": "New satellite data shows how fast some African cities are sinking",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cq074p95z4llo?at_medium=RSS&at_campaign=rss",
+      "summary": "Cities including Lagos and Alexandria are sinking faster than previously thought, a new study shows.",
+      "published": "Fri, 27 Nov 2026 19:03:18 GMT"
+    },
+    {
+      "id": "7392b241432b2c16",
+      "title": "'Can't control the weather': Sadness as Macy's Thanksgiving parade postponed",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/videos/cmx29qd8ew4xo?at_medium=RSS&at_campaign=rss",
+      "summary": "Macy's postpones its 100th annual Thanksgiving Day Parade in New York because of severe weather.",
+      "published": "Fri, 27 Nov 2026 15:27:00 GMT"
+    },
+    {
       "id": "a5556aea40d460a3",
       "title": "Floating nature islands installed in parks as Glasgow Games legacy",
       "source": "BBC",
@@ -882,6 +837,15 @@
       "url": "https://www.bbc.co.uk/news/articles/cwe9kxdm1k4lo?at_medium=RSS&at_campaign=rss",
       "summary": "The islands, being planted in five Glasgow parks, are designed to encourage wildlife and help clean the water.",
       "published": "Fri, 27 Nov 2026 06:19:13 GMT"
+    },
+    {
+      "id": "a067c0da2f1d9669",
+      "title": "Major Thanksgiving storm brings flooding, flight delays across US",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
+      "summary": "Almost one million customers in the US had no power on Thursday evening as storms descended on both US coasts, bringing wind gusts, heavy rain and flooding.",
+      "published": "Fri, 27 Nov 2026 05:15:26 GMT"
     },
     {
       "id": "795c7e877b7dc8e4",
@@ -900,6 +864,42 @@
       "url": "https://www.bbc.co.uk/weather/videos/c6y0xq8y757ko?at_medium=RSS&at_campaign=rss",
       "summary": "BBC Weather's Matt Taylor takes us on a tour of the Met Office control room.",
       "published": "Fri, 27 Nov 2026 00:09:30 GMT"
+    },
+    {
+      "id": "85a2dcdf151ac842",
+      "title": "Watch: Man and dog narrowly escape powerful king tide in Oregon",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/videos/cm4gnje836x2o?at_medium=RSS&at_campaign=rss",
+      "summary": "Both the man and his dog escaped unharmed, the police department says.",
+      "published": "Thu, 26 Nov 2026 21:51:16 GMT"
+    },
+    {
+      "id": "a61b694cddafa7ab",
+      "title": "Second court defeat for Trump's deep-sea mining ambitions",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/c6y4jyx2m172o?at_medium=RSS&at_campaign=rss",
+      "summary": "Second judge rules against Trump administration's plans to lease areas of ocean floor and survey for mining.",
+      "published": "Thu, 26 Nov 2026 18:22:28 GMT"
+    },
+    {
+      "id": "bd75f74e73c3fab5",
+      "title": "Council to set London's highest littering fines",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/ckj0590g84nno?at_medium=RSS&at_campaign=rss",
+      "summary": "Fines for littering will rise from £500 to £750 in Harrow, while fly-tipping will see a £5,000 penalty.",
+      "published": "Fri, 27 Nov 2026 06:11:37 GMT"
+    },
+    {
+      "id": "a234e11d051b30f4",
+      "title": "Fireball steals the show during Thanksgiving drone display in Indiana",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/videos/c6n4e3yypylxo?at_medium=RSS&at_campaign=rss",
+      "summary": "The glowing object was captured on video as holiday-themed drones illuminated the night sky.",
+      "published": "Thu, 26 Nov 2026 16:18:30 GMT"
     }
   ],
   "audio_lessons": {
@@ -924,11 +924,11 @@
       "title": "BBC News",
       "description": "실제 뉴스 앵커의 5분 뉴스 보도",
       "feed_url": "https://podcast.voice.api.bbci.co.uk/rss/audio/p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr",
-      "episode_title": "27/11/2026 09:01 GMT",
-      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw4707q2.mp3",
+      "episode_title": "27/11/2026 22:01 GMT",
+      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw471tdr.mp3",
       "transcript_url": "",
-      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zx179g",
-      "published": "Fri, 27 Nov 2026 09:06:00 GMT",
+      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zx2t04",
+      "published": "Fri, 27 Nov 2026 22:06:00 GMT",
       "duration": "300",
       "audio_available": true,
       "transcript_available": false
