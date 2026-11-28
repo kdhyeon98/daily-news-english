@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T23:06:10.041379+00:00",
+  "updated_at": "2026-11-28T08:56:32.126172+00:00",
   "articles": [
     {
       "id": "65e067513a05324a",
@@ -11,6 +11,42 @@
       "published": "Fri, 27 Nov 2026 21:55:53 GMT"
     },
     {
+      "id": "58b7ceb1a51005c1",
+      "title": "Turkish officials 'destroyed' pro-opposition TV channel, owner tells BBC",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cq36gk151xkdo?at_medium=RSS&at_campaign=rss",
+      "summary": "The headquarters of Halk TV were raided last month, the latest in a series of crackdowns on news sources deemed critical of the government.",
+      "published": "Sat, 28 Nov 2026 04:13:45 GMT"
+    },
+    {
+      "id": "0b2a52c951b978bc",
+      "title": "Eight killed in Peruvian military helicopter crash",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cwp9d85mlp88o?at_medium=RSS&at_campaign=rss",
+      "summary": "The pilot was the sole survivor of the crash during a rescue mission in a remote area known for drug trafficking.",
+      "published": "Sat, 28 Nov 2026 04:19:16 GMT"
+    },
+    {
+      "id": "6ccc7c31dee7390a",
+      "title": "'Poison seller' Kenneth Law apologises in court to the families of his victims",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cmx2898wq2qjo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Canadian man, who pleaded guilty to 14 counts of aiding and abetting suicide earlier this year, said he was remorseful for his actions.",
+      "published": "Sat, 28 Nov 2026 00:56:55 GMT"
+    },
+    {
+      "id": "43587a9eefb34108",
+      "title": "Australian wrestler Bronson Reed dies aged 38, WWE says",
+      "source": "BBC",
+      "topic": "World",
+      "url": "https://www.bbc.co.uk/news/articles/cvwy08g70ldko?at_medium=RSS&at_campaign=rss",
+      "summary": "Tributes have flooded in for the 38-year-old Australian who is survived by his pregnant wife, Paige, their daughter.",
+      "published": "Sat, 28 Nov 2026 07:31:14 GMT"
+    },
+    {
       "id": "2eccc11da40e85e3",
       "title": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
       "source": "BBC",
@@ -18,15 +54,6 @@
       "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
       "summary": "Ukraine's president voices frustration with US and says it is not pushing Russia hard enough in peace talks to end the war.",
       "published": "Fri, 27 Nov 2026 18:00:40 GMT"
-    },
-    {
-      "id": "1eab93bf7e54c93e",
-      "title": "Weary of war but with no sign of backing down, Kyiv faces another punishing winter",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
-      "summary": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?",
-      "published": "Fri, 27 Nov 2026 18:42:50 GMT"
     },
     {
       "id": "5813550398040e4f",
@@ -38,31 +65,22 @@
       "published": "Fri, 27 Nov 2026 20:06:31 GMT"
     },
     {
-      "id": "f53be474bc7fc47c",
-      "title": "Brazil pushes back on Macron calling its meat 'doped'",
+      "id": "5ef4be14e1a178df",
+      "title": "Canada's top court largely upholds Quebec ban on religious symbols for public servants",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c6rrg28npvzeo?at_medium=RSS&at_campaign=rss",
-      "summary": "France's president made the comment while speaking to French farming representatives, months after the EU banned Brazil beef and poultry products.",
-      "published": "Fri, 27 Nov 2026 15:54:15 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cq3dgpy9lem3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The law faced legal challenges from a range of groups, including female Muslim, Sikh and Catholic teachers, who argued it violated their fundamental rights.",
+      "published": "Fri, 27 Nov 2026 16:53:46 GMT"
     },
     {
-      "id": "6ccc7c31dee7390a",
-      "title": "Prosecutors seek 25-year prison term for 'poison seller' Kenneth Law",
+      "id": "60bd6b1a9655a231",
+      "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmx2898wq2qjo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Canadian man, who pleaded guilty to 14 counts of aiding and abetting suicide earlier this year, will be sentenced at a later date.",
-      "published": "Fri, 27 Nov 2026 22:03:46 GMT"
-    },
-    {
-      "id": "1bc3f2e2255b4e74",
-      "title": "Capsized tanker carrying 7,000 tonnes of diesel to be towed away from Ibiza",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cvrlgz6g0ekgo?at_medium=RSS&at_campaign=rss",
-      "summary": "There are fears of a major oil spillage off Ibiza but the ship's fuel tanks are so far intact.",
-      "published": "Fri, 27 Nov 2026 20:34:45 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss",
+      "summary": "Paul Mackenzie is found guilty of killing his followers, weeks after being jailed for the mass murder of children.",
+      "published": "Fri, 27 Nov 2026 17:19:31 GMT"
     },
     {
       "id": "1c0565d52f665d4b",
@@ -72,15 +90,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cw074p95ye5do?at_medium=RSS&at_campaign=rss",
       "summary": "More than 100 countries have outlawed marital rape, but a large part of South Asia has not.",
       "published": "Fri, 27 Nov 2026 08:13:43 GMT"
-    },
-    {
-      "id": "5ef4be14e1a178df",
-      "title": "Canada's top court largely upholds Quebec ban on religious symbols for public servants",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cq3dgpy9lem3o?at_medium=RSS&at_campaign=rss",
-      "summary": "The law faced legal challenges from a range of groups, including female Muslim, Sikh and Catholic teachers, who argued it violated their fundamental rights.",
-      "published": "Fri, 27 Nov 2026 16:53:46 GMT"
     },
     {
       "id": "c8eeaea13d408f69",
@@ -99,15 +108,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cm5y1380q3vgo?at_medium=RSS&at_campaign=rss",
       "summary": "The endangered reptiles were bound with duct tape to prevent them moving, officials say.",
       "published": "Fri, 27 Nov 2026 13:38:07 GMT"
-    },
-    {
-      "id": "60bd6b1a9655a231",
-      "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
-      "source": "BBC",
-      "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss",
-      "summary": "Paul Mackenzie is found guilty of killing his followers, weeks after being jailed for the mass murder of children.",
-      "published": "Fri, 27 Nov 2026 17:19:31 GMT"
     },
     {
       "id": "517112579bf8b7c1",
@@ -155,49 +155,49 @@
       "published": "Thu, 26 Nov 2026 19:26:16 GMT"
     },
     {
-      "id": "da1e6fed24ce0ae9",
-      "title": "Inside Saudi Arabia, Houthi attacks test kingdom's image of security",
+      "id": "1eab93bf7e54c93e",
+      "title": "Weary of war but with no sign of backing down, Kyiv faces another punishing winter",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/c6ly7jgv7jzdo?at_medium=RSS&at_campaign=rss",
-      "summary": "Despite the strikes, markets and restaurants in Riyadh remain busy as residents express trust in the government to protect them.",
-      "published": "Fri, 27 Nov 2026 06:04:51 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
+      "summary": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?",
+      "published": "Fri, 27 Nov 2026 18:42:50 GMT"
     },
     {
-      "id": "9b174b6e98d0e13f",
-      "title": "Sheikh Hasina's planned return puts Bangladesh on edge - and India in a bind",
+      "id": "dd6d2bba2a651706",
+      "title": "Behind China's spectacular rise, voices who defied it say they are being drowned out",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cx30g71rev23o?at_medium=RSS&at_campaign=rss",
-      "summary": "The ousted prime minister's December homecoming plan deepens Dhaka-Delhi tensions and risks fresh unrest.",
-      "published": "Fri, 27 Nov 2026 00:47:43 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cme3d4y094x7o?at_medium=RSS&at_campaign=rss",
+      "summary": "China's immense clout now also has the flex of soft power. Critics and dissidents say their voices are being drowned out.",
+      "published": "Fri, 27 Nov 2026 23:02:35 GMT"
     },
     {
-      "id": "efe7c65837100c2f",
-      "title": "Met Police ruined my life, says Kenyan man wrongly convicted over attack on UK couple",
+      "id": "776f6dea0328e2d7",
+      "title": "A clinic is reassessing people with ADHD and autism diagnoses - but critics fear it could deepen stigma",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cqvg2nlr8kd8o?at_medium=RSS&at_campaign=rss",
-      "summary": "Evidence from a British police officer helped convict Ali Kololo over a 2011 attack in the Kenyan resort of Lamu.",
-      "published": "Fri, 27 Nov 2026 00:48:11 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cr9309nyg2vno?at_medium=RSS&at_campaign=rss",
+      "summary": "While many people find a diagnosis for ADHD or autism affirming, a government-funded clinic in Sweden is re-assessing people who feel it does not reflect them.",
+      "published": "Sat, 28 Nov 2026 00:05:17 GMT"
     },
     {
-      "id": "d256b509bbc86a95",
-      "title": "Desperate appeals from women on death row in Iran after protests",
+      "id": "d78f8d306811d4ce",
+      "title": "The Indian 'Tamasha queen' whose fans paid for a show that never happened",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cm8x0ve4yd7wo?at_medium=RSS&at_campaign=rss",
-      "summary": "Female protesters and dissidents are being sentenced to death in numbers not seen for decades, a rights group says.",
-      "published": "Thu, 26 Nov 2026 06:01:58 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cj20q9pw0116o?at_medium=RSS&at_campaign=rss",
+      "summary": "A new Bollywood flim spotlights the remarkable life of dancer and singer Vithabhai Narayangaonkar.",
+      "published": "Sat, 28 Nov 2026 00:50:11 GMT"
     },
     {
-      "id": "b5cf1873b222cec9",
-      "title": "France's political mainstream risks presidential vote debacle with no clear candidate",
+      "id": "5ebdf7f6465550fb",
+      "title": "Nigeria's 'ultimate hard man' who become an online meme",
       "source": "BBC",
       "topic": "World",
-      "url": "https://www.bbc.co.uk/news/articles/cq772vedgepro?at_medium=RSS&at_campaign=rss",
-      "summary": "Hard-right and hard-left candidates dominate the polls ahead of next year's presidential election.",
-      "published": "Thu, 26 Nov 2026 00:23:27 GMT"
+      "url": "https://www.bbc.co.uk/news/articles/cm3vg3lkrk03o?at_medium=RSS&at_campaign=rss",
+      "summary": "Before becoming a household name in the Nigerian film industry, Edochie built a career in broadcasting.",
+      "published": "Sat, 28 Nov 2026 01:20:35 GMT"
     },
     {
       "id": "77ed0ea9783dbc60",
@@ -551,6 +551,15 @@
       "published": "Thu, 08 Oct 2026 23:09:56 GMT"
     },
     {
+      "id": "b76bc7fc35228203",
+      "title": "Butcher blames costs for closure after 127 years",
+      "source": "BBC",
+      "topic": "Business",
+      "url": "https://www.bbc.co.uk/news/articles/cqe9k3m9mvexo?at_medium=RSS&at_campaign=rss",
+      "summary": "Bennett Butchers in Spalding says rises in National Insurance and energy have made it \"unviable\".",
+      "published": "Sat, 28 Nov 2026 07:18:47 GMT"
+    },
+    {
       "id": "79656fdd26d2e6ca",
       "title": "Will new energy fixes cost more in January?",
       "source": "BBC",
@@ -650,6 +659,24 @@
       "published": "Wed, 25 Nov 2026 16:56:47 GMT"
     },
     {
+      "id": "6811ba22810e73a4",
+      "title": "Pensions and benefits services still down after 'cyber incident'",
+      "source": "BBC",
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cm1wrgqyq4d8o?at_medium=RSS&at_campaign=rss",
+      "summary": "The UK's former chief technology officer says the Department for Work and Pensions may have been hit by hackers, but the government has not confirmed that.",
+      "published": "Sat, 28 Nov 2026 08:41:54 GMT"
+    },
+    {
+      "id": "bb0be17c4eefba01",
+      "title": "How gamers are using AI and leaked files to clone Grand Theft Auto 6",
+      "source": "BBC",
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/news/articles/c64gn8pe5eeqo?at_medium=RSS&at_campaign=rss",
+      "summary": "With an official PC version potentially still months away, fans are getting impatient.",
+      "published": "Sat, 28 Nov 2026 01:30:50 GMT"
+    },
+    {
       "id": "762ce6d7fedd6d19",
       "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
       "source": "BBC",
@@ -713,24 +740,6 @@
       "published": "Mon, 23 Nov 2026 23:16:08 GMT"
     },
     {
-      "id": "90dea8d2d19230c9",
-      "title": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
-      "source": "BBC",
-      "topic": "Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
-      "summary": "The jump in Nvidia shares has also lifted stock markets, with the tech-heavy Nasdaq up 6.5%.",
-      "published": "Mon, 23 Nov 2026 21:23:42 GMT"
-    },
-    {
-      "id": "9194ddb079718aec",
-      "title": "How important are Nvidia and Jensen Huang to the US economy?",
-      "source": "BBC",
-      "topic": "Technology",
-      "url": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Nvidia chief executive has been at the centre of the artificial intelligence boom.",
-      "published": "Mon, 23 Nov 2026 16:12:35 GMT"
-    },
-    {
       "id": "3d8f05f75b9061b9",
       "title": "Tech Life",
       "source": "BBC",
@@ -767,6 +776,15 @@
       "published": "Tue, 03 Nov 2026 20:30:00 GMT"
     },
     {
+      "id": "7e6740d947b0596d",
+      "title": "Tech Now",
+      "source": "BBC",
+      "topic": "Technology",
+      "url": "https://www.bbc.co.uk/iplayer/episode/m00353dd?at_medium=RSS&at_campaign=rss",
+      "summary": "Ammie Sekhon looks at robotics that could one day help spacecraft act independently.",
+      "published": "Sat, 28 Nov 2026 01:00:00 GMT"
+    },
+    {
       "id": "eee4866095576938",
       "title": "Tech Now",
       "source": "BBC",
@@ -794,22 +812,22 @@
       "published": "Sat, 10 Oct 2026 01:00:00 GMT"
     },
     {
-      "id": "2d0c1972c36b2f83",
-      "title": "Tech Now",
-      "source": "BBC",
-      "topic": "Technology",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m0032n6v?at_medium=RSS&at_campaign=rss",
-      "summary": "Alasdair Keane heads to the Pokémon World Championships in San Francisco.",
-      "published": "Sat, 03 Oct 2026 01:00:00 GMT"
-    },
-    {
       "id": "a38c1440c2b10cd0",
       "title": "Hundreds of thousands still without power a day after US slammed with Thanksgiving storms",
       "source": "BBC",
       "topic": "Science",
       "url": "https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss",
-      "summary": "Pennsylvania and neighbouring states remain badly affected on Friday after both coasts were lashed with wind and rain.",
-      "published": "Fri, 27 Nov 2026 22:29:46 GMT"
+      "summary": "Pennsylvania and neighbouring states remained badly affected on Friday after both coasts were lashed with wind and rain.",
+      "published": "Sat, 28 Nov 2026 01:55:33 GMT"
+    },
+    {
+      "id": "1bc3f2e2255b4e74",
+      "title": "Capsized tanker carrying 7,000 tonnes of diesel to be towed away from Ibiza",
+      "source": "BBC",
+      "topic": "Science",
+      "url": "https://www.bbc.co.uk/news/articles/cvrlgz6g0ekgo?at_medium=RSS&at_campaign=rss",
+      "summary": "There are fears of a major oil spillage off Ibiza but the ship's fuel tanks are so far intact.",
+      "published": "Fri, 27 Nov 2026 20:34:45 GMT"
     },
     {
       "id": "a84f71235d1a87c8",
@@ -882,24 +900,6 @@
       "url": "https://www.bbc.co.uk/news/articles/c6y4jyx2m172o?at_medium=RSS&at_campaign=rss",
       "summary": "Second judge rules against Trump administration's plans to lease areas of ocean floor and survey for mining.",
       "published": "Thu, 26 Nov 2026 18:22:28 GMT"
-    },
-    {
-      "id": "bd75f74e73c3fab5",
-      "title": "Council to set London's highest littering fines",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/articles/ckj0590g84nno?at_medium=RSS&at_campaign=rss",
-      "summary": "Fines for littering will rise from £500 to £750 in Harrow, while fly-tipping will see a £5,000 penalty.",
-      "published": "Fri, 27 Nov 2026 06:11:37 GMT"
-    },
-    {
-      "id": "a234e11d051b30f4",
-      "title": "Fireball steals the show during Thanksgiving drone display in Indiana",
-      "source": "BBC",
-      "topic": "Science",
-      "url": "https://www.bbc.co.uk/news/videos/c6n4e3yypylxo?at_medium=RSS&at_campaign=rss",
-      "summary": "The glowing object was captured on video as holiday-themed drones illuminated the night sky.",
-      "published": "Thu, 26 Nov 2026 16:18:30 GMT"
     }
   ],
   "audio_lessons": {
@@ -924,11 +924,11 @@
       "title": "BBC News",
       "description": "실제 뉴스 앵커의 5분 뉴스 보도",
       "feed_url": "https://podcast.voice.api.bbci.co.uk/rss/audio/p002vsmz?api_key=JqAy8fGqi8lpxLsr3WaGxyG31AZ5URMr",
-      "episode_title": "27/11/2026 22:01 GMT",
-      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw471tdr.mp3",
+      "episode_title": "28/11/2026 08:01 GMT",
+      "audio_url": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/w1msm0vdw4730w1.mp3",
       "transcript_url": "",
-      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zx2t04",
-      "published": "Fri, 27 Nov 2026 22:06:00 GMT",
+      "episode_url": "http://www.bbc.co.uk/programmes/w1730nl02zx40gf",
+      "published": "Sat, 28 Nov 2026 08:06:00 GMT",
       "duration": "300",
       "audio_available": true,
       "transcript_available": false
